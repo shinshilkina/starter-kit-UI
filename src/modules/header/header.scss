@@ -1,0 +1,28 @@
+@import "../fonts/Montserrat/fonts.css";
+
+.navigation {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  background-color: #FFFFFF;
+  box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
+  width: 100%;
+  &__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__element {
+    list-style: none;
+    position: relative;
+  }
+  &__link {
+    display: block;
+    padding: 1em 2em;
+    text-decoration: none;
+    color: rgba(31, 32, 65, 0.5);
+  }
+}

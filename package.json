@@ -9,7 +9,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode=production",
     "build:dev": "webpack --mode=development",
-    "start:dev": "webpack-dev-server --mode=development"
+    "start:dev": "webpack-dev-server --mode=development",
+    "serve:dist": "http-server -c-1 ./dist/"
   },
   "keywords": [],
   "author": "",
@@ -21,12 +22,15 @@
     "node-sass": "^4.13.0",
     "pug": "^2.0.4",
     "pug-loader": "^2.4.0",
+    "resolve-url-loader": "^3.1.1",
     "sass-loader": "^8.0.1",
+    "url-loader": "^3.0.0",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"
   },
   "dependencies": {
     "clean-webpack-plugin": "^3.0.0",
+    "http-server": "^0.12.1",
     "style-loader": "^1.1.2",
     "webpack-config": "^7.5.0"
   }

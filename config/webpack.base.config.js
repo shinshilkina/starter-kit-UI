@@ -9,7 +9,7 @@ module.exports = new configurator.default().merge({
     output: {
         filename: '[name].js',
         path: path.resolve(__dirname, '..', 'dist'),
-        publicPath: '/static/'
+        publicPath: '/'
     },
     resolve: {
         modules: [
@@ -57,6 +57,10 @@ module.exports = new configurator.default().merge({
                     'sass-loader',
                 ],
             },
-        ],
+            {
+                test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+                loader: 'url-loader?limit=100000'
+            },
+        ]
     },
 });

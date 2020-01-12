@@ -1,0 +1,49 @@
+-
+    var navigation = [
+        {
+            name: 'home',
+            link: '#home',
+            title: 'Home',
+        },
+        {
+            name: 'about_us',
+            link: '#about_us',
+            title: 'About Us',
+        },
+        {
+            name: 'services',
+            link: '#services',
+            title: 'Services',
+            type: [
+                {
+                    name: 'one',
+                    title: '#'
+                },
+                {
+                    name: 'two',
+                    title: '#'
+                },
+            ]
+        },
+        {
+            name: 'careers',
+            link: '#careers',
+            title: 'Careers',
+        },
+        {
+            name: 'news',
+            link: '#news',
+            title: 'News',
+        },
+        {
+            name: 'documentation',
+            link: '#documentation',
+            title: 'Documentation',
+        }
+    ]
+
+nav.navigation
+    ul.navigation__list
+        each item in navigation
+            li.navigation__element
+                a(href=item.link, class='navigation__link--'+item.name).navigation__link=item.title

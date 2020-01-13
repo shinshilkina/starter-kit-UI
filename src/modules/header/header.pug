@@ -50,7 +50,7 @@
         {
             name: 'register',
             link: '#register',
-            title: 'Register'
+            title: 'register'
         }
     ]
 
@@ -60,5 +60,6 @@ nav.navigation
             li.navigation__element
                 a(href=item.link, class='navigation__link--'+item.name).navigation__link=item.title
         each item in buttonElement
-            li.navigation__element
-                button(class='navigation__button navigation__button--'+item.name type="button")=item.title
+            li.navigation__button
+                button(class='navigation__button navigation__button--'+item.name type="button")
+                    div(class ='navigation__button navigation__button--'+item.name+'__item')=item.title

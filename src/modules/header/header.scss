@@ -2,37 +2,60 @@
 @import "../../theme/colors/colors";
 
 .navigation {
+  display: flex;
   font-family: Montserrat;
   font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 17px;
+  font-weight: lighter;
+  font-size: 15.5px;
+  line-height: 20px;
+  margin: 4em 0 2em 0;
   background-color: #FFFFFF;
   box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
   width: 100%;
+  color: $dark_shade_50;
+  justify-content: flex-end;
   &__list {
-    margin: 0;
-    padding: 0;
     display: flex;
-    justify-content: flex-end;
   }
   &__element {
     list-style: none;
     position: relative;
   }
   &__link {
-    display: block;
-    padding: 1em 2em;
+    display: flex;
+    padding: 1em 1.1em;
     text-decoration: none;
-    color: rgba(31, 32, 65, 0.5);
+    color: $dark_shade_50;
   }
   &__button {
-    display: block;
-    padding: 1em 2em;
+    display: flex;
+    margin: 0.5em 1.2em;
     font: inherit;
-    border-radius: 2em 2em;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 1.5em 1.5em;
+    background-image: $gradient;
+    border:none;
+    &--register{
+      color: #FFFFFF;
+      margin: 0;
+      margin-left: -0.75em;
+      &__item{
+        padding-left: -0.1em;
+      }
+    }
     &--login{
-      border: 2em solid $gradient;
+      color: $purple;
+      margin: 0;//0.05em 0.1em;
+      padding: 0.15em;
+        &__item{
+          margin: inherit;
+          background-color: #FFFFFF;
+          background-image: none;
+          padding: 0.5em 1.45em;
+          border-radius: inherit;
+        }
     }
   }
 }

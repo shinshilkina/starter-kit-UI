@@ -1,4 +1,5 @@
 @import "../fonts/Montserrat/fonts.css";
+@import "../../theme/colors/colors";
 
 .navigation {
   font-family: Montserrat;
@@ -24,5 +25,14 @@
     padding: 1em 2em;
     text-decoration: none;
     color: rgba(31, 32, 65, 0.5);
+  }
+  &__button {
+    display: block;
+    padding: 1em 2em;
+    font: inherit;
+    border-radius: 2em 2em;
+    &--login{
+      border: 2em solid $gradient;
+    }
   }
 }

@@ -17,9 +17,6 @@ module.exports = new configurator.default().merge({
             'node_modules'
         ]
     },
-    externals: {
-        jquery: 'jQuery'
-    },
     plugins: [
         new CleanWebpackPlugin(),
         new webpack.DefinePlugin({
@@ -73,6 +70,10 @@ module.exports = new configurator.default().merge({
             {
                 test: /\.(png|woff|woff2|eot|ttf|svg)$/,
                 loader: 'url-loader?limit=100000'
+            },
+            {
+                test: /[\/]jquery\.js$/,
+                use: 'expose-loader?$!expose?jQuery'
             },
         ]
     },

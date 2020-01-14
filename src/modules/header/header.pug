@@ -59,6 +59,8 @@ nav.navigation
         each item in navigation
             li.navigation__element
                 a(href=item.link, class='navigation__link--'+item.name).navigation__link=item.title
+                ul.navigation__submenu
+
         each item in buttonElement
             li.navigation__button
                 button(class='navigation__button navigation__button--'+item.name type="button")

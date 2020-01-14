@@ -17,6 +17,9 @@ module.exports = new configurator.default().merge({
             'node_modules'
         ]
     },
+    externals: {
+        jquery: 'jQuery'
+    },
     plugins: [
         new CleanWebpackPlugin(),
         new webpack.DefinePlugin({
@@ -25,7 +28,7 @@ module.exports = new configurator.default().merge({
         new webpack.ProgressPlugin(),
         new webpack.ProvidePlugin({
             $: 'jquery',
-            jQuery: 'jquery',
+            jquery: 'jquery',
         }),
         new HtmlWebpackPlugin({
             getData: () => {

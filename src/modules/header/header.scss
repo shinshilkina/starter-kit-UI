@@ -7,15 +7,18 @@
   font-style: normal;
   font-weight: lighter;
   font-size: 15.5px;
-  line-height: 20px;
-  margin: 4em 0 2em 0;
+  line-height: 1rem;
+  margin: 4rem 0 3.5rem 0;
   background-color: #FFFFFF;
-  box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
+  box-shadow: 0 1rem 2rem rgba(31, 32, 65, 0.05);
   width: 100%;
   color: $dark_shade_50;
   justify-content: flex-end;
   &__list {
     display: flex;
+    &:last-child{
+      margin-right: 8.35rem;
+    }
   }
   &__element {
     list-style: none;
@@ -23,37 +26,36 @@
   }
   &__link {
     display: flex;
-    padding: 1em 1.1em;
+    padding: 1rem 1.05rem;
     text-decoration: none;
     color: $dark_shade_50;
+    &icon{
+      color: red;
+    }
   }
   &__button {
     display: flex;
-    margin: 0.5em 1.2em;
+    margin: 0.4rem 1rem;
     font: inherit;
     font-size: 0.85rem;
     font-weight: bold;
     text-transform: uppercase;
-    border-radius: 1.5em 1.5em;
+    border-radius: 1.5rem 1.5rem;
     background-image: $gradient;
     border:none;
     &--register{
       color: #FFFFFF;
-      margin: 0;
-      margin-left: -0.75em;
-      &__item{
-        padding-left: -0.1em;
-      }
+      margin: 0 0 0 -0.75rem;
     }
     &--login{
       color: $purple;
       margin: 0;//0.05em 0.1em;
-      padding: 0.15em;
+      padding: 0.15rem;
         &__item{
           margin: inherit;
           background-color: #FFFFFF;
           background-image: none;
-          padding: 0.5em 1.45em;
+          padding: 0.5rem 1.3rem 0.55rem 1.3rem;
           border-radius: inherit;
         }
     }

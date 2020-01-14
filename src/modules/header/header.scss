@@ -10,12 +10,18 @@
   line-height: 1rem;
   margin: 4rem 0 3.5rem 0;
   background-color: #FFFFFF;
-  box-shadow: 0 1rem 2rem rgba(31, 32, 65, 0.05);
+  box-shadow: 0 0 2rem rgba(31, 32, 65, 0.05);
   width: 100%;
   color: $dark_shade_50;
-  justify-content: flex-end;
+  justify-content: space-between;
   &__list {
     display: flex;
+    flex-wrap: wrap;
+    &__icon{
+      width: 1rem;
+      height: 1rem;
+      background-color: #8BA4F9;
+    }
     &:last-child{
       margin-right: 8.35rem;
     }
@@ -43,6 +49,7 @@
     border-radius: 1.5rem 1.5rem;
     background-image: $gradient;
     border:none;
+    max-height: 2.4rem;
     &--register{
       color: #FFFFFF;
       margin: 0 0 0 -0.75rem;
@@ -59,5 +66,15 @@
           border-radius: inherit;
         }
     }
+  }
+  &__sub{
+    display: none;
+  }
+  &__show-more{
+    display: flex;
+    position: relative;
+    height: 1rem;
+    width: 1rem;
+    background-color: #8BA4F9;
   }
 }

@@ -16,12 +16,19 @@
             title: 'Services',
             type: [
                 {
-                    name: 'one',
-                    title: '#'
+                    name: 'documentation',
+                    link: '#documentation',
+                    title: 'Documentation'
                 },
                 {
-                    name: 'two',
-                    title: '#'
+                    name: 'community',
+                    link: '#community',
+                    title: 'Community'
+                },
+                {
+                    name: 'get-in-touch',
+                    link: '#get-in-touch',
+                    title: 'Get in Touch'
                 },
             ]
         },
@@ -53,14 +60,19 @@
             title: 'register'
         }
     ]
-
 nav.navigation
+    div.navigation__logo
+        include ../logo/logo
     ul.navigation__list
         each item in navigation
             li.navigation__element
                 a(href=item.link, class='navigation__link--'+item.name).navigation__link=item.title
-                ul.navigation__sub
-
+            if item.type
+                div.navigation__show-more
+                    ul.navigation__sub
+                        each item_sub in item.type
+                            li.navigation__subm-element
+                                a(href='#' + item_sub.name).navigation__sub-link=item_sub.title
         each item in buttonElement
             li.navigation__button
                 button(class='navigation__button navigation__button--'+item.name type="button")

@@ -68,8 +68,11 @@ module.exports = new configurator.default().merge({
                 ],
             },
             {
-                test: /\.(png|woff|woff2|eot|ttf|svg)$/,
-                loader: 'url-loader?limit=100000'
+                test: /\.(png|jpg|svg|ttf|eot|woff|woff2)$/,
+                loader: 'file-loader',
+                options: {
+                    name: '[path][name].[ext]'
+                }
             },
             {
                 test: /[\/]jquery\.js$/,

@@ -20,7 +20,6 @@
   &__logo{
     padding-left: 10.7rem;
   }
-
   &__list {
     display: flex;
     flex-wrap: wrap;
@@ -30,7 +29,7 @@
     list-style: none;
     position: relative;
     align-items: center;
-    margin: 1.2rem 1.15rem;
+    margin: 1.26rem 1.15rem;
     &:first-child{
       font-weight: bold;
       color: $dark_shade_75;
@@ -68,10 +67,11 @@
       color: #FFFFFF;
       width: 8rem;
       padding-bottom: 0.1rem;
+      margin-right: 10.95rem;
     }
     &--login{
       padding: 0.15rem;
-      margin-left: 1.5rem;
+      margin-left: 1.2rem;
       width: 6.2rem;
       color: $purple;
         &__item{

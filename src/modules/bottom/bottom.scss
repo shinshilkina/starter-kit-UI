@@ -1,0 +1,51 @@
+@import "../../theme/colors/colors";
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+.bottom{
+  display: flex;
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: lighter;
+  letter-spacing: -0.015em;
+  background: #FFFFFF;
+  box-shadow: 0 1rem 2rem rgba(31, 32, 65, 0.05);
+
+  padding: 7.7rem 7rem 0 10.9rem;
+  list-style: none;
+  &__element{
+    &:first-child{
+      width: 20rem;
+      margin-right: 3.7rem;
+    }
+    &:last-child{
+      width: 20rem;
+    }
+    margin-right: 0.95rem;
+    width: 15rem;
+    &__title{
+      text-transform: uppercase;
+      margin: 0.7rem 0 1.5rem 0;
+      font-size: 0.9em;
+      font-weight: bold;
+      line-height: 15px;
+      color: $dark_shade;
+      letter-spacing: 0.04em;
+    }
+    &__sub-element{
+      font-size: 1.05em;
+      line-height: 1.75em;
+      letter-spacing: 0;
+      color: $dark_shade_50;
+      list-style: none;
+      word-wrap: break-word;
+      padding:  0;
+      &__body{
+        &.--height{
+          line-height: 1.8em;
+          margin-bottom: 1.05rem;
+        }
+      }
+    }
+  }
+}
+//bottom__element__sub-element__body_

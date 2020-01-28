@@ -1,0 +1,14 @@
+include bottom-data
+    ul.bottom
+
+        each item in locals.bottomData
+            li(class="bottom__element")
+                if item.id == undefined
+                    include ../logo/logo
+                div(class="bottom__element__title")=item.title
+                if item.elements
+                    ul.bottom__element__sub-element
+                        each item_child in item.elements
+                            li(class="bottom__element__sub-element")
+                                div(class="bottom__element__sub-element__body -"+item.id)=item_child.element
+

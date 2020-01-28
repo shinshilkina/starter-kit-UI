@@ -11,8 +11,9 @@
   line-height: 0.9em;
   letter-spacing: -0.015em;
   margin: 4rem 0 3.5rem 0;
+  padding-left: 10.7rem;
   background-color: #FFFFFF;
-  box-shadow: 0 0 2rem rgba(31, 32, 65, 1); //0.05
+  box-shadow: 0 1rem 2rem rgba(31, 32, 65, 0.05);
   width: 100%;
   color: $dark_shade_50;
   justify-content: space-between;
@@ -20,9 +21,6 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    &:last-child{
-      margin-right: 9.8rem;
-    }
   }
   &__element {
     display: inherit;
@@ -84,5 +82,5 @@
   &__sub{
     display: none;
   }
-
 }
+

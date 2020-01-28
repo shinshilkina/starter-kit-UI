@@ -1,0 +1,33 @@
+@import "../../theme/colors/colors";
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+.bottom-pretty{
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  padding-top: 7.9rem;
+  //justify-content: center;
+  height: 29rem;
+  background: #FFFFFF;
+  &__logo{
+    padding-left: 1rem;
+    padding-bottom: 1.5rem;
+  }
+  &__subscribe{
+    width: 45rem;
+    padding-bottom: 2.2rem;
+
+    font-family: Montserrat, sans-serif;
+    font-size: 1em;
+    line-height: 190%;
+    color: $dark_shade_75;
+    letter-spacing: 0.055em;
+    word-wrap: break-word;
+    text-align: center;
+  }
+  &__links{
+    display: flex;
+    padding-right: 1.5rem;
+  }
+}

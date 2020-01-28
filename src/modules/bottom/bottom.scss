@@ -1,5 +1,14 @@
 @import "../../theme/colors/colors";
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@mixin link-image($url) {
+  width: 1.8rem;
+  height: 1.8rem;
+  margin-left: 1.6rem;
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
 
 .bottom{
   display: flex;
@@ -9,8 +18,9 @@
   letter-spacing: -0.015em;
   background: #FFFFFF;
   box-shadow: 0 1rem 2rem rgba(31, 32, 65, 0.05);
+  margin-bottom: 1px;
 
-  padding: 7.7rem 7rem 0 10.9rem;
+  padding: 7.7rem 7rem 6.8rem 10.9rem;
   list-style: none;
   &__element{
     &:first-child{
@@ -39,13 +49,80 @@
       list-style: none;
       word-wrap: break-word;
       padding:  0;
-      &__body{
-        &.--height{
+      &__body {
+
+        &__email {
+          position: relative;
+          &__text {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 1em;
+            line-height: 171%;
+            color: $dark_shade_25;
+            letter-spacing: 0.035em;
+
+            margin-top: 1.9rem;
+            padding: 0.7rem 3.7rem 0.85rem 1.1rem;
+
+            background: #FFFFFF;
+            border: 1px solid rgba(31, 32, 65, 0.25);
+            box-sizing: border-box;
+            border-radius: 4px;
+          }
+          &__button {
+            position: absolute;
+            top: 2.85rem;
+            right: 0.5rem;
+            height: 1.5rem;
+            width: 1.5rem;
+            background-image: url("../icon/arrow_forward.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+          }
+        }
+
+        &.--height {
           line-height: 1.8em;
           margin-bottom: 1.05rem;
         }
       }
     }
   }
+  &__down{
+    display: flex;
+
+    background: #FFFFFF;
+    box-shadow: 0 1rem 2rem rgba(31, 32, 65, 0.05);
+    &__copyright{
+      font-family: Montserrat, sans-serif;
+      font-size: 1.1em;
+      font-style: normal;
+      font-weight: lighter;
+      letter-spacing: 0em;
+      word-wrap: break-word;
+      color: $dark_shade_75;
+
+      padding: 2rem 0 2rem 10.9rem;
+    }
+    &__links{
+      display: flex;
+      flex-direction: row;
+      position: absolute;
+      right: 11.5rem;
+      padding-top: 1.75rem;
+      &--twitter{
+       @include link-image("../icon/twitter.png");
+      }
+      &--instagram{
+        @include link-image("../icon/instagram.png");
+      }
+      &--facebook{
+        @include link-image("../icon/facebook.png");
+      }
+    }
+  }
 }
-//bottom__element__sub-element__body_
+
+

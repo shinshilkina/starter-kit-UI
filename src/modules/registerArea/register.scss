@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Quicksand&display=swap');
+@import "../../theme/colors/colors";
+
+@mixin input-area($text-color, $border-color) {
+  width: 91.5%;
+  height: 3.5rem;
+  padding: 1rem 1rem;
+  margin-bottom: 0.7rem;
+
+  background: #FFFFFF;
+  border: 1px solid $border-color;
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.1em;
+  line-height: 129%;
+  color: $text-color;
+}
+
+@mixin input-area-focus-hover(){
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  color: $dark_shade_75;
+  line-height: 171%;
+}
+
+@mixin radiobutton() {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.05em;
+  line-height: 171%;
+  letter-spacing: 0em;
+  color: $dark_shade_50;
+
+  input[name="rRadio"] {
+    display:none;
+  }
+  input[name="rRadio"] + label .rectangle {
+    display:inline-block;
+    position: relative;
+    width: 1.45rem;
+    height: 1.45rem;
+    margin-right: 0.5rem;
+    vertical-align:middle;
+    background-color: #FFFFFF;
+    border: 1px solid $dark_shade_25;
+    border-radius: 50%;
+    cursor:pointer;
+  }
+  input[name="rRadio"]:checked + label{
+    color: $dark_shade_75;
+  }
+  input[name="rRadio"]:checked + label .rectangle {
+    border-color: transparent;
+    background-image: $gradient;
+  }
+  input[name="rRadio"]:checked + label .rectangle .round{
+    position: absolute;
+    width:1.06rem;
+    height:1.06rem;
+    vertical-align:middle;
+    background-image: $gradient;
+    border: 3px solid #FFFFFF;
+    border-radius: 50%;
+  }
+}
+
+@mixin title-monserrat() {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 0.9em;
+  line-height: 1.9rem;
+  letter-spacing: 0.067em;
+  text-transform: uppercase;
+  color: $dark_shade;
+}
+.register-area{
+
+  width: 30.3rem;
+  height: 51.4rem;
+  margin: 3rem 10.6rem;
+
+  padding: 1.4rem 0 0 2.4rem;
+
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  &__title{
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.2em;
+    line-height: 2.6em;
+    color: $dark_shade;
+  }
+  &__first-name{
+    @include input-area($dark_shade_25, $dark_shade_25);
+  }
+  &__second-name{
+    @include input-area($dark_shade_25, $dark_shade_25);
+  }
+  &__gender{
+    display: flex;
+    margin-bottom: 1.5rem;
+    &__man{
+      @include radiobutton();
+      margin-right: 0.85rem;
+    }
+    &__woman{
+      @include radiobutton();
+    }
+  }
+
+  &__birthday{
+    margin-bottom: 0.5rem;
+    &__label{
+      @include title-monserrat();
+    }
+    &__date{
+      @include input-area($dark_shade_25, $dark_shade_25);
+    }
+  }
+  &__data-for-login{
+
+    &__title{
+      @include title-monserrat();
+    }
+    &__login{
+      @include input-area($dark_shade_25, $dark_shade_25);
+      margin-bottom: 0.9rem;
+    }
+    &__password{
+      @include input-area($dark_shade_25, $dark_shade_25);
+    }
+  }
+
+  &__special-offer{
+
+
+  }
+  &__button__go-to-payment{
+
+    &__arrow{
+
+    }
+  }
+  &__have-account{
+
+    &__label{
+
+    }
+    &__login{
+
+    }
+  }
+  &.reg-input:focus{
+    @include input-area-focus-hover();
+  }
+  &.reg-input:hover{
+    @include input-area-focus-hover();
+  }
+}

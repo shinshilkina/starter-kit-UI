@@ -20,12 +20,6 @@
   color: $text-color;
 }
 
-@mixin input-area-focus-hover(){
-  border: 1px solid rgba(31, 32, 65, 0.5);
-  color: $dark_shade_75;
-  line-height: 171%;
-}
-
 @mixin radiobutton() {
   font-family: Montserrat;
   font-style: normal;
@@ -41,8 +35,8 @@
   input[name="rRadio"] + label .rectangle {
     display:inline-block;
     position: relative;
-    width: 1.45rem;
-    height: 1.45rem;
+    width: 23px;//1.45rem;
+    height: 23px;//1.45rem;
     margin-right: 0.5rem;
     vertical-align:middle;
     background-color: #FFFFFF;
@@ -59,8 +53,8 @@
   }
   input[name="rRadio"]:checked + label .rectangle .round{
     position: absolute;
-    width:1.06rem;
-    height:1.06rem;
+    width: 17px; //1.06rem;
+    height: 17px; //1.06rem;
     vertical-align:middle;
     background-image: $gradient;
     border: 3px solid #FFFFFF;
@@ -68,7 +62,7 @@
   }
 }
 
-@mixin title-monserrat() {
+@mixin title-monserrat($text-color) {
   font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
@@ -76,13 +70,56 @@
   line-height: 1.9rem;
   letter-spacing: 0.067em;
   text-transform: uppercase;
-  color: $dark_shade;
+  color: $text-color;
 }
+
+@mixin toggle() {
+  &__check{
+    display: none;
+  }
+
+  &__fake-check {
+    cursor: pointer;
+    width: 3rem;
+    height: 1.5rem;
+    background: #FFFFFF;
+    border-radius: 1rem;
+    position: relative;
+    border: 1px solid $dark_shade_25;
+  }
+
+  &__fake-check:after {
+    content: '';
+    position: absolute;
+    top: 0.25rem;
+    left: 0.2rem;
+    width: 1rem;
+    height: 1rem;
+    background: $dark_shade_25;
+    border-radius: 0.9rem;
+    transition: 0.3s;
+  }
+
+
+  &__check:checked + &__fake-check {
+    border-color: $purple;
+  }
+
+  &__check:checked + &__fake-check:after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+    background-image: $gradient;
+  }
+
+  &__fake-check:active:after {
+    width: 1.2rem;
+  }
+}
+
 .register-area{
 
   width: 30.3rem;
   height: 51.4rem;
-  margin: 3rem 10.6rem;
 
   padding: 1.4rem 0 0 2.4rem;
 
@@ -120,7 +157,7 @@
   &__birthday{
     margin-bottom: 0.5rem;
     &__label{
-      @include title-monserrat();
+      @include title-monserrat($dark_shade);
     }
     &__date{
       @include input-area($dark_shade_25, $dark_shade_25);
@@ -129,7 +166,7 @@
   &__data-for-login{
 
     &__title{
-      @include title-monserrat();
+      @include title-monserrat($dark_shade);
     }
     &__login{
       @include input-area($dark_shade_25, $dark_shade_25);
@@ -141,28 +178,93 @@
   }
 
   &__special-offer{
+    display: flex;
+    @include toggle();
 
-
+    margin-bottom: 1.7rem;
+    &__label{
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.11em;
+      line-height: 171%;
+      margin-left: 0.9rem;
+    }
   }
   &__button__go-to-payment{
+    @include title-monserrat(#FFFFFF);
+    font-size: 0.865em;
+    letter-spacing: 0.1em;
+    text-align: center;
 
+    position: relative;
+    padding-top: 0.75rem;
+    width: 91.5%;
+    height: 2.8rem;
+    border-radius: 1.7rem 1.7rem;
+    background-image: $gradient;
     &__arrow{
-
+      position: absolute;
+      width: 1.5rem;
+      height: 1.5rem;
+      right: 1rem;
+      top: 1rem;
+      background-image: url("../icon/arrow_forward_white.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      align-self: center;
     }
   }
   &__have-account{
-
+    display: flex;
+    margin-top: 2.4rem;
     &__label{
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1em;
+      line-height: 129%;
+      letter-spacing: 0.06em;
 
+      display: flex;
+      align-items: center;
+      text-align: center;
+
+      color: #000000;
     }
     &__login{
+      @include title-monserrat(#FFFFFF);
+      font-size: 0.85em;
+      margin-left: 3rem;
+      border-radius: 1.7rem 1.7rem;
+      background-image: $gradient;
+      border:none;
+      height: 3.2rem;
 
+      padding: 0.1rem 0.15rem;
+      width: 7.5rem;
+      color: $purple;
+      &__text{
+        text-align: center;
+        height: 2.5rem;
+        width: 7.5rem;
+        //padding: 0.65rem 1.9rem;
+        padding-top: 0.65rem;
+        border-radius: inherit;
+        background-color: #FFFFFF;
+        background-image: none;
+      }
     }
   }
-  &.reg-input:focus{
-    @include input-area-focus-hover();
-  }
-  &.reg-input:hover{
-    @include input-area-focus-hover();
-  }
+
+}
+
+.reg-input:focus {
+  @include input-area($dark_shade_75, $dark_shade_50);
+  line-height: 171%;
+}
+.reg-input:hover {
+  @include input-area($dark_shade_75, $dark_shade_50);
+  line-height: 171%;
 }

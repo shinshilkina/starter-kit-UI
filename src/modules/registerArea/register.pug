@@ -5,7 +5,7 @@ div.register-area
     input.register-area__second-name(placeholder="Фамилия" class="reg-input")
     div.register-area__gender
         div.register-area__gender__man
-            input.register-area__gender__man__checkbox(type="radio" id="register-checkbox-man" name="rRadio" value="man")
+            input.register-area__gender__man__checkbox(type="radio" id="register-checkbox-man" name="rRadio" value="man" checked)
             label(for="register-checkbox-man").register-area__gender__man <span class="rectangle"><span class="round"></span></span> Мужчина
         div.register-area__gender__woman
             input.register-area__gender__woman__checkbox(type="radio" id="register-checkbox-woman" name="rRadio" value="woman")
@@ -19,10 +19,11 @@ div.register-area
         input.register-area__data-for-login__password(type="password" placeholder="Пароль" class="reg-input")
     div.register-area__special-offer
         input.register-area__special-offer__check( type="checkbox" id="register_special-offer")
+        label.register-area__special-offer__fake-check(for="register_special-offer")
         label.register-area__special-offer__label(for="register_special-offer")="Получать спецпредложения"
     div.register-area__button__go-to-payment(type="button")="перейти к оплате"
         div.register-area__button__go-to-payment__arrow
     div.register-area__have-account
         label.register-area__have-account__label="Уже есть аккаунт на Toxin"
         div.register-area__have-account__login(type="button")
-
+            div.register-area__have-account__login__text="Войти"

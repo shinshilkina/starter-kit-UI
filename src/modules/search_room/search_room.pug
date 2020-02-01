@@ -1,0 +1,20 @@
+div.search
+    div.search__title="Найдём номера под ваши пожелания"
+    div.search__dates
+        div.search__dates__arrival
+            label.search__dates__arrival__title(for="search-room-date-arrival")="Прибытие"
+            div.search__dates__arrival__date
+                input.search__dates__arrival__date__area(placeholder="ДД.ММ.ГГГГ" id="search-room-date-arrival")
+                div.search__dates__arrival__date__select
+        div.search__dates__exit
+            label.search__dates__exit__title(for="search-room-date-exit")="Выезд"
+            div.search__dates__exit__date
+                input.search__dates__exit__date__area(placeholder="ДД.ММ.ГГГГ" id="search-room-date-exit")
+                div.search__dates__exit__date__select
+    div.search__guest
+        label.search__guest__title(for="search-room-guest")="Гости"
+        div.search__guest__count
+            input.search__guest__count__area(placeholder="Сколько гостей" id="search-room-guest")
+            div.search__guest__count__select
+    div.search__button(type="button")="Подобрать номер"
+        div.search__button__arrow

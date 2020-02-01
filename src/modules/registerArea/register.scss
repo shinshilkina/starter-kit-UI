@@ -116,6 +116,64 @@
   }
 }
 
+@mixin button-register-login-onforms() {
+  @include title-monserrat(#FFFFFF);
+  font-size: 0.865em;
+  letter-spacing: 0.1em;
+  text-align: center;
+
+  position: relative;
+  padding-top: 0.75rem;
+  width: 91.5%;
+  height: 2.8rem;
+  border-radius: 1.7rem 1.7rem;
+  background-image: $gradient;
+  &__arrow{
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    right: 1rem;
+    top: 1rem;
+    background-image: url("../icon/arrow_forward_white.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    align-self: center;
+  }
+}
+
+@mixin button-register-login-bordered(){
+  @include title-monserrat(#FFFFFF);
+  font-size: 0.85em;
+  border-radius: 1.7rem 1.7rem;
+  background-image: $gradient;
+  border:none;
+  height: 3.2rem;
+
+  padding: 0.1rem 0.15rem;
+  width: 7.5rem;
+  color: $purple;
+  &__text{
+    text-align: center;
+    height: 2.55rem;
+    width: 7.5rem;
+    //padding: 0.65rem 1.9rem;
+    padding-top: 0.65rem;
+    border-radius: inherit;
+    background-color: #FFFFFF;
+    background-image: none;
+  }
+}
+
+@mixin title-of-forms() {
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.2em;
+  line-height: 2.6em;
+  color: $dark_shade;
+}
+
 .register-area{
 
   width: 30.3rem;
@@ -129,12 +187,7 @@
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   &__title{
-    font-family: Quicksand;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 2.2em;
-    line-height: 2.6em;
-    color: $dark_shade;
+    @include title-of-forms();
   }
   &__first-name{
     @include input-area($dark_shade_25, $dark_shade_25);
@@ -192,29 +245,7 @@
     }
   }
   &__button__go-to-payment{
-    @include title-monserrat(#FFFFFF);
-    font-size: 0.865em;
-    letter-spacing: 0.1em;
-    text-align: center;
-
-    position: relative;
-    padding-top: 0.75rem;
-    width: 91.5%;
-    height: 2.8rem;
-    border-radius: 1.7rem 1.7rem;
-    background-image: $gradient;
-    &__arrow{
-      position: absolute;
-      width: 1.5rem;
-      height: 1.5rem;
-      right: 1rem;
-      top: 1rem;
-      background-image: url("../icon/arrow_forward_white.png");
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
-      align-self: center;
-    }
+    @include button-register-login-onforms();
   }
   &__have-account{
     display: flex;
@@ -234,27 +265,8 @@
       color: #000000;
     }
     &__login{
-      @include title-monserrat(#FFFFFF);
-      font-size: 0.85em;
       margin-left: 3rem;
-      border-radius: 1.7rem 1.7rem;
-      background-image: $gradient;
-      border:none;
-      height: 3.2rem;
-
-      padding: 0.1rem 0.15rem;
-      width: 7.5rem;
-      color: $purple;
-      &__text{
-        text-align: center;
-        height: 2.5rem;
-        width: 7.5rem;
-        //padding: 0.65rem 1.9rem;
-        padding-top: 0.65rem;
-        border-radius: inherit;
-        background-color: #FFFFFF;
-        background-image: none;
-      }
+     @include button-register-login-bordered();
     }
   }
 

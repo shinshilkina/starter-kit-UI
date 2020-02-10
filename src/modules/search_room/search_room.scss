@@ -2,17 +2,18 @@
 @import "../../theme/colors/colors";
 @import "../../modules/registerArea/register";
 
-@mixin dropdown($width) {
+@mixin dropdown($color-text, $color-border, $width) {
   position: relative;
-
-  input {
-    @include input-area($dark_shade_25, $dark_shade_25);
+  display:flex;
+  flex-direction: row-reverse;
+  .dropdown-input {
+    @include input-area($color-text, $color-border);
     padding: 0 0 0.35rem 1.2rem;
-
+    margin-bottom: 0;
     width: $width;
   }
 
-  div {
+  .dropdown-select {
     position: absolute;
     width: 1rem;
     height: 1rem;
@@ -24,6 +25,32 @@
     background-position: center;
     align-self: center;
   }
+  .dropdown-select:hover, .dropdown-select:focus ~ .dropdown-input{
+    border-radius: 4px 4px 0px 0px;
+    border: 4px;
+  }
+
+  .dropdown-input:focus, .dropdown-input:hover {
+    @include input-area($dark_shade_75, $dark_shade_50);
+    line-height: 171%;
+    padding: 0 0 0.35rem 1.2rem;
+    width: $width;
+  }
+}
+
+@mixin dropdown-guests() {
+    @include title-monserrat($dark_shade);
+    list-style: none;
+    padding-left: 1.25rem;
+    margin: 0;
+    li{
+      padding: 0.55rem 0;
+      font-size: 0.865rem;
+      letter-spacing: 0.11em;
+    }
+    .count, .count-plus, .count-min{
+      float: right;
+    }
 }
 
 .search{
@@ -40,6 +67,7 @@
 
   &__title{
     @include title-of-forms();
+    font-family: Quicksand;
     line-height: 1.07em;
     letter-spacing: 0.025em;
   }
@@ -48,11 +76,12 @@
     display: flex;
     &__arrival{
       margin-right: 1.55rem;
+      width:12rem;
       &__title{
         @include title-monserrat($dark_shade);
       }
       &__date{
-        @include dropdown(12rem);
+        @include dropdown($dark_shade_25, $dark_shade_25, 12rem);
       }
     }
     &__exit{
@@ -61,7 +90,7 @@
         @include title-monserrat($dark_shade);
       }
       &__date{
-        @include dropdown(12rem);
+        @include dropdown($dark_shade_25, $dark_shade_25, 12rem);
       }
     }
   }
@@ -71,9 +100,12 @@
       @include title-monserrat($dark_shade);
     }
     &__count{
-      @include dropdown(25.5rem);
+      @include dropdown($dark_shade_25, $dark_shade_25, 25.5rem);
       div {
         right: 1.5rem;
+      }
+      &__dropdown{
+        @include dropdown-guests();
       }
     }
   }
@@ -83,3 +115,4 @@
     width: 25.5rem;
   }
 }
+

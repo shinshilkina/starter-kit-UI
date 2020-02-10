@@ -1,0 +1,22 @@
+div.dropdown-title="DROPDOWN"
+div.dropdown
+    input.dropdown__area(placeholder="Сколько гостей")
+    div.dropdown__select
+    ul.dropdown__items
+        li.dropdown__items__first(class="dropdown-item")="взрослые"
+            div.dropdown__items__first__button-minus(class="button-minus" type="button")="-"
+            div.dropdown__items__first__count(class="str-count")="0"
+            div.dropdown__items__first__button-plus(class="button-plus" type="button")="+"
+
+        li.dropdown__items__second(class="dropdown-item")="дети"
+            div.dropdown__items__second_button-minus(class="button-minus" type="button")="-"
+            div.dropdown__items__second__count(class="str-count")="0"
+            div.dropdown__items__second__button-plus(class="button-minus" type="button")="+"
+
+        li.dropdown__items__third(class="dropdown-item")="младенцы"
+            div.dropdown__items__third__button-minus(class="button-minus" type="button")="-"
+            div.dropdown__items__third__count(class="str-count")="0"
+            div.dropdown__items__third__button-plus(class="button-minus" type="button")="+"
+
+        div.dropdown__items__clear(type="button")="clear"
+        div.dropdown__items__save(type="button")="save"

@@ -2,7 +2,7 @@
 @import "../../theme/colors/colors";
 @import "../../modules/registerArea/register";
 
-.dropdown-title{
+.dropdown-title {
   margin-top: 3.4rem;
   margin-left: 1.5rem;
   @include title-monserrat($dark_shade);
@@ -11,12 +11,13 @@
 
   position: relative;
   margin-left: 1.6rem;
-  width: 25.4em;
+  max-width: 25.4em;
   &__area {
     @include input-area($dark_shade_75, $dark_shade_50);
     height: 3.4rem;
     width: 100%;
-    padding: 0 0 0.35rem 1.2rem;
+
+    padding: 1rem 0 0.35rem 1.1rem;
     margin-bottom: 0;
     border-radius: 4px 4px 0 0;
   }
@@ -33,25 +34,78 @@
     align-self: center;
   }
   &__items{
+    display: none;
+
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 0 0.5rem 0 1rem;
     background: #FFFFFF;
     border: 1px solid $dark_shade_50;
+    border-top: solid transparent;
     border-radius: 0 0 4px 4px;
     box-sizing: border-box;
     & .dropdown-item {
       display: flex;
+      justify-content: space-around;
+      align-items: stretch;
       @include title-monserrat($dark_shade);
-      font-size: 0.865em;
-      padding: 0.5rem 0.5rem 0.45rem 1.1rem;
+      font-size: 0.86em;
+      line-height: 2.3rem;
+      letter-spacing: 0.12em;
+      padding: 0.3rem 0 0.3rem 0;
+
+      & .item-title {
+        flex: 0 0 68%;
+        align-self: flex-start;
+      }
+      & .button-minus , & .button-plus , & .str-count {
+        flex: 0 0 9.5%;
+        text-align: center;
+      }
+      & .button-minus , & .button-plus {
+        width: 2rem;
+        height: 2.2rem;
+        font-size: 1.4em;
+        color: $dark_shade_50;
+        border: 1px solid $dark_shade_50;
+        border-radius: 50%;
+        align-self: flex-end;
+      }
+      & .button-minus{
+        color: $dark_shade_25;
+        border: 1px solid $dark_shade_25;
+      }
+      & .passive {
+        color: $dark_shade_25;
+        border: 1px solid $dark_shade_25;
+      }
+      & .active{
+        color: $dark_shade_50;
+        border: 1px solid $dark_shade_50;
+      }
     }
-    & .button-minus , .button-plus{
-      color: $dark_shade_50;
-      border: 1px solid rgba(31, 32, 65, 0.25);
-      box-sizing: border-box;
-      border-radius: 22px;
-      align-self: flex-end;
+
+    &__buttons{
+      display: flex;
+      @include title-monserrat($dark_shade);
+      font-size: 0.869em;
+      text-transform: uppercase;
+      margin: 1.15rem 0 0.6rem 0;
+      &__clear , &__save {
+        flex: 0 0 50%;
+      }
+      &__clear{
+        color: $dark_shade_50;
+      }
+      &__save{
+        text-align: right;
+        color: $purple;
+      }
     }
+
   }
+}
+
+.visible {
+  display: block;
 }

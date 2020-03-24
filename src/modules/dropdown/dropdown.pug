@@ -1,25 +1,17 @@
-div.dropdown-title="DROPDOWN"
-div.dropdown
-    div.dropdown__area="Сколько гостей"
-    div.dropdown__select
-    ul.dropdown__items
-        li.dropdown__items__first(class="dropdown-item ")
-            div.dropdown__items__first__title(class="item-title")="взрослые"
-            div.dropdown__items__first__button-minus(class="button-minus" type="button")="-"
-            div.dropdown__items__first__count(class="str-count")="0"
-            div.dropdown__items__first__button-plus(class="button-plus" type="button")="+"
+mixin dropdownGuests(...items)
+    div.dropdown-title="гости"
+    div.dropdown(class="guests")
+        div.dropdown__area="Сколько гостей"
+        div.dropdown__select
+        ul.dropdown__items
+            each item in items
+                li.dropdown__items__first(class="dropdown-item")
+                    div.dropdown__items__title(class="item-title")=item
+                    div.dropdown__items__button-minus(class="button-minus" type="button")="-"
+                    div.dropdown__items__count(class="str-count")="0"
+                    div.dropdown__items__button-plus(class="button-plus" type="button")="+"
+            div.dropdown__items__buttons
+                div.dropdown__items__buttons__clear(type="button")="очистить"
+                div.dropdown__items__buttons__save(type="button")="применить"
 
-        li.dropdown__items__second(class="dropdown-item")
-            div.dropdown__items__second__title(class="item-title")="дети"
-            div.dropdown__items__second__button-minus(class="button-minus" type="button")="-"
-            div.dropdown__items__second__count(class="str-count")="0"
-            div.dropdown__items__second__button-plus(class="button-plus" type="button")="+"
-
-        li.dropdown__items__third(class="dropdown-item")
-            div.dropdown__items__third__title(class="item-title")="младенцы"
-            div.dropdown__items__third__button-minus(class="button-minus" type="button")="-"
-            div.dropdown__items__third__count(class="str-count")="0"
-            div.dropdown__items__third__button-plus(class="button-plus" type="button")="+"
-        div.dropdown__items__buttons
-            div.dropdown__items__buttons__clear(type="button")="очистить"
-            div.dropdown__items__buttons__save(type="button")="применить"
++dropdownGuests("взрослые", "дети", "младенцы")

@@ -1,18 +1,26 @@
 "use strict";
 import './dropdown.scss';
-import $ from "jquery";
 
-function changeButtonMinus ( currentLine , valueStr , before , after ){
-    let changingButton = currentLine.querySelectorAll('.button-minus');
+function changeButtonMinus(currentLine, value) {
+    const changingButton = currentLine.querySelectorAll('.button-minus');
 
-    for (let button of changingButton) {
-        if (parseInt(valueStr.textContent ) === 0) {
-            if (button.classList.contains(before)){
-                button.classList.remove(before);
-            }
-            button.classList.add(after);
-        }
+    for (const button of changingButton) {
+        button.classList.add('active');
+        button.classList.add('passive');
+        button.classList.remove(value === 0 ? 'active': 'passive');
     }
+}
+
+function buttonClearState(currentLine) {
+    const clearButton = currentLine.parentElement.querySelector('.dropdown__items__buttons__clear');
+    const values = currentLine.parentElement.querySelectorAll('.str-count');
+    let countZero = 0;
+
+    for (const value of values) {
+        parseInt(value.textContent, 10) === 0 ? countZero++: null;
+    }
+    countZero === values.length ? clearButton.classList.remove('visible') :
+        clearButton.classList.add('visible');
 }
 
 function changeDropdownText(currentLine) {
@@ -21,7 +29,7 @@ function changeDropdownText(currentLine) {
 
     let sum = 0;
     for (let value of values) {
-        sum += parseInt(value.textContent);
+        sum += parseInt(value.textContent, 10);
     }
     if (sum === 0) {
         dropdownInput.textContent = 'Сколько гостей';
@@ -45,18 +53,21 @@ for (let button of buttons) {
     button.addEventListener('click', function(event) {
         const currentLine = button.parentElement;
         const valueStr = currentLine.querySelector('.str-count');
+        const value = parseInt(valueStr.textContent, 10);
+        let newValue = value;
 
         if (button.classList.contains('button-plus')) {
-            changeButtonMinus ( currentLine , valueStr , 'passive' , 'active' );
-            valueStr.textContent = parseInt(valueStr.textContent) + parseInt('1');
-        } else {
-            if (parseInt(valueStr.textContent )!= 0) {
-                valueStr.textContent = parseInt(valueStr.textContent) - parseInt('1');
-                changeButtonMinus ( currentLine , valueStr , 'active' , 'passive' );
-            }
+            newValue++;
+        } else if (value > 0) {
+            newValue--;
         }
+        changeButtonMinus(currentLine, newValue);
+
+        valueStr.textContent = newValue;
 
         changeDropdownText(currentLine);
+
+        buttonClearState(currentLine);
     });
 }
 
@@ -66,17 +77,18 @@ for (let button of ButtonsClearOrSave) {
             const dropdown = this.parentElement.parentElement;
             const values = this.parentElement.parentElement.querySelectorAll('.str-count');
             const dropdownInput = this.parentElement.parentElement.parentElement.querySelector('.dropdown__area');
-
+            const value = parseInt(values.textContent, 10);
             if (button.classList.contains('dropdown__items__buttons__clear')){
                 for (let value of values) {
                     value.textContent = "0";
                 }
                 dropdownInput.textContent = 'Сколько гостей';
-                changeButtonMinus ( dropdown , values[0] , 'active' , 'passive' );
+                changeButtonMinus ( dropdown , 0 );
             } else {
                 changeDropdownText(dropdown);
-                changeButtonMinus ( dropdown , values , 'active' , 'passive' );
+                dropdown.classList.toggle('visible');
             }
+            buttonClearState(dropdown);
         }
     );
 }

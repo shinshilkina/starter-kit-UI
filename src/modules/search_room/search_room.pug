@@ -12,22 +12,27 @@ div.search
                 input.search__dates__exit__date__area(class="date dropdown-input" placeholder="ДД.ММ.ГГГГ" pattern="[0-9]{2}.[0-9]{2}.[0-9]{4}" id="search-room-date-exit")
                 div.search__dates__exit__date__select(class="dropdown-select")
     div.search__guest
-        label.search__guest__title(for="search-room-guest")="Гости"
-        div.search__guest__count
-            input.search__guest__count__area(class="dropdown-input" placeholder="Сколько гостей" id="search-room-guest")
-            div.search__guest__count__select(class="dropdown-select")
-            ul.search__guest__count__dropdown
-                li.search__guest__count__dropdown__adult(id="count_adult")="Взрослые"
-                        div.search__guest__count__dropdown__button-minus(class="count-min" type="button")="-"
-                        label.search__guest__count__dropdown__count-adult(class="count" for="count_adult")="0"
-                        div.search__guest__count__dropdown__button-plus(class="count-plus" type="button")="+"
-                li.search__guest__count__dropdown__children(id="count_children")="дети"
-                        div.search__guest__count__dropdown__button-minus(class="count-min" type="button")="-"
-                        label.search__guest__count__dropdown__count-adult(class="count" for="count_children")="0"
-                        div.search__guest__count__dropdown__button-plus(class="count-plus" type="button")="+"
-                li.search__guest__count__dropdown__babies(id="count_babies")="младенцы"
-                        div.search__guest__count__dropdown__button-minus(class="count-min" type="button")="-"
-                        label.search__guest__count__dropdown__count-adult(class="count" for="count_babies")="0"
-                        div.search__guest__count__dropdown__button-plus(class="count-plus" type="button")="+"
+        +dropdownGuests("взрослые", "дети", "младенцы")
+
     div.search__button(type="button")="Подобрать номер"
         div.search__button__arrow
+
+
+//
+
+            div.search__guest__count
+                input.search__guest__count__area(class="dropdown-input" placeholder="Сколько гостей" id="search-room-guest")
+                div.search__guest__count__select(class="dropdown-select")
+                ul.search__guest__count__dropdown
+                    li.search__guest__count__dropdown__adult(id="count_adult")="Взрослые"
+                    div.search__guest__count__dropdown__button-minus(class="count-min" type="button")="-"
+                    label.search__guest__count__dropdown__count-adult(class="count" for="count_adult")="0"
+                    div.search__guest__count__dropdown__button-plus(class="count-plus" type="button")="+"
+                    li.search__guest__count__dropdown__children(id="count_children")="дети"
+                    div.search__guest__count__dropdown__button-minus(class="count-min" type="button")="-"
+                    label.search__guest__count__dropdown__count-adult(class="count" for="count_children")="0"
+                    div.search__guest__count__dropdown__button-plus(class="count-plus" type="button")="+"
+                    li.search__guest__count__dropdown__babies(id="count_babies")="младенцы"
+                    div.search__guest__count__dropdown__button-minus(class="count-min" type="button")="-"
+                    label.search__guest__count__dropdown__count-adult(class="count" for="count_babies")="0"
+                    div.search__guest__count__dropdown__button-plus(class="count-plus" type="button")="+"

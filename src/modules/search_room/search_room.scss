@@ -54,10 +54,9 @@
 }
 
 .search{
-
-  width: 30.3rem;
+  width: 30.2rem;
   height: 29.8rem;
-  padding: 3.2rem 2rem 0 2.35rem;
+  padding: 3.1rem 2.5rem 0 2.2rem;
 
   background: #FFFFFF;
   border: 1px solid rgba(0, 0, 0, 0.12);
@@ -67,9 +66,10 @@
 
   &__title{
     @include title-of-forms();
-    font-family: Quicksand;
-    line-height: 1.07em;
-    letter-spacing: 0.025em;
+    font-family: Quicksand, sans-serif;
+    line-height: 1.12em;
+    letter-spacing: -0.025em;
+    font-size: 2.15em;
   }
   &__dates{
     margin-top: 1.4rem;
@@ -95,7 +95,7 @@
     }
   }
   &__guest{
-    margin-top: 0.7rem;
+    margin-top: 1.35rem;
     &__title{
       @include title-monserrat($dark_shade);
     }
@@ -110,7 +110,7 @@
     }
   }
   &__button{
-    margin-top: 1.65rem;
+    margin-top: 2.5rem;
     @include button-register-login-onforms();
     width: 25.5rem;
   }

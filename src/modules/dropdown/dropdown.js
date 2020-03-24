@@ -96,8 +96,10 @@ for (let button of ButtonsClearOrSave) {
 for (let button of buttonsShowDropdown){
     button.addEventListener('click',
         function (event) {
-            let dropdownBody = button.parentElement.querySelector('.dropdown__items');
+            const dropdownBody = button.parentElement.querySelector('.dropdown__items');
             dropdownBody.classList.toggle('visible');
+            const dropdownArea = dropdownBody.parentElement.querySelector('.dropdown__area');
+            dropdownArea.classList.toggle('dark');
         }
     );
 }

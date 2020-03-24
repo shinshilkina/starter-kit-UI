@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Quicksand&display=swap');
+
+@mixin title-monserrat($text-color, $font-size) {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: $font-size;
+  line-height: 1.55rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: $text-color;
+}
+
+@mixin title-of-forms() {
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.2em;
+  line-height: 2.6em;
+  color: $dark_shade;
+}
+
+
+@mixin input-area($text-color, $border-color) {
+  width: 91.5%;
+  height: 2.7rem;
+
+  background: #FFFFFF;
+  border: 1px solid $border-color;
+  box-sizing: border-box;
+  border-radius: 4px;
+
+
+
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.87em;
+  letter-spacing: -0.01em;
+  line-height: 129%;
+  color: $text-color;
+}
+
+
+@mixin dropdown($color-text, $color-border, $width) {
+  position: relative;
+  display:flex;
+  flex-direction: row-reverse;
+  .dropdown-input {
+    @include input-area($color-text, $color-border);
+    padding: 0 0 0.3rem 0.8rem;
+    margin-bottom: 0;
+    width: $width;
+  }
+
+  .dropdown-select {
+    position: absolute;
+    width: 0.82rem;
+    height: 0.82rem;
+    right: 1rem;
+    top: 0.85rem;
+    background-image: url("../icon/expand_more.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    align-self: center;
+  }
+  .dropdown-select:hover, .dropdown-select:focus ~ .dropdown-input{
+    border-radius: 4px 4px 0px 0px;
+    border: 4px;
+  }
+
+  .dropdown-input:focus, .dropdown-input:hover {
+    @include input-area($dark_shade_75, $dark_shade_50);
+    line-height: 171%;
+    padding: 0 0 0.35rem 1.2rem;
+    width: $width;
+  }
+}
+
+
+@mixin button-register-login-onforms($font-size, $height) {
+  @include title-monserrat(#FFFFFF);
+  font-size: $font-size;
+  letter-spacing: 0.115em;
+  text-align: center;
+
+  position: relative;
+  padding-top: 0.7rem;
+  height: $height;
+  border-radius: 1.7rem 1.7rem;
+  background-image: $gradient;
+  &__arrow{
+    position: absolute;
+    width: 1.1rem;
+    height: 1.1rem;
+    right: 0.87rem;
+    top: 0.9rem;
+    background-image: url("../icon/arrow_forward_white.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    align-self: center;
+  }
+}

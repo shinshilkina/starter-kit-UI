@@ -1,7 +1,6 @@
 {
   "name": "starter-kit-UI",
   "version": "1.0.0",
-  "description": "",
   "engines": {
     "node": ">=7.0.0"
   },
@@ -38,9 +37,20 @@
     "expose-loader": "^0.7.5",
     "http-server": "^0.12.1",
     "jquery": "^3.4.1",
+    "jquery-mask-plugin": "^1.14.16",
     "jquery-plugin": "0.0.0-ignored",
     "style-loader": "^1.1.2",
     "webpack-config": "^7.5.0",
     "webpack-dev-server": "^3.10.1"
-  }
+  },
+  "main": "test.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shinshilkina/starter-kit-UI.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shinshilkina/starter-kit-UI/issues"
+  },
+  "homepage": "https://github.com/shinshilkina/starter-kit-UI#readme",
+  "description": ""
 }

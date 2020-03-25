@@ -1,0 +1,15 @@
+mixin checkbox-list($class, $title, ...items)
+    div.checkbox-list(class=$class)
+        div.checkbox-list_title=$title
+            div.checkbox-list_select(type='button')
+        div.checkbox-list_items(class='invisible')
+            each item in items
+                label.checkbox-list_items_item
+                    input.checkbox-list_items_checkbox(type='checkbox')
+                    div.checkbox-list_items_fake
+                        div.checkbox-list_items_fake_checkbox
+                    =item
+
++checkbox-list('expandable', 'expandable checkbox list', 'Завтрак',
+    'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор',
+    'Шампунь', 'Телевизор', 'Шампунь')

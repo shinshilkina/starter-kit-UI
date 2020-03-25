@@ -2,7 +2,6 @@
 
 .checkbox-list {
   width: 266px;
-  height: 277px;
 
   &_title {
     height: 44px;
@@ -25,14 +24,20 @@
     @include button-select(url('../icon/expand_more.png'));
     right: 0.8rem;
     top: 1rem;
-    transition-duration: 0.8s;
+    transition-duration: 0.3s;
   }
   & .rotate {
     transform: rotate(180deg);
   }
 
   &_items {
+    position: absolute;
     margin-top: 0.2rem;
+
+    background-color: #FFFFFF;
+    z-index: 2;
+    width: inherit;
+
       &_item {
         display: flex;
         font-family: Montserrat, sans-serif;

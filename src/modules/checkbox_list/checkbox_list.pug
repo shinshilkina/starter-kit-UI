@@ -1,6 +1,6 @@
 mixin checkbox-list($class, $title, ...items)
     div.checkbox-list(class=$class)
-        div.checkbox-list_title=$title
+        div.checkbox-list_title(type='button')=$title
             div.checkbox-list_select(type='button')
         div.checkbox-list_items(class='invisible')
             each item in items
@@ -10,6 +10,9 @@ mixin checkbox-list($class, $title, ...items)
                         div.checkbox-list_items_fake_checkbox
                     =item
 
++checkbox-list('expandable', 'expandable checkbox list', 'Завтрак',
+    'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор',
+    'Шампунь', 'Телевизор', 'Шампунь')
 +checkbox-list('expandable', 'expandable checkbox list', 'Завтрак',
     'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор',
     'Шампунь', 'Телевизор', 'Шампунь')

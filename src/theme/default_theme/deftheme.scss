@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Quicksand&display=swap');
+@import "../../theme/colors/colors";
 
 @mixin title-monserrat($text-color, $font-size) {
   font-family: Montserrat;
@@ -54,16 +55,7 @@
   }
 
   .dropdown-select {
-    position: absolute;
-    width: 0.82rem;
-    height: 0.82rem;
-    right: 1rem;
-    top: 0.85rem;
-    background-image: url("../icon/expand_more.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    align-self: center;
+    @include button-select(url("../../modules/icon/expand_more.png"));
   }
   .dropdown-select:hover, .dropdown-select:focus ~ .dropdown-input{
     border-radius: 4px 4px 0px 0px;
@@ -78,6 +70,18 @@
   }
 }
 
+@mixin button-select($url) {
+  position: absolute;
+  width: 0.82rem;
+  height: 0.82rem;
+  right: 1rem;
+  top: 0.85rem;
+  background-image: $url ;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  align-self: center;
+}
 
 @mixin button-register-login-onforms($font-size, $height) {
   @include title-monserrat(#FFFFFF);

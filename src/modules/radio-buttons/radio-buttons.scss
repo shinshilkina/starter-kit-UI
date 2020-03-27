@@ -1,0 +1,46 @@
+@import "../../theme/default_theme/deftheme";
+
+.radio {
+
+  &_title {
+    @include title-checkboxs();
+  }
+  &_buttons {
+    display: flex;
+    &_item {
+      display: flex;
+      margin-right: 1.3rem;
+
+      font-family: Montserrat, sans-serif;
+      font-size: 0.869em;
+      letter-spacing: 0.02em;
+
+      color: $dark_shade_75;
+    }
+    &_radio {
+      display: none;
+    }
+    &_fake-radio {
+      content: '';
+      width: 1.1rem;
+      height: 1.1rem;
+
+
+      margin-right: 0.6rem;
+
+      border: 1px solid $purple;
+      border-radius: 50%;
+    }
+    &_radio:checked ~ &_fake-radio::after {
+      content: '';
+      display: block;
+
+      width: 0.73rem;
+      height: 0.74rem;
+      margin: 0.19rem 0.18rem;
+
+      background-color: $purple;
+      border-radius: 50%;
+    }
+  }
+}

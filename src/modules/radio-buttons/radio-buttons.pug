@@ -1,0 +1,10 @@
+mixin radio-buttons($title, $nameRadio, ...items)
+    label.radio_title=$title
+    div.radio_buttons
+        each item in items
+            label.radio_buttons_item
+                input(type='radio' name=$nameRadio checked).radio_buttons_radio
+                div.radio_buttons_fake-radio
+                =item
+
++radio-buttons('radio buttons', 'gender', 'Мужчина', 'Женщина')

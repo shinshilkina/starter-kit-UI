@@ -1,0 +1,13 @@
+include rich_checkbox_data
+
+div.rich-checkbox
+    div.rich-checkbox_title='Rich Checkbox Buttons'
+    each row in locals.rows
+        label.rich-checkbox_element
+            input.rich-checkbox_element_checkbox(type='checkbox')
+            div.rich-checkbox_element_fake
+                div.rich-checkbox_element_fake_checkbox
+            =row.title
+        div.rich-checkbox_subscription=row.subscription
+
+//'Доступность'

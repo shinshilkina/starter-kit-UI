@@ -1,0 +1,7 @@
+mixin text-field($title, $placeholder ,$value)
+    div.text-field
+        label.text-field_title=$title
+        input.text-field_input(placeholder=$placeholder value=$value)
+
+
++text-field('text field', 'Email')

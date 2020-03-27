@@ -1,0 +1,40 @@
+@import "../../theme/default_theme/deftheme";
+
+.text-field {
+  display: flex;
+  flex-direction: column;
+
+  width: 320px;
+
+  &_title {
+    @include title-checkboxs();
+    height: 1.45rem;
+  }
+  &_input {
+    height: 2.75rem;
+    padding-left: 0.9rem;
+
+    font-family: Montserrat, sans-serif;
+    font-size: 0.8em;
+
+    color: $dark_shade_25;
+    background: #FFFFFF;
+
+    border: 1px solid $dark_shade_25;
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+  &_input:hover, &_input:focus {
+    padding-bottom: 0.1rem;
+    letter-spacing: 0.035em;
+
+    color: $dark_shade_75;
+    border-color: $dark_shade_50;
+  }
+  &_input::placeholder {
+    color: $dark_shade_25;
+  }
+  &_input:hover::placeholder {
+    color: $dark_shade_75;
+  }
+}

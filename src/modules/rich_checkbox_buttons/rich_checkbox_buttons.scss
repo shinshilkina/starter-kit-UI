@@ -11,24 +11,21 @@
   &_element {
     display: flex;
     @include checkbox();
+    font-family: Montserrat, sans-serif;
 
-    &_fake {
-      font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 0.86em;
+    line-height: 150%;
+    letter-spacing: 0.035em;
 
-      font-style: normal;
-      font-weight: bold;
-      font-size: 0.86em;
-      line-height: 150%;
-      letter-spacing: 0.04em;
+    color: $dark_shade_75;
 
-      color: $dark_shade_75;
-
-      margin-bottom: auto;
-      //margin-bottom: 0.55rem;
-    }
+    margin: 0.25rem 0;
   }
   &_subscription {
     margin-left: 11.5%;
+    margin-bottom: 0.55rem;
 
     width: 85%;
     font-family: Montserrat, sans-serif;
@@ -36,7 +33,7 @@
     font-weight: lighter;
     font-size: 0.77em;
     letter-spacing: -0.015em;
-    line-height: 128%;
+    line-height: 120%;
 
     white-space:pre-wrap;
 

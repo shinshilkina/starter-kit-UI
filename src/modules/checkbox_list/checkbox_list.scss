@@ -4,21 +4,7 @@
   width: 266px;
 
   &_title {
-    height: 44px;
-    position: relative;
-
-    font-family: Montserrat, sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
-    letter-spacing: 0.024em;
-
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-
-    color: #1F2041;
+  @include title-checkboxs();
   }
   &_select {
     @include button-select(url('../icon/expand_more.png'));
@@ -38,56 +24,21 @@
     z-index: 2;
     width: inherit;
 
-      &_item {
-        display: flex;
-        font-family: Montserrat, sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 129%;
+    &_item {
+      display: flex;
+      font-family: Montserrat, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 129%;
 
-        color: $dark_shade_50;
-        margin-bottom: 0.66rem;
+      color: $dark_shade_50;
+      margin-bottom: 0.66rem;
 
-        align-items: center;
-      }
-      &_checkbox {
-        display: none;
-      }
-      &_fake {
-        width: 1.1rem;
-        height: 1.1rem;
-        border: 1px solid $dark_shade_25;
-        border-radius: 4px;
-
-        margin-right: 0.7rem;
-        &_checkbox {
-          width: 1.1rem;
-          height: 1.1rem;
-
-          background-color: #FFFFFF;
-          /* Dark 25% */
-          z-index: 2;
-          border-radius: 4px;
-        }
-      }
-    &_checkbox:checked ~ &_fake {
-      border-color: $purple;
+      align-items: center;
     }
-      &_checkbox:checked ~ &_fake > &_fake_checkbox {
-        content: '';
-        background-image: $gradient;
-        clip-path: polygon(
-                        26% 46%,
 
-                        32% 39%,
-                        48% 54%,
-                        69% 31%,
-
-                        76% 37%,
-                        48% 68%);
-      }
-
+    @include checkbox();
   }
   & .invisible {
     display: none;

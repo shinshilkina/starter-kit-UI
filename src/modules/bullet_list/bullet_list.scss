@@ -1,0 +1,39 @@
+@import "../../theme/default_theme/deftheme";
+
+.bullet-list {
+  width: 292px;
+  &_title {
+    @include title-checkboxs();
+    height: 1rem;
+    margin-bottom: 0.75rem;
+  }
+  &_elements {
+    margin: 0;
+    padding: 0 2rem 0 0;
+  }
+  &_element {
+    list-style: none;
+    display: flex;
+    margin-bottom: 0.62rem;
+
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.88em;
+    line-height: 171%;
+
+    white-space: pre-wrap;
+
+    color: $dark_shade_75;
+  }
+
+  &_marker::before {
+    content: '';
+    background-color: $dark_shade_25;
+    width: 0.65rem;
+    height: 0.65rem;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 0.65rem;
+  }
+}

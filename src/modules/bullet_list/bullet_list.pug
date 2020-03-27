@@ -1,0 +1,12 @@
+mixin bullet-list($title, ...items)
+    div.bullet-list
+        div.bullet-list_title=$title
+        ul.bullet-list_elements
+            each item in items
+                li.bullet-list_element
+                    div.bullet-list_marker
+                    =item
+
+
++bullet-list('bullet list', 'Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00')
+

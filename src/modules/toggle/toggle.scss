@@ -1,0 +1,64 @@
+@import "../../theme/default_theme/deftheme";
+
+.toggle {
+
+  &_title {
+    @include title-checkboxs();
+    letter-spacing: 0.015em;
+    height: 2.8rem;
+  }
+  &_body {
+
+    &_content {
+      display: flex;
+
+      font-family: Montserrat, sans-serif;
+      font-size: 0.869em;
+      letter-spacing: 0.009em;
+
+      color: $dark_shade_75;
+    }
+    &_input {
+      display: none;
+    }
+    &_fake-toggle {
+      width: 2.35rem;
+      height: 1.15rem;
+      position: relative;
+
+      margin-right: 0.6rem;
+
+      border: 1px solid $dark_shade_25;
+      border-radius: 1rem;
+    }
+    &_fake-toggle::after {
+      content: '';
+      display: block;
+      position: absolute;
+
+      width: 0.75rem;
+      height: 0.75rem;
+      left: 0.2rem;
+      top: 0.2rem;
+
+      background-color: $dark_shade_25;
+      border-radius: 50%;
+      animation: 1s moveLeft forwards;
+    }
+
+    &_input:checked ~ &_fake-toggle {
+      border-color: $purple;
+    }
+    &_input:checked ~ &_fake-toggle::after {
+      background-image: $gradient;
+
+      animation: 1s moveRight forwards;
+    }
+    @keyframes moveRight {
+      to {
+        transform: translateX(1.2rem);
+
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@import "../../theme/default_theme/deftheme";
+
+.noUi {
+  &-horizontal {
+    width: 266px;
+    height: 6px !important;
+  }
+
+  &-handle {
+    width: 0.7rem !important;
+    height: 0.7rem !important;
+    right: -0.5rem !important;
+
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  &-touch-area {
+    width: 12px !important;
+    height: 12px !important;
+    /* Secondary Gradient */
+
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    border: 2px solid #FFFFFF;
+    border-radius: 10px;
+  }
+
+  &-touch-area:before, &-touch-area:after {
+
+  }
+}

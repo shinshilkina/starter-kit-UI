@@ -41,7 +41,8 @@
     "jquery-plugin": "0.0.0-ignored",
     "style-loader": "^1.1.2",
     "webpack-config": "^7.5.0",
-    "webpack-dev-server": "^3.10.1"
+    "webpack-dev-server": "^3.10.1",
+    "inputmask": "latest"
   },
   "main": "test.js",
   "repository": {

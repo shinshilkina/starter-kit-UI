@@ -1,0 +1,88 @@
+@import "../../theme/default_theme/deftheme";
+
+.like-button {
+  &_title {
+    @include title-checkboxs();
+  }
+  &_area {
+
+    &_body {
+      border: 1px solid $dark_shade_25;
+      border-radius: 1rem;
+
+      width: 2.4rem;
+
+      & .count {
+        display: flex;
+
+        font-family: Montserrat, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 0.6em;
+        line-height: 1.8em;
+
+        text-align: center;
+
+        color: rgba(31, 32, 65, 0.25);
+      }
+      &_checkbox {
+        display: none;
+      }
+      & .hurt {
+        width: 0.7rem;
+        height: 0.7rem;
+        margin: 0.3rem 0.35rem 0 0.2rem;
+
+
+        background-image: url("../icon/favorite_border.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+
+  }
+}
+
+.like-button_area-checked {
+  width: 2.5rem;
+  height: 1.25rem;
+  position: relative;
+
+  background-image: $gradient;
+  border-radius: 1rem;
+
+  &_body {
+    width: 2.4rem;
+    height: 1.1rem;
+    position: absolute;
+    top: 0.05rem;
+    left: 0.05rem;
+
+    border-radius: inherit;
+    background-color: #FFFFFF;
+    & .count {
+      display: flex;
+
+      font-family: Montserrat, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 0.6em;
+      line-height: 1.8em;
+
+      text-align: center;
+
+      color: $purple;
+    }
+
+    & .hurt {
+      width: 0.7rem;
+      height: 0.7rem;
+      margin: 0.3rem 0.35rem 0 0.2rem;
+
+      background-image: url("../icon/favorite.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+}

@@ -1,12 +1,13 @@
 mixin rate-button($countStars)
     div.rate-button
-        each i in [5, 4, 3, 2, 1]
-            if(i === $countStars)
-                input(type="radio" id=("star"+i) name="rate" value=i checked)
-                label(for=("star"+i) title=i)
-            else
-                input(type="radio" id=("star" + i) name="rate" value=i)
-                label(for=("star" + i) title=i)
+        div.rate-button_area
+            each i in [1, 2, 3, 4, 5]
+                if(i === $countStars)
+                    input(type="radio" id=("star"+i) name="rate" value=i checked)
+                    label(for=("star"+i) title=i)
+                else
+                    input(type="radio" id=("star" + i) name="rate" value=i)
+                    label(for=("star" + i) title=i)
 
 
 label.rate-button_title='rate button'

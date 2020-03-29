@@ -1,18 +1,21 @@
 @import "../../theme/default_theme/deftheme";
-
 .rate-button {
-  float: left;
-  height: 46px;
-  margin: 0.2rem 0 0 0.2rem;
+height: 1.5rem;
   &_title {
     @include title-checkboxs();
   }
 }
-.rate-button:not(:checked) > input {
+
+.rate-button_area {
+  float: left;
+  height: 1em;
+  margin: 0.2rem 0 0 0.2rem;
+}
+.rate-button_area:not(:checked) > input {
   position:absolute;
   top:-9999px;
 }
-.rate-button:not(:checked) > label {
+.rate-button_area:not(:checked) > label {
   float: right;
   width: 0.7em;
   margin-right: 0.31rem;
@@ -27,10 +30,10 @@
   background-repeat: no-repeat;
   background-size: contain;
 }
-.rate-button:not(:checked) > label:before {
+.rate-button_area:not(:checked) > label:before {
   content: '★ ';
 }
-.rate-button > input:checked ~ label {
+.rate-button_area > input:checked ~ label {
   color: transparent;
   background-image: url("../icon/star.svg");
   background-repeat: no-repeat;

@@ -1,0 +1,6 @@
+mixin masked-text-field($title, $placeholder ,$value)
+    div.masked-text-field
+        label.masked-text-field_title=$title
+        input.masked-text-field_input(placeholder=$placeholder value=$value)
+
++masked-text-field('masked text field', 'ДД.ММ.ГГГГ')

@@ -1,0 +1,11 @@
+@import "../../theme/default_theme/deftheme";
+
+.masked-text-field {
+  width: 320px;
+  @include text-field();
+  &_input {
+    width: 100%;
+    font-size: 0.87em !important;
+  }
+}
+

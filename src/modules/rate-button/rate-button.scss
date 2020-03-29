@@ -1,0 +1,39 @@
+@import "../../theme/default_theme/deftheme";
+
+.rate-button {
+  float: left;
+  height: 46px;
+  margin: 0.2rem 0 0 0.2rem;
+  &_title {
+    @include title-checkboxs();
+  }
+}
+.rate-button:not(:checked) > input {
+  position:absolute;
+  top:-9999px;
+}
+.rate-button:not(:checked) > label {
+  float: right;
+  width: 0.7em;
+  margin-right: 0.31rem;
+
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 1.7em;
+
+  color: transparent;
+  background-image: url("../icon/star_border.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.rate-button:not(:checked) > label:before {
+  content: '★ ';
+}
+.rate-button > input:checked ~ label {
+  color: transparent;
+  background-image: url("../icon/star.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+

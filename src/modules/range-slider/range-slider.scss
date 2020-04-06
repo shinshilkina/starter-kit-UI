@@ -17,8 +17,8 @@
   }
 
   &-touch-area {
-    width: 12px !important;
-    height: 12px !important;
+    width: 1rem !important;
+    height: 1rem !important;
     /* Secondary Gradient */
 
     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
@@ -26,7 +26,28 @@
     border-radius: 10px;
   }
 
-  &-touch-area:before, &-touch-area:after {
+  &-handle:before, &-handle:after {
+    content: none !important;
+  }
+}
 
+.range-slider {
+  width: 266px;
+  &_title {
+    @include title-checkboxs();
+    margin-bottom: 0.5rem;
+  }
+  &_value {
+    display: flex;
+    width: 64.3%;
+    justify-content: flex-end;
+
+    &_start, &_perm, &_end {
+      font-weight: normal;
+      font-size: 1.06em;
+      color: $dark_shade_50;
+      letter-spacing: 0em;
+      white-space: pre-wrap;
+    }
   }
 }

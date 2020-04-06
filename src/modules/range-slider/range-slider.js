@@ -6,11 +6,35 @@ import 'nouislider/distribute/nouislider.css';
 var slider = document.getElementById('slider');
 
 noUiSlider.create(slider, {
-    start: [20, 80],
+    start: [5000, 10000],
     connect: true,
     range: {
-        'min': 0,
-        'max': 100
+        'min': 500,
+        'max': 16000
     }
 });
 
+//noUi-handle noUi-handle-lower
+//noUi-handle noUi-handle-upper
+
+const handleLower = document.querySelector('.noUi-handle-lower');
+const handleUpper = document.querySelector('.noUi-handle-upper');
+
+
+slider.noUiSlider.on('update.one', function () {
+    const titleStart = document.querySelector('.range-slider_value_start');
+    const titleEnd = document.querySelector('.range-slider_value_end');
+    changeValueSlider(handleUpper, titleEnd);
+    changeValueSlider(handleLower, titleStart);
+
+});
+
+function changeValueSlider(handle, title) {
+    const valueStart = handle.getAttribute('aria-valuetext');
+    const value = formatNumber(Math.round(parseInt(valueStart, 10)));
+    title.textContent = value + '₽';
+}
+
+function formatNumber(n) {
+    return (n + "").split("").reverse().join("").replace(/(\d{3})/g, "$1 ").split("").reverse().join("").replace(/^ /, "");
+}

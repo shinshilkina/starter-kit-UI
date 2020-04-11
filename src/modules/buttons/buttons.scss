@@ -1,0 +1,95 @@
+@import "../../theme/default_theme/deftheme";
+
+.buttons {
+
+  &_title {
+    @include title-checkboxs();
+    margin-top: 1.9rem;
+  }
+  &_active {
+    width: 6.2rem;
+    height: 2.8rem;
+    padding-top: 0.1rem;
+
+    background: $gradient;
+    border-radius: 1.4rem;
+
+    @include title-checkboxs();
+    color: #FFFFFF;
+    justify-content: center;
+    vertical-align: baseline;
+    letter-spacing: 0.03em;
+  }
+  &_active:hover {
+    opacity: 0.5;
+  }
+  &_bordered {
+    width: 6.2rem;
+    height: 2.8rem;
+    padding-top: 0.1rem;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    background: $gradient;
+    border-radius: 1.4rem;
+    &_body {
+      width: 5.9rem;
+      height: 2.65rem !important;
+
+      background: #FFFFFF;
+      @include title-checkboxs();
+      color: $purple;
+      justify-content: center;
+      vertical-align: baseline;
+      letter-spacing: 0.03em;
+
+      border-radius: 1.4rem;
+    }
+  }
+  &_bordered:hover {
+    opacity: 0.5;
+  }
+
+  &_icon-link {
+    display: flex;
+    margin-top: 1rem;
+    &_purple {
+      @include title-checkboxs();
+      color: $purple;
+      letter-spacing: 0.04em;
+    }
+    &_dark {
+      @include title-checkboxs();
+      color: $dark_shade_50;
+      letter-spacing: 0.04em;
+    }
+  }
+
+  &_go-to {
+    @include title-checkboxs();
+    color: #FFFFFF;
+    text-align: center;
+    justify-content: center;
+
+    position: relative;
+
+    width: 20rem;
+    height: 2.8rem;
+    border-radius: 1.7rem 1.7rem;
+    background-image: $gradient;
+    &_icon{
+      position: absolute;
+      width: 1.15rem;
+      height: 1.15rem;
+      right: 0.8rem;
+      top: 0.8rem;
+      background-image: url("../icon/arrow_forward_white.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      align-self: center;
+    }
+  }
+}

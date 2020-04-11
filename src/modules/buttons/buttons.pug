@@ -1,0 +1,26 @@
+mixin button-active($text)
+    div.buttons_active=$text
+
+mixin button-bordered($text)
+    div.buttons_bordered
+        div.buttons_bordered_body=$text
+
+mixin icon-link-purple($text)
+    div.buttons_icon-link_purple=$text
+
+mixin icon-link-dark($text)
+    div.buttons_icon-link_dark=$text
+
+mixin button-go-topay($text)
+    div.buttons_go-to=$text
+        div.buttons_go-to_icon
+
+
+div.buttons_title='buttons'
++button-active('click me')
++button-bordered('click me')
+div.buttons_icon-link
+    +icon-link-purple('click me')
+    +icon-link-dark('click me')
+
++button-go-topay('Перейти к оплате')

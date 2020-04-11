@@ -1,0 +1,26 @@
+@import "../../theme/default_theme/deftheme";
+
+.filter-date-dropdown {
+  width: 17rem;
+  @include text-field();
+  position: relative;
+  &_input {
+    width: 16.7rem;
+
+    font-size: 0.86em !important;
+    color: $dark_shade_75 !important;
+
+    &_choose {
+      position: absolute;
+      width: 0.8rem;
+      height: 0.8rem;
+      right: 1.3rem;
+      top: 2.45rem;
+      background-image: url("../icon/expand_more.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      align-self: center;
+    }
+  }
+}

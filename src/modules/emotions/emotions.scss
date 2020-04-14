@@ -1,0 +1,49 @@
+@import "../../theme/default_theme/deftheme";
+
+.emotion {
+  display: flex;
+
+  width: 17.45rem;
+  height: 4.2rem;
+
+  padding-top: 1.25rem;
+
+  border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+  &_image {
+    width: 2.3rem;
+    height: 2.3rem;
+    margin: 0.25rem 0 0 0.2rem;
+
+    font-style: normal;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  & .comfort {
+    background-image: url("../icon/insert_emoticon.svg");
+  }
+  & .convenience {
+    background-image: url("../icon/location_city.svg");
+  }
+  &_body {
+    padding-left: 1rem;
+
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 0.85em;
+    line-height: 170%;
+    letter-spacing: 0.07em;
+
+    color: $dark_shade_75;
+
+    &_sub {
+      font-weight: normal;
+      letter-spacing: 0.02em;
+    }
+  }
+}

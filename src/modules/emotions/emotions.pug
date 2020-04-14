@@ -1,0 +1,17 @@
+mixin emotion-comfort($title, $sub)
+    div.emotion
+        div.emotion_image(class='comfort')
+        div.emotion_body
+            div.emotion_body_title=$title
+            div.emotion_body_sub=$sub
+
+mixin emotion-convenience($title, $sub)
+    div.emotion
+        div.emotion_image(class='convenience')
+        div.emotion_body
+            div.emotion_body_title=$title
+            div.emotion_body_sub=$sub
+
+
++emotion-comfort('Комфорт', 'Шумопоглащающие стены')
++emotion-convenience('Удобство', 'Окно в каждой из спален')

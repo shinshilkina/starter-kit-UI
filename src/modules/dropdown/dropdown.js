@@ -24,16 +24,15 @@ function buttonClearState(currentLine) {
 }
 
 function changeDropdownText(currentLine) {
-    const values = document.querySelectorAll('.str-count');
+    const areaDropdown = currentLine.parentElement;
+    const values = areaDropdown.querySelectorAll('.str-count');
     const dropdownInput = currentLine.parentElement.parentElement.querySelector('.dropdown__area');
 
     let sum = 0;
     for (let value of values) {
         sum += parseInt(value.textContent, 10);
     }
-    if (sum === 0) {
-        dropdownInput.textContent = 'Сколько гостей';
-    } else {
+    if (sum !== 0 && dropdownInput.parentElement.classList.contains('guests')) {
         if (sum === 1){
             dropdownInput.textContent = sum + ' гость';
         }else if (sum < 5){
@@ -42,12 +41,26 @@ function changeDropdownText(currentLine) {
         else {
             dropdownInput.textContent = sum + ' гостей';
         }
+    } else if (sum !== 0 && dropdownInput.parentElement.classList.contains('furniture')) {
+        dropdownInput.textContent = '';
+        for (let value of values) {
+            const count = parseInt(value.textContent, 10);
+            if (count !== 0) {
+                const furniture = value.parentElement.querySelector('.dropdown__items__title').textContent;
+                dropdownInput.textContent += count + ' ' + furniture + ', ';
+            }
+        }
+        dropdownInput.textContent = dropdownInput.textContent.slice(0, dropdownInput.textContent.length - 2);
+    } else if (sum === 0 && dropdownInput.parentElement.classList.contains('guests')) {
+        dropdownInput.textContent = 'Сколько гостей';
+    } else if (sum === 0 && dropdownInput.parentElement.classList.contains('furniture')) {
+        dropdownInput.textContent = 'Удобства номера';
     }
 }
 
 const buttons = document.querySelectorAll(".button-minus , .button-plus");
 const ButtonsClearOrSave = document.querySelectorAll('.dropdown__items__buttons__clear , .dropdown__items__buttons__save');
-const buttonsShowDropdown = document.querySelectorAll('.dropdown__select');
+const buttonsShowDropdown = document.querySelectorAll('.dropdown__select, .dropdown__area');
 
 for (let button of buttons) {
     button.addEventListener('click', function(event) {
@@ -82,7 +95,8 @@ for (let button of ButtonsClearOrSave) {
                 for (let value of values) {
                     value.textContent = "0";
                 }
-                dropdownInput.textContent = 'Сколько гостей';
+                dropdown.classList.contains('guests') ? dropdownInput.textContent = 'Сколько гостей' :
+                    dropdownInput.textContent = "Удобства номера";
                 changeButtonMinus ( dropdown , 0 );
             } else {
                 changeDropdownText(dropdown);

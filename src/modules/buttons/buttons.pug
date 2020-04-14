@@ -15,6 +15,18 @@ mixin button-go-topay($text)
     div.buttons_go-to=$text
         div.buttons_go-to_icon
 
+mixin pagination($countPages, $countOnPage, $countVariants)
+    div.pagination
+        div.pagination_map
+            div.pagination_map_page(class='active')='1'
+            div.pagination_map_page='2'
+            div.pagination_map_page='3'
+            div.pagination_map_page='...'
+            div.pagination_map_page=$countPages
+            div.pagination_map_next
+                div.pagination_map_next_arrow
+        label.pagination_label='1 – '+$countOnPage+' из '+$countVariants+' вариантов аренды'
+
 
 div.buttons_title='buttons'
 +button-active('click me')
@@ -24,3 +36,6 @@ div.buttons_icon-link
     +icon-link-dark('click me')
 
 +button-go-topay('Перейти к оплате')
+
+div.pagination_title='pagination'
++pagination('15', '12', '100+')

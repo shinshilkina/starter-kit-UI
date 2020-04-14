@@ -1,0 +1,54 @@
+@import "../../theme/default_theme/deftheme";
+
+.comment {
+  width: 45rem;
+
+  &_header {
+    display: flex;
+    &_image {
+      width: 3.4rem;
+      height: 3.4rem;
+
+      background-image: url('../icon/murad2.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      border: 2px solid #FFFFFF;
+      box-sizing: border-box;
+      box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.1);
+      border-radius: 32px;
+    }
+    &_about {
+      margin: 0.3rem 0 0 0.4rem;
+
+      white-space: pre-line;
+
+      font-family: Montserrat, sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 0.85em;
+      line-height: 171%;
+      letter-spacing: 0.08em;
+      color: $dark_shade_75;
+      &_date {
+        font-weight: normal;
+        letter-spacing: 0.02em;
+      }
+    }
+  }
+  &_body {
+    display: flex;
+    margin: 0.5rem 0 0 0.45rem;
+    &_text {
+      padding-left: 0.9rem;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 175%;
+
+      color: $dark_shade_75;
+
+      white-space: pre-line;
+    }
+  }
+}

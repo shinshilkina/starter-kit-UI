@@ -1,0 +1,11 @@
+include ../like-button/like-button
+div.comment
+    div.comment_header
+        div.comment_header_image
+        div.comment_header_about
+            div.comment_header_about_name='Мурад Сарафнов'
+            div.comment_header_about_date='5 дней назад'
+    div.comment_body
+        div.comment_body_like
+            +like-button('12','checked')
+        div.comment_body_text='Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. \nИ стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'

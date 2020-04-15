@@ -1,0 +1,6 @@
+mixin date-dropdown($date, $title)
+    div.date-dropdown
+        if $title
+            label.date-dropdown_title=$title
+        input.date-dropdown_input(class='masked-text-field_input' placeholder='ДД.ММ.ГГГГ' value=$date)
+        div.date-dropdown_select

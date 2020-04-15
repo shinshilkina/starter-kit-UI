@@ -1,0 +1,27 @@
+@import "../../theme/default_theme/deftheme";
+
+.date-dropdown {
+  width: 9.45rem;
+  @include text-field($dark_shade_75, $dark_shade_75, $dark_shade_25, $dark_shade_25, $dark_shade_75, $dark_shade_75);
+  position: relative;
+  &_input {
+    width: 9.45rem;
+    font-size: 0.87em !important;
+  }
+  &_title {
+    @include title-checkboxs();
+    height: 1.45rem;
+  }
+  &_select {
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    right: 1rem;
+    bottom: 0.6rem;
+    background-image: url("../icon/expand_more.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    align-self: center;
+  }
+}

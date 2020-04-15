@@ -6,5 +6,5 @@
 
   width: 320px;
 
-  @include text-field();
+  @include text-field($dark_shade_25, $dark_shade_75, $dark_shade_25, $dark_shade_50, $dark_shade_25, $dark_shade_75);
 }

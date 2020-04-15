@@ -1,5 +1,5 @@
-mixin dropdownGuests(...items)
-    div.dropdown-title='Сколько гостей'
+mixin dropdownGuests($title, ...items)
+    div.dropdown-title=$title
     div.dropdown(class="guests")
         div.dropdown__area="Сколько гостей"
         div.dropdown__select
@@ -14,8 +14,8 @@ mixin dropdownGuests(...items)
                 div.dropdown__items__buttons__clear(type="button")="очистить"
                 div.dropdown__items__buttons__save(type="button")="применить"
 
-mixin dropdownFurniture(...items)
-    div.dropdown-title='Удобства номера'
+mixin dropdownFurniture($title, ...items)
+    div.dropdown-title=$title
     div.dropdown(class="furniture")
         div.dropdown__area="Удобства номера"
         div.dropdown__select

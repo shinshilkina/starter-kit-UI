@@ -148,14 +148,13 @@
 
 @mixin title-checkboxs() {
   height: 44px;
-  position: relative;
 
   font-family: Montserrat, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size:  0.7em;
   line-height: 15px;
-  letter-spacing: 0.065em;
+  letter-spacing: 0.075em;
 
   text-transform: uppercase;
   display: flex;
@@ -164,8 +163,8 @@
   color: #1F2041;
 }
 
-@mixin text-field() {
-  label {
+@mixin text-field($colorDef, $colorFocus, $borderDef, $borderFocus, $placehDef, $placeholdFocus) {
+  label, div {
     @include title-checkboxs();
     height: 1.45rem;
   }
@@ -176,10 +175,10 @@
     font-family: Montserrat, sans-serif;
     font-size: 0.8em;
 
-    color: $dark_shade_25;
+    color: $colorDef;
     background: #FFFFFF;
 
-    border: 1px solid $dark_shade_25;
+    border: 1px solid $borderDef;
     box-sizing: border-box;
     border-radius: 4px;
   }
@@ -187,13 +186,13 @@
     padding-bottom: 0.1rem;
     letter-spacing: 0.035em;
 
-    color: $dark_shade_75;
-    border-color: $dark_shade_50;
+    color: $colorFocus;
+    border-color: $borderFocus;
   }
   input::placeholder {
-    color: $dark_shade_25;
+    color: $placehDef;
   }
   input:hover::placeholder {
-    color: $dark_shade_75;
+    color: $placeholdFocus;
   }
 }

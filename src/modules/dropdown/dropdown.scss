@@ -10,13 +10,15 @@
     @include input-area($dark_shade_75, $dark_shade_25);
     height: 2.65rem;
     width: 100%;
+    letter-spacing: 0.008em;
 
-    padding: 0.75rem 0 0.35rem 0.85rem;
+    padding: 0.75rem 0 0.35rem 0.95rem;
     margin-bottom: 0;
-    border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 4px 4px;
   }
   & .dark {
     border-color: $dark_shade_50;
+    border-radius: 4px 4px 0 0;
   }
   &__select {
     position: absolute;

@@ -8,13 +8,13 @@
   }
   &_active {
     width: 6.2rem;
-    height: 2.8rem;
+    height: 2.6rem;
     padding-top: 0.1rem;
 
     background: $gradient;
     border-radius: 1.4rem;
 
-    @include title-checkboxs();
+    @include font-prop();
     color: #FFFFFF;
     justify-content: center;
     vertical-align: baseline;
@@ -25,7 +25,7 @@
   }
   &_bordered {
     width: 6.2rem;
-    height: 2.8rem;
+    height: 2.7rem;
     padding-top: 0.1rem;
 
     display: flex;
@@ -36,10 +36,11 @@
     border-radius: 1.4rem;
     &_body {
       width: 5.9rem;
-      height: 2.65rem !important;
+      height: 2.5rem;
+      margin-top: 0.05rem;
 
       background: #FFFFFF;
-      @include title-checkboxs();
+      @include font-prop();
       color: $purple;
       justify-content: center;
       vertical-align: baseline;
@@ -54,11 +55,12 @@
 
   &_icon-link {
     display: flex;
-    margin-top: 1rem;
+    font-size: 1.065em;
+
     &_purple {
       @include title-checkboxs();
       color: $purple;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.045em;
     }
     &_dark {
       @include title-checkboxs();

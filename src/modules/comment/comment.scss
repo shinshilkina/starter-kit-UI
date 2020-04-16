@@ -29,6 +29,9 @@
       line-height: 171%;
       letter-spacing: 0.08em;
       color: $dark_shade_75;
+      &_name {
+
+      }
       &_date {
         font-weight: normal;
         letter-spacing: 0.02em;
@@ -37,7 +40,10 @@
   }
   &_body {
     display: flex;
-    margin: 0.5rem 0 0 0.45rem;
+    margin: 0.45rem 0 0 0.45rem;
+    &_like {
+      margin-top: 0.1rem;
+    }
     &_text {
       padding-left: 0.9rem;
       font-family: Montserrat;

@@ -115,6 +115,7 @@
   &_fake {
     width: 1.1rem;
     height: 1.1rem;
+    align-self: baseline;
     border: 1px solid $dark_shade_25;
     border-radius: 4px;
 
@@ -148,13 +149,17 @@
 
 @mixin title-checkboxs() {
   height: 44px;
+  @include font-prop();
 
+}
+
+@mixin font-prop() {
   font-family: Montserrat, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size:  0.7em;
   line-height: 15px;
-  letter-spacing: 0.075em;
+  letter-spacing: 0.07em;
 
   text-transform: uppercase;
   display: flex;

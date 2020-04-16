@@ -23,7 +23,7 @@
 
         text-align: center;
 
-        color: rgba(31, 32, 65, 0.25);
+        color: $dark_shade_25;
       }
       &_checkbox {
         display: none;
@@ -38,51 +38,48 @@
         background-repeat: no-repeat;
         background-size: contain;
       }
+      &_checkbox:checked + &_hurt {
+        background-image: url("../icon/favorite.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+      &_checkbox:checked ~ &_count {
+        color: $purple;
+        font-size: 1.5em;
+      }
     }
 
   }
 }
 
 .like-button_area-checked {
-  width: 2.5rem;
-  height: 1.25rem;
+  width: 2.4rem;
   position: relative;
 
-  background-image: $gradient;
+  border: 1px solid $purple;
   border-radius: 1rem;
+  & .count {
+    display: flex;
 
-  &_body {
-    width: 2.4rem;
-    height: 1.1rem;
-    position: absolute;
-    top: 0.07rem;
-    left: 0.05rem;
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.6em;
+    line-height: 1.8em;
 
-    border-radius: inherit;
-    background-color: #FFFFFF;
-    & .count {
-      display: flex;
+    text-align: center;
 
-      font-family: Montserrat, sans-serif;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 0.6em;
-      line-height: 1.8em;
+    color: $purple;
+  }
 
-      text-align: center;
+  & .hurt {
+    width: 0.65rem;
+    height: 0.65rem;
+    margin: 0.3rem 0.35rem 0 0.25rem;
 
-      color: $purple;
-    }
-
-    & .hurt {
-      width: 0.7rem;
-      height: 0.7rem;
-      margin: 0.3rem 0.35rem 0 0.2rem;
-
-      background-image: url("../icon/favorite.svg");
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
+    background-image: url("../icon/favorite.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 
 }

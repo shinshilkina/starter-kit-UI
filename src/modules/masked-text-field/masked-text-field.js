@@ -5,7 +5,7 @@ const maskedInputs = document.querySelectorAll('.masked-text-field_input');
 
 for (let input of maskedInputs) {
     Inputmask('datetime', {
-        inputFormat: "mm.dd.yyyy",
+        inputFormat: "dd.mm.yyyy",
         showMaskOnHover:false,
         showMaskOnFocus: false
     }).mask(input);

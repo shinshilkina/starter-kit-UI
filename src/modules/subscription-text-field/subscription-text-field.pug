@@ -1,7 +1,7 @@
 mixin subscription-text-field($title, $text)
     div.subscription-text-field
-        label.subscription-text-field_title=$title
+        if $title
+            label.subscription-text-field_title=$title
         input.subscription-text-field_input(placeholder = $text)
         div.subscription-text-field_input_choose
 
-+subscription-text-field('subscription-text-field', 'Email')

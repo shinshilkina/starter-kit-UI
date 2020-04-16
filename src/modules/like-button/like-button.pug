@@ -1,11 +1,10 @@
 mixin like-button($count, $checked)
-    if $checked
+    if $checked===true
         div.like-button_area-checked
-            div.like-button_area-checked_body
-                label.like-button_area-checked_body_count(class='count')
-                    input.like-button_area_body_checkbox(type='checkbox' checked)
-                    div.like-button_area-checked_body_hurt(class='hurt')
-                    =$count
+            label.like-button_area-checked_body_count(class='count')
+                input.like-button_area_body_checkbox(type='checkbox' checked)
+                div.like-button_area-checked_body_hurt(class='hurt')
+                =$count
     else
         div.like-button_area
             div.like-button_area_body

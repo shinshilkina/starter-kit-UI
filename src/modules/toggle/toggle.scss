@@ -5,10 +5,10 @@
   &_title {
     @include title-checkboxs();
     letter-spacing: 0.015em;
-    height: 2.8rem;
+    height: 1.1rem;
   }
   &_body {
-
+    margin-top: 0.9rem;
     &_content {
       display: flex;
 

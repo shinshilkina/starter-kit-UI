@@ -1,10 +1,13 @@
-mixin radio-buttons($title, $nameRadio, ...items)
-    label.radio_title=$title
+mixin radio-buttons({title, nameRadio = 'radio', options = [] } = {})
+    label.radio_title=title
     div.radio_buttons
-        each item in items
-            label.radio_buttons_item
-                input(type='radio' name=$nameRadio checked).radio_buttons_radio
-                div.radio_buttons_fake-radio
-                =item
+        each option in options
+            - const {text, checked} = option
+            +radio-options({nameRadio, text, checked})
 
-+radio-buttons('radio buttons', 'gender', 'Мужчина', 'Женщина')
+
+mixin radio-options({nameRadio, text = 'option', checked = false} = {})
+    label.radio_buttons_item
+        input(type='radio' name=nameRadio checked=checked).radio_buttons_radio
+        div.radio_buttons_fake-radio
+        =text

@@ -1,7 +1,7 @@
-mixin filter-date-dropdown($title, $dateOne, $dateTwo)
+mixin filter-date-dropdown($dateOne, $dateTwo, $title)
     div.filter-date-dropdown
-        label.filter-date-dropdown_title=$title
+        if $title
+            label.filter-date-dropdown_title=$title
         input.filter-date-dropdown_input(value = $dateOne+' - '+$dateTwo)
         div.filter-date-dropdown_input_choose
 
-+filter-date-dropdown('filter date dropdown', '19 авг', '23 авг')

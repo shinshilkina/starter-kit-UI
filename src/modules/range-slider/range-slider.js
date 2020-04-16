@@ -3,10 +3,8 @@ import noUiSlider from 'nouislider';
 import 'nouislider/distribute/nouislider.css';
 
 
-var slider = document.getElementById('slider');
+const slider = document.getElementById('slider');
 
-const handleLower = document.querySelector('.noUi-handle-lower');
-const handleUpper = document.querySelector('.noUi-handle-upper');
 
 
 if (slider) {
@@ -22,17 +20,13 @@ if (slider) {
     slider.noUiSlider.on('update.one', function () {
         const titleStart = document.querySelector('.range-slider_value_start');
         const titleEnd = document.querySelector('.range-slider_value_end');
+        const handleLower = document.querySelector('.noUi-handle-lower');
+        const handleUpper = document.querySelector('.noUi-handle-upper');
         changeValueSlider(handleUpper, titleEnd);
         changeValueSlider(handleLower, titleStart);
 
     });
 }
-
-
-//noUi-handle noUi-handle-lower
-//noUi-handle noUi-handle-upper
-
-
 
 function changeValueSlider(handle, title) {
     const valueStart = handle.getAttribute('aria-valuetext');

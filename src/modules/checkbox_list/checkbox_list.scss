@@ -4,7 +4,7 @@
   width: 266px;
 
   &_title {
-  @include title-checkboxs();
+    @include title-checkboxs();
     position: relative;
   }
   &_select {
@@ -30,7 +30,7 @@
       font-family: Montserrat, sans-serif;
       font-style: normal;
       font-weight: normal;
-      font-size: 14px;
+      font-size: 0.87em;
       line-height: 129%;
       white-space: pre-wrap;
 

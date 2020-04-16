@@ -4,8 +4,8 @@ mixin checkbox-list({title = 'expandable checkbox list', options = []} = {})
     div.checkbox-list
         div.checkbox-list_title(type='button')=title
             div.checkbox-list_select(type='button')
-            div.checkbox-list_items(class='invisible')
-                each option in options
-                    label.checkbox-list_items_item
-                        - const {text, checked} = option
-                        +checkbox-params({text, checked})
+        div.checkbox-list_items(class='invisible')
+            each option in options
+                label.checkbox-list_items_item
+                    - const {text, checked} = option
+                    +checkbox-params({text, checked})

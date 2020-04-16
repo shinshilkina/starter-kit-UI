@@ -1,9 +1,9 @@
-mixin toggle($title, $content)
-    label.toggle_title=$title
+mixin toggle($content, $checked, $title)
+    if $title
+        label.toggle_title=$title
     div.toggle_body
         label.toggle_body_content
-            input.toggle_body_input(type='checkbox' checked)
+            input.toggle_body_input(type='checkbox' checked=$checked)
             div.toggle_body_fake-toggle
             =$content
 
-+toggle('toggle', 'Получать спецпредложения')

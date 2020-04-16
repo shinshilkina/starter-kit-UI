@@ -2,21 +2,20 @@
 
 .subscription-text-field {
   width: 17rem;
-  @include text-field($dark_shade_25, $dark_shade_75, $dark_shade_25, $dark_shade_50, $dark_shade_25, $dark_shade_75);
+  @include text-field($dark_shade_75, $dark_shade_75, $dark_shade_25, $dark_shade_50, $dark_shade_25, $dark_shade_75);
   position: relative;
   &_input {
     width: 16.7rem;
     padding-bottom: 0.2rem;
 
     font-size: 0.9em !important;
-    color: $dark_shade_75 !important;
 
     &_choose {
       position: absolute;
       width: 1.15rem;
       height: 1.15rem;
       right: 1.2rem;
-      top: 2.2rem;
+      top: 2.1rem;
       background-image: url("../icon/arrow_forward.png");
       background-repeat: no-repeat;
       background-size: contain;

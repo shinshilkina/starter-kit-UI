@@ -1,13 +1,15 @@
-include rich_checkbox_data
+mixin rich-checkbox-buttons({title='Rich Checkbox Buttons', options = []} = {})
+    div.rich-checkbox
+        div.rich-checkbox_title=title
+        each option in options
+            - const {text , subscription, checked} = option
+            +rich-checkbox-buttons-option({text , subscription, checked})
 
-div.rich-checkbox
-    div.rich-checkbox_title='Rich Checkbox Buttons'
-    each row in locals.rows
-        label.rich-checkbox_element
-            input.rich-checkbox_element_checkbox(type='checkbox')
-            div.rich-checkbox_element_fake
-                div.rich-checkbox_element_fake_checkbox
-            =row.title
-        div.rich-checkbox_subscription=row.subscription
 
-//'Доступность'
+mixin rich-checkbox-buttons-option({text='option' , subscription='subscription', checked = false} = {})
+    label.rich-checkbox_element
+        input.rich-checkbox_element_checkbox(type='checkbox' checked = checked)
+        div.rich-checkbox_element_fake
+            div.rich-checkbox_element_fake_checkbox
+        =text
+    div.rich-checkbox_subscription=subscription

@@ -5,6 +5,7 @@
 
   &_title {
   @include title-checkboxs();
+    position: relative;
   }
   &_select {
     @include button-select(url('../icon/expand_more.png'));
@@ -31,6 +32,7 @@
       font-weight: normal;
       font-size: 14px;
       line-height: 129%;
+      white-space: pre-wrap;
 
       color: $dark_shade_50;
       margin-bottom: 0.66rem;

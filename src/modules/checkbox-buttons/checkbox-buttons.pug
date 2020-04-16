@@ -1,0 +1,15 @@
+mixin checkbox-buttons({title, params = []} ={})
+    div.checkbox-list(class='checkboxButtons')
+        div.checkbox-list_title(type='button')=title
+        div.checkbox-list_items
+            each param in params
+                label.checkbox-list_items_item
+                    - const {text, checked} = param
+                    +checkbox-params({text, checked})
+
+
+mixin checkbox-params({text, checked = false} = {})
+    input.checkbox-list_items_checkbox(type='checkbox' checked=checked)
+    div.checkbox-list_items_fake
+        div.checkbox-list_items_fake_checkbox
+    =text

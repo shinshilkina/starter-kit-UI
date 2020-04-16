@@ -1,121 +1,136 @@
 "use strict";
 import './dropdown.scss';
 
-function changeButtonMinus(currentLine, value) {
-    const changingButton = currentLine.querySelectorAll('.button-minus');
+//dropdown__area dark
 
-    for (const button of changingButton) {
-        button.classList.add('active');
-        button.classList.add('passive');
-        button.classList.remove(value === 0 ? 'active': 'passive');
-    }
-}
+//dropdown__items visible
 
-function buttonClearState(currentLine) {
-    const clearButton = currentLine.parentElement.querySelector('.dropdown__items__buttons__clear');
-    const values = currentLine.parentElement.querySelectorAll('.str-count');
-    let countZero = 0;
-
-    for (const value of values) {
-        parseInt(value.textContent, 10) === 0 ? countZero++: null;
-    }
-    countZero === values.length ? clearButton.classList.remove('visible') :
-        clearButton.classList.add('visible');
-}
-
-function changeDropdownText(currentLine) {
-    const areaDropdown = currentLine.parentElement;
-    const values = areaDropdown.querySelectorAll('.str-count');
-    const dropdownInput = currentLine.parentElement.parentElement.querySelector('.dropdown__area');
-
-    let sum = 0;
-    for (let value of values) {
-        sum += parseInt(value.textContent, 10);
-    }
-    if (sum !== 0 && dropdownInput.parentElement.classList.contains('guests')) {
-        if (sum === 1){
-            dropdownInput.textContent = sum + ' гость';
-        }else if (sum < 5){
-            dropdownInput.textContent = sum + ' гостя';
-        }
-        else {
-            dropdownInput.textContent = sum + ' гостей';
-        }
-    } else if (sum !== 0 && dropdownInput.parentElement.classList.contains('furniture')) {
-        dropdownInput.textContent = '';
-        for (let value of values) {
-            const count = parseInt(value.textContent, 10);
-            if (count !== 0) {
-                const furniture = value.parentElement.querySelector('.dropdown__items__title').textContent;
-                dropdownInput.textContent += count + ' ' + furniture + ', ';
-            }
-        }
-        dropdownInput.textContent = dropdownInput.textContent.slice(0, dropdownInput.textContent.length - 2);
-    } else if (sum === 0 && dropdownInput.parentElement.classList.contains('guests')) {
-        dropdownInput.textContent = 'Сколько гостей';
-    } else if (sum === 0 && dropdownInput.parentElement.classList.contains('furniture')) {
-        dropdownInput.textContent = 'Удобства номера';
-    }
-}
-
-const buttons = document.querySelectorAll(".button-minus , .button-plus");
-const ButtonsClearOrSave = document.querySelectorAll('.dropdown__items__buttons__clear , .dropdown__items__buttons__save');
+const dropdowns = document.querySelectorAll('.dropdown');
+const buttonsMinPlus = document.querySelectorAll(".button-minus , .button-plus");
+const buttonsClearDropdown = document.querySelectorAll('.dropdown__items__buttons__clear');
+const buttonsSaveDropdown = document.querySelectorAll('.dropdown__items__buttons__save');
 const buttonsShowDropdown = document.querySelectorAll('.dropdown__select, .dropdown__area');
 
-for (let button of buttons) {
-    button.addEventListener('click', function(event) {
-        const currentLine = button.parentElement;
-        const valueStr = currentLine.querySelector('.str-count');
-        const value = parseInt(valueStr.textContent, 10);
-        let newValue = value;
+for (let dropdown of dropdowns) {
+    const group = dropdown.dataset.group;
+    group === 'guests' ? writeCountGuests(dropdown) : null;
+    group === 'furniture' ? writeCountFurniture(dropdown) : null;
+}
 
-        if (button.classList.contains('button-plus')) {
-            newValue++;
-        } else if (value > 0) {
-            newValue--;
+for (let clickerElement of buttonsShowDropdown) {
+    clickerElement.addEventListener('click',
+        function (event) {
+            const dropdown = this.parentElement;
+            const items = dropdown.querySelector('.dropdown__items');
+            const area = dropdown.querySelector('.dropdown__area');
+            items.classList.toggle('visible');
+            area.classList.toggle('dark');
         }
-        changeButtonMinus(currentLine, newValue);
+    );
+}
 
-        valueStr.textContent = newValue;
-
-        changeDropdownText(currentLine);
-
-        buttonClearState(currentLine);
+for (let button of buttonsMinPlus) {
+    button.addEventListener('click', function () {
+        const value = this.parentElement.querySelector('.str-count');
+        const dropdown = this.parentElement.parentElement.parentElement.parentElement;
+        const input = dropdown.querySelector('.dropdown__area');
+        const group = dropdown.dataset.group;
+        if (this.classList.contains('button-minus') && value.textContent !== '0') {
+            const number = parseInt(value.textContent, 10) - 1;
+            value.textContent = number;
+            //debugger
+            if (number === 0) {
+                changeButtonMinus(this, number)
+            }
+        } else if (this.classList.contains('button-plus')) {
+            const number = parseInt(value.textContent, 10) + 1;
+            value.textContent = number;
+            //debugger
+            if (number === 1) {
+                changeButtonMinus(this, number)
+            }
+        }
+        group === 'guests' ? writeCountGuests(dropdown) : null;
+        group === 'furniture' ? writeCountFurniture(dropdown) : null;
     });
 }
 
-for (let button of ButtonsClearOrSave) {
-    button.addEventListener('click',
-        function (event) {
-            const dropdown = this.parentElement.parentElement;
-            const values = this.parentElement.parentElement.querySelectorAll('.str-count');
-            const dropdownInput = this.parentElement.parentElement.parentElement.querySelector('.dropdown__area');
-            const value = parseInt(values.textContent, 10);
-            if (button.classList.contains('dropdown__items__buttons__clear')){
-                for (let value of values) {
-                    value.textContent = "0";
-                }
-                dropdown.classList.contains('guests') ? dropdownInput.textContent = 'Сколько гостей' :
-                    dropdownInput.textContent = "Удобства номера";
-                changeButtonMinus ( dropdown , 0 );
-            } else {
-                changeDropdownText(dropdown);
-                dropdown.classList.toggle('visible');
-            }
-            buttonClearState(dropdown);
+function writeCountFurniture(dropdown) {
+    const input = dropdown.querySelector('.dropdown__area')
+    const lines = dropdown.querySelectorAll('.dropdown__item');
+    input.value = null;
+    for (let line of lines) {
+        const count = line.querySelector('.str-count').textContent;
+        if (count !== '0') {
+            const furnitureName = line.querySelector('.dropdown__item__title').textContent;
+            input.value += count + ' ' + furnitureName + ', ';
         }
-    );
+    }
+    if (input.value && input.value.length < 20) {
+        input.value = input.value.substring(0, input.value.length - 2);
+    } else {
+        input.value = input.value.substring(0, 20) + '...';
+    }
 }
 
-for (let button of buttonsShowDropdown){
-    button.addEventListener('click',
-        function (event) {
-            const dropdownBody = button.parentElement.querySelector('.dropdown__items');
-            dropdownBody.classList.toggle('visible');
-            const dropdownArea = dropdownBody.parentElement.querySelector('.dropdown__area');
-            dropdownArea.classList.toggle('dark');
-        }
-    );
+function writeCountGuests(dropdown) {
+    const input = dropdown.querySelector('.dropdown__area')
+    const lines = dropdown.querySelectorAll('.dropdown__item');
+    let sum = 0;
+    for (let line of lines) {
+        const count = line.querySelector('.str-count').textContent;
+        sum += parseInt(count, 10);
+    }
+    if (sum === 1) {
+        input.value = '1 гость';
+    } else if (sum > 0 && sum <= 4) {
+        input.value = sum + ' гостя';
+    } else {
+        input.value = sum + ' гостей';
+    }
+    if (sum === 0) {
+        input.value = null;
+        buttonClearVisibility(dropdown, false);
+    } else
+        buttonClearVisibility(dropdown, true);
 }
+
+function changeButtonMinus(button, number) {
+    const buttonMinus = button.parentElement.querySelector('.button-minus')
+    if (number !== 0) {
+        buttonMinus.classList.add('active');
+    } else {
+        buttonMinus.classList.remove('active')
+    }
+}
+
+function buttonClearVisibility(dropdown, answer) {
+    const buttonClear = dropdown.querySelector('.dropdown__items__buttons__clear');
+    answer ? buttonClear.classList.add('visible') : buttonClear.classList.remove('visible');
+}
+
+for (let button of buttonsClearDropdown) {
+    button.addEventListener('click', function () {
+        const thisItemsArea = this.parentElement.parentElement;
+        const input = thisItemsArea.parentElement.querySelector('.dropdown__area');
+        const counts = thisItemsArea.querySelectorAll('.str-count');
+        for (let count of counts) {
+            count.textContent = '0';
+        }
+        input.value = null;
+        input.classList.remove('dark');
+        thisItemsArea.classList.remove('visible');
+    });
+}
+
+for (let button of buttonsSaveDropdown) {
+    button.addEventListener('click', function () {
+        const thisItemsArea = this.parentElement.parentElement;
+        const input = thisItemsArea.parentElement.querySelector('.dropdown__area');
+        input.classList.remove('dark');
+        thisItemsArea.classList.remove('visible');
+    });
+}
+
 
 

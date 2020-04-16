@@ -5,14 +5,13 @@
 }
 .dropdown {
   position: relative;
-  width: 320px;
   &__area {
     @include input-area($dark_shade_75, $dark_shade_25);
     height: 2.65rem;
     width: 100%;
     letter-spacing: 0.008em;
 
-    padding: 0.75rem 0 0.35rem 0.95rem;
+    padding-left: 0.85rem;
     margin-bottom: 0;
     border-radius: 4px 4px 4px 4px;
   }
@@ -25,7 +24,7 @@
     width: 0.8rem;
     height: 0.8rem;
     right: 1rem;
-    top: 0.9rem;
+    top: 2.45rem;
     background-image: url("../icon/expand_more.png");
     background-repeat: no-repeat;
     background-size: contain;
@@ -40,52 +39,59 @@
 
     list-style: none;
     margin: 0;
-    padding: 0rem 0.35rem 0 0.8rem;
+    padding: 0rem 0.45rem 0.2rem  0.9rem;
+
     background: #FFFFFF;
+
     border: 1px solid $dark_shade_50;
     border-top: solid transparent;
     border-radius: 0 0 4px 4px;
+
     box-sizing: border-box;
-    & .dropdown-item {
+    & .dropdown__item {
       display: flex;
-      justify-content: space-around;
-      align-items: stretch;
-      @include title-monserrat($dark_shade, 0.64em);
-      line-height: 2.35rem;
-      letter-spacing: 0.145em;
-      padding: 0;
-      & .item-title {
-        flex: 0 0 68%;
-        align-self: flex-start;
-      }
-      & .button-minus , & .button-plus , & .str-count {
-        flex: 0 0 9.5%;
-        text-align: center;
-      }
-      & .button-minus , & .button-plus {
-        width: 1.7rem;
-        height: 1.7rem;
+      height: 2.3rem;
 
-        font-size: 1.6em;
-        font-weight: normal;
-        line-height: 1.7rem;
-        color: $dark_shade_50;
+      @include font-prop();
 
-        border: 1px solid $dark_shade_50;
-        border-radius: 50%;
-        align-self: center;
+      &__title {
+        display: block;
+        width: 100%;
       }
-      & .button-minus {
-        color: $dark_shade_25;
-        border: 1px solid $dark_shade_25;
-      }
-      & .passive {
-        color: $dark_shade_25;
-        border: 1px solid $dark_shade_25;
-      }
-      & .active{
-        color: $dark_shade_50;
-        border: 1px solid $dark_shade_50;
+      &__buttons {
+        display: flex;
+
+        justify-content: space-between;
+        align-items: center;
+
+        max-width: 5.7rem;
+        width: 100%;
+
+        & .button-minus , & .button-plus , & .str-count {
+          text-align: center;
+          vertical-align: middle;
+          line-height: 2rem;
+        }
+
+        & .button-minus , & .button-plus {
+          width: 1.75rem;
+          height: 1.75rem;
+
+          font-size: 1.6em;
+          font-weight: normal;
+          color: $dark_shade_50;
+
+          border: 1px solid $dark_shade_50;
+          border-radius: 50%;
+        }
+        & .button-minus {
+          color: $dark_shade_25;
+          border: 1px solid $dark_shade_25;
+        }
+        & .active {
+          color: $dark_shade_50;
+          border: 1px solid $dark_shade_50;
+        }
       }
     }
 
@@ -95,7 +101,7 @@
       font-size: 0.75em;
       letter-spacing: 0;
       text-transform: uppercase;
-      margin: 0.8rem 0.1rem 0.5rem 0;
+      margin: 0.8rem 0.1rem 0.3rem 0;
       &__clear , &__save {
         flex: 0 0 50%;
       }

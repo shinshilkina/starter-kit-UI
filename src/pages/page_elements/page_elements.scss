@@ -1,0 +1,30 @@
+header {
+  height: 5rem;
+
+  & .logo_grey {
+    width: 3rem;
+    height: 3rem;
+    margin: 2.4rem 0 0 1.8rem;
+
+    background: url("../../modules/icon/Group.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+main {
+  display: inline-block;
+  padding: 0.8rem 0 0 8.8rem;
+  & .text-field {
+    margin-top: 1rem;
+  }
+  & .dropdown-title {
+    margin-top: 1.1rem;
+  }
+  & .masked-text-field {
+    margin-top: 1.25rem;
+  }
+  & .date_dropdowns {
+    margin-top: 2.3rem;
+    display: flex;
+  }
+}

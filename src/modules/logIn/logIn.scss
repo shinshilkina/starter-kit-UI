@@ -1,0 +1,25 @@
+.login-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 23.9rem;
+  width: 100%;
+  min-height: 22.3rem;
+  background: #FFFFFF;
+  border: 1px solid rgba(0,0,0,0.12);
+  box-sizing: border-box;
+  box-shadow: 0px 0px 1.786rem rgba(0,0,0,0.2);
+  border-radius: 0.286rem;
+  &_body {
+    padding: 1.4rem 1.9rem 0 1.8rem;
+
+    & .password {
+      margin-top: 0.7rem;
+    }
+    & .button-login {
+      margin-top: 1.2rem;
+    }
+    & .exist-on-toxin {
+      margin-left: 0.1rem;
+    }
+  }
+}

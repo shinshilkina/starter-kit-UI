@@ -1,0 +1,20 @@
+include ../../elements/masked-text-field/masked-text-field
+include ../../elements/buttons/buttons
+
+mixin login({title} = {})
+    form.login-form
+        div.login-form_body
+            h1.title-h1=title
+            +masked-text-field({
+                placeholder: 'Email',
+                className: 'email'
+            })
+            +masked-text-field({
+                placeholder: 'Пароль',
+                className: 'password',
+                password: true
+            })
+            +button-go-topay({text: 'Войти', className: 'button-login'})
+            div.exist-on-toxin
+                label.exist-on-toxin_text='Нет аккаунта на Toxin?'
+                +button-bordered({text: 'создать', className: 'createAccount'})

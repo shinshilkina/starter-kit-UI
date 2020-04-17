@@ -5,7 +5,7 @@ include ../../elements/buttons/buttons
 mixin search-room({title, arrival, departure, searchText} = {})
     form.search
         div.search_wrapper
-            label.search_wrapper_title=title
+            h1.title-h1=title
             div.date_dropdowns
                 +date-dropdown(arrival, 'Прибытие')
                 +date-dropdown(departure, 'Выезд')

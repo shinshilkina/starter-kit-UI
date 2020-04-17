@@ -1,5 +1,8 @@
 mixin radio-buttons({title, nameRadio = 'radio', options = [] } = {})
-    label.radio_title=title
+    if title
+        label.radio_title=title
+
+
     div.radio_buttons
         each option in options
             - const {text, checked} = option

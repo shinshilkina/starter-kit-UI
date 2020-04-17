@@ -1,5 +1,9 @@
-mixin masked-text-field($title, $placeholder ,$value)
+mixin masked-text-field({title, placeholder ,value, className, password=false} = {})
     div.masked-text-field
-        label.masked-text-field_title=$title
-        input.masked-text-field_input(placeholder=$placeholder value=$value)
+        if title
+            label.masked-text-field_title(class=className+'-title')=title
 
+        if password
+            input.masked-text-field_input(type="password" class=className placeholder=placeholder value=value)
+        else
+            input.masked-text-field_input(class=className placeholder=placeholder value=value)

@@ -1,5 +1,8 @@
-mixin text-field($title, $placeholder ,$value)
+mixin text-field({title, placeholder ,value, className='text'} = {})
     div.text-field
-        label.text-field_title=$title
-        input.text-field_input(placeholder=$placeholder value=$value)
+        if title
+            label.text-field_title=title
+
+
+        input.text-field_input(class=className placeholder=placeholder value=value)
 

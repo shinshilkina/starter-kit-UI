@@ -1,4 +1,23 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Quicksand&display=swap');
+@font-face {
+  font-family: 'Monserrat';
+  src: url('../../../src/theme/default_theme/fonts/fonts/Montserrat-Black.eot');
+  src: local('☺'), url('../../../src/theme/default_theme/fonts/fonts/Montserrat-Black.woff') format('woff'),
+  url('../../../src/theme/default_theme/fonts/fonts/Montserrat-Black.ttf') format('truetype'),
+  url('../../../src/theme/default_theme/fonts/fonts/Montserrat-Black.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('../../../src/theme/default_theme/fonts/fonts/Quicksand-Regular.eot');
+  src: local('☺'), url('../../../src/theme/default_theme/fonts/fonts/Quicksand-Regular.woff') format('woff'),
+  url('../../../src/theme/default_theme/fonts/fonts/Quicksand-Regular.ttf') format('truetype'),
+  url('../../../src/theme/default_theme/fonts/fonts/Quicksand-Regular.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @import "../../theme/colors/colors";
 
 @mixin title-monserrat($text-color, $font-size) {
@@ -55,7 +74,7 @@
   }
 
   .dropdown-select {
-    @include button-select(url("../../modules/icon/expand_more.png"));
+    @include button-select(url("../../elements/icon/expand_more.png"));
   }
   .dropdown-select:hover, .dropdown-select:focus ~ .dropdown-input{
     border-radius: 4px 4px 0px 0px;
@@ -200,4 +219,10 @@
   input:hover::placeholder {
     color: $placeholdFocus;
   }
+}
+
+@mixin heading-h1() {
+  font-size: 1.714rem;
+  letter-spacing: 0.1rem;
+  line-height: 1.9rem;
 }

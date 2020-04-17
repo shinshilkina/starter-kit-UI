@@ -1,0 +1,45 @@
+include ../../elements/text-field/text-field
+include ../../elements/radio-buttons/radio-buttons
+include ../../elements/masked-text-field/masked-text-field
+include ../../elements/toggle/toggle
+include ../../elements/buttons/buttons
+
+mixin register({title})
+    form.register
+        div.register_body
+            h1.title-h1=title
+            +text-field({
+                placeholder: 'Имя',
+                className: 'name'
+            })
+            +text-field({
+                placeholder: 'Фамилия',
+                className: 'secondName'
+            })
+            +radio-buttons({
+                nameRadio: 'gender',
+                options: [
+                    {text: 'Мужчина', checked: true},
+                    {text: 'Женщина'}
+                ]
+            })
+            +masked-text-field({
+                title: 'дата рождения',
+                placeholder: 'ДД.ММ.ГГГГ',
+                className: 'birthday'
+            })
+            +masked-text-field({
+                title: 'данные для входа в сервис',
+                placeholder: 'Email',
+                className: 'email'
+            })
+            +masked-text-field({
+                placeholder: 'Пароль',
+                className: 'password',
+                password: true
+            })
+            +toggle('Получать спецпредложения', false)
+            +button-go-topay('Перейти к оплате')
+            div.exist-on-toxin
+                label.exist-on-toxin_text='Уже есть аккаунт на Toxin'
+                +button-bordered('войти')

@@ -13,7 +13,6 @@
   &_body {
     padding: 1.35rem 1.9rem 0 1.8rem;
     & .title-h1 {
-      @include heading-h1();
       color: $dark_shade;
     }
     & .secondName {

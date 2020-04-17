@@ -221,9 +221,29 @@
   }
 }
 
-@mixin heading-h1() {
+.title-h1 {
   font-size: 1.714rem;
   letter-spacing: 0.1rem;
   line-height: 1.9rem;
   font-weight: bold;
+}
+
+.exist-on-toxin {
+  display: flex;
+  margin-top: 1.8rem;
+  &_text {
+    margin-right: auto;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+  }
 }

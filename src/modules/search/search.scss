@@ -1,0 +1,38 @@
+@import "../../theme/default_theme/deftheme";
+
+.search {
+  max-width: 23.8rem;
+  min-height: 23.5rem;
+  background: #FFFFFF;
+  border: 1px solid rgba(0,0,0,0.12);
+  box-sizing: border-box;
+  box-shadow: 0px 0px 1.786rem rgba(0,0,0,0.2);
+  border-radius: 0.286rem;
+  display: flex;
+  flex-direction: column;
+
+  &_wrapper {
+    padding: 2.5rem 1.8rem 0rem 1.9rem;
+
+    &_title {
+      @include heading-h1();
+      font-weight: bold;
+
+      color: $dark_shade;
+    }
+    & .date_dropdowns {
+      margin-top: 1.1rem;
+      display: flex;
+
+      & .date-dropdown:last-child {
+        margin-left: 1.2rem;
+      }
+    }
+    & .dropdown {
+      margin-top: 1.1rem;
+    }
+    & .buttons_go-to {
+      margin-top: 1.9rem;
+    }
+  }
+}

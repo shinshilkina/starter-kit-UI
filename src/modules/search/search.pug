@@ -1,0 +1,23 @@
+include ../../elements/date_dropdown/date_dropdown
+include ../../elements/dropdown/dropdown
+include ../../elements/buttons/buttons
+
+mixin search-room({title, arrival, departure, searchText} = {})
+    form.search
+        div.search_wrapper
+            label.search_wrapper_title=title
+            div.date_dropdowns
+                +date-dropdown(arrival, 'Прибытие')
+                +date-dropdown(departure, 'Выезд')
+            +dropdown({
+                title: 'Гости',
+                placeholder: 'Сколько гостей',
+                options: [
+                    {text: 'дети'},
+                    {text: 'взрослые'},
+                    {text: 'младенцы'},
+                ],
+                buttons: true,
+                group: 'guests'
+            })
+            +button-go-topay('подобрать номер')

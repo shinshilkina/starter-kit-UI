@@ -247,3 +247,53 @@
     color: #000000;
   }
 }
+
+@mixin quicksand($weight, $size, $height, $color) {
+  font-family: Quicksand;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+
+  color: $color;
+
+  white-space: pre-wrap;
+}
+
+@mixin monserrat($weight, $size, $height, $color) {
+  font-family: Montserrat, sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+
+  color: $color;
+
+  white-space: pre-wrap;
+}
+
+.room {
+  &_number {
+    &_symbol {
+      @include quicksand( bold, 0.85em, 1.6em, $dark_shade);
+      letter-spacing: 0.1em;
+    }
+
+    &_count {
+      @include quicksand( bold, 1.05em, 1.1em, $dark_shade);
+      letter-spacing: 0.08rem;
+    }
+  }
+  &_category {
+    @include monserrat(bold, 0.75em, 1.8em, $purple);
+    text-transform: uppercase;
+  }
+  &_day {
+    @include monserrat(normal, 0.8em, 1.8em, $dark_shade_50);
+    letter-spacing: -0.01em;
+}
+  &_cost {
+    @include monserrat(bold, 0.86em, 1.4em, $dark_shade_50);
+    letter-spacing: 0.02em;
+  }
+}
+
+

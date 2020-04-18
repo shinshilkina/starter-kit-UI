@@ -1,0 +1,22 @@
+mixin image-slider({ buttons = false, images = [] } = {})
+    div.room-card_body_images-block
+        each image in images
+            - const {url, text} = image
+            img.room-card_body_images-block_image(class='fade' src=url, alt=text, title=text)
+
+
+        if buttons
+            div.room-card_body_images-block_prev
+                div.room-card_body_images-block_prev_button
+            div.room-card_body_images-block_next
+                div.room-card_body_images-block_next_button
+
+
+        - let index = 1
+        div.room-card_body_images-block_dots
+            each image in images
+                    span.room-card_body_images-block_dots_dot(data-index=index)
+                    - index++
+
+
+

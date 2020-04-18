@@ -1,0 +1,41 @@
+@import "../../theme/default_theme/deftheme";
+
+
+.room-card_small {
+  width: 270px;
+  height: 257px;
+  box-shadow: 0 0.714rem 1.429rem rgba(31,32,65,0.05);
+  border-radius: 0.286rem;
+  &_body {
+    border-radius: 0.286rem;
+
+    &_info {
+      display: flex;
+
+      margin: 1.5rem 1rem 0.4rem 1.3rem;
+      padding-bottom: 0.5rem;
+
+      border-bottom: 1px solid rgba(31, 32, 65, 0.1);;
+
+      &_cost {
+        margin-left: auto;
+      }
+    }
+    &_reviews {
+      display: flex;
+      padding: 0.1rem 1.25rem 0 1.2rem;
+
+      &_feedback {
+        &_count {
+          margin-left: auto;
+          @include monserrat(bold, 0.85em, 2em, $dark_shade_50);
+        }
+        &_text {
+          @include monserrat(normal, 0.87em, 2em, $dark_shade_50);
+        }
+      }
+    }
+  }
+}
+
+

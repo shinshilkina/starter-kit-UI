@@ -67,9 +67,18 @@ function changeCostRoom(card, days) {
     const sum = card.querySelector('.check_table_row_sum_result_sum');
     const cost = card.querySelector('.check_table_row_sum_text_cost');
 
-    const costR = parseInt(cost.textContent.replace(' ', ''), 10);
-    const res = costR * days;
+    const costNum = parseInt(cost.textContent.replace(' ', ''), 10);
+    const costRoom = costNum * days;
 
-    sum.textContent =  res;
+    sum.textContent = costRoom;
+
+    if (days !== 0) {
+        const resultSum = card.querySelector('.check_table_row_result_sum_cost');
+        const sale = card.querySelector('.check_table_row_sale_text_sale');
+        const saleNum = parseInt(sale.textContent.replace(' ', ''), 10);
+
+        resultSum.textContent = costRoom - saleNum + 300;
+    }
 }
+
 

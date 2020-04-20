@@ -7,8 +7,8 @@ mixin small-room-card({number = '888', category='люкс', cost='9990', currenc
         div.room-card_body
             +image-slider({buttons, images})
             div.room-card_small_body_info
-                span.room-card_small_body_info_number.room_number_symbol='№ '
-                span.room-card_small_body_info_number.room_number_count=`${number} `
+                span.room-card_small_body_info_number_symbol.room_number_symbol='№ '
+                span.room-card_small_body_info_number_count.room_number_count=`${number} `
                 span.room-card_small_body_info_category.room_category=category
                 span.room-card_small_body_info_cost.room_cost=`${cost}${currency} `
                 span.room-card_small_body_info_day.room_day=' в сутки'

@@ -1,0 +1,71 @@
+include ../../elements/buttons/buttons
+include ../../elements/dropdown/dropdown
+include ../../elements/date_dropdown/date_dropdown
+
+
+mixin room-card({number = '888', category='люкс', cost='9990', currency= '₽', sale = 2179} = {})
+    form.room-card.room-card_check
+        div.room-card_body
+            div.room-card_check_body_header
+                span.room-card_check_body_info_number_symbol.room_number_symbol='№ '
+                span.room-card_check_body_info_number_count.room_number_count=`${number}`
+                span.room-card_check_body_info_category.room_category=` ${category}`
+                span.room-card_check_body_info_cost.room_cost=`${cost}${currency} `
+                span.room-card_check_body_info_day.room_day=' в сутки'
+            div.room-card_check_body_dates.date_dropdowns
+                +date-dropdown('', 'прибытие','arrival')
+                +date-dropdown('', 'выезд', 'departure')
+            +dropdown({
+                title: 'гости',
+                placeholder: 'Сколько гостей',
+                options: [
+                    {text: 'дети'},
+                    {text: 'взрослые'},
+                    {text: 'младенцы'},
+                ],
+                buttons: true,
+                group: 'guests'
+            })
+            +room-card-table({cost, currency, sale})
+            +button-go-topay({text:'Забронировать'})
+
+
+mixin room-card-table({cost, currency, sale})
+    table.room-card_body_table.check_table
+        tbody.check_table_body
+            tr.check_table_row
+                td.check_table_row_sum_text.row-text(colspan='2')
+                    span.check_table_row_sum_text_cost.table-cost=cost
+                    span.check_table_row_sum_text_currency=`${currency} x `
+                    span.check_table_row_sum_text_interval='0'
+                    span.check_table_row_sum_text_interval_text=' суток'
+                td.check_table_row_sum_result.row-result
+                    span.check_table_row_sum_result_sum.table-cost='0'
+                    span.check_table_row_sum_result_currency=`${currency}`
+            tr.check_table_row
+                td.check_table_row_sale_text.row-text
+                    span.check_table_row_sale_text_title='Сбор за услуги: скидка '
+                    span.check_table_row_sale_text_sale.table-cost=`${sale}`
+                    span.check_table_row_sale_text_sale_currency=`${currency}`
+                td.check_table_row_sale_text_icon.row-icon
+                    span.row-icon_body='i'
+                td.check_table_row_sale_result.row-result
+                    span.check_table_row_sale_result_sum.table-cost='0'
+                    span.check_table_row_sale_result_currency=`${currency}`
+            tr.check_table_row
+                td.check_table_row_compl-serv_text.row-text='Сбор за дополнительные услуги'
+                td.check_table_row_compl-serv_icon.row-icon
+                    span.row-icon_body='i'
+                td.check_table_row_compl-serv_result.row-result
+                    span.check_table_row_compl-serv_result.table-cost='300'
+                    span.check_table_row_compl-serv_currency=`${currency}`
+            tr.check_table_row_result
+                td.check_table_row_result_title(colspan='2')
+                    h2.check_table_row_result_title_text='Итого'
+                    div.check_table_row_result_title_line
+                td.check_table_row_result_sum.row-result
+                    span.check_table_row_result_sum_cost.table-cost='0'
+                    span.check_table_row_result_sum_currency=`${currency}`
+
+
+

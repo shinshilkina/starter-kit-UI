@@ -1,0 +1,80 @@
+@import "../../theme/default_theme/deftheme";
+
+.check_table {
+  padding: 0.5rem 0 0 0;
+  width: 101%;
+  border-spacing: 2px;
+  &_body {
+    & .row-text, & .row-icon {
+      @include monserrat(normal, 0.85em, 1.3em, $dark_shade_75);//1.3em
+      letter-spacing: 0.01em;
+
+      word-break: break-word;
+      white-space: pre-wrap;
+
+    }
+    & .row-icon {
+      position: relative;
+      width: 6.5%;
+      &_body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: absolute;
+        right: 0;
+        top: 0.6rem;
+        width: 1.3rem;
+        height: 1.3rem;
+
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        border-radius: 50%;
+
+        box-sizing: border-box;
+
+        @include monserrat(bold, 0.857rem, 1rem, $dark_shade_25);
+      }
+    }
+    & .row-result {
+      @include monserrat(normal, 0.87em, 1.3em, $dark_shade_75);
+      word-break: break-word;
+      white-space: pre-wrap;
+    }
+    & .row-text {
+      width: 69%;
+      padding-top: 0.76rem;
+    }
+    & .row-result {
+      text-align: right;
+      vertical-align: top;
+      padding-top: 0.76rem;
+    }
+  }
+  &_row_result {
+    &_title {
+      position: relative;
+      &_text {
+        @include quicksand(bold, 1.2em, 1.1em, $dark_shade);
+        padding-top: 0.8rem;
+        letter-spacing: 0.04em;
+      }
+
+      &_line {
+        position: absolute;
+        top: 3rem;
+        right: -0.5rem;
+
+        border-top: 1px dotted rgba(31,32,65,0.25);
+        width: 78%;
+      }
+    }
+    &_sum {
+      &_cost, &_currency {
+        @include quicksand(bold, 1.2em, 3.5em, $dark_shade);
+        padding-top: 0.8rem;
+        letter-spacing: 0.04em;
+        vertical-align: bottom;
+      }
+    }
+  }
+}

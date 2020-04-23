@@ -1,8 +1,16 @@
 import './room-card.scss';
 import './check-table.scss';
 import {formatNumber} from "../../elements/range-slider/range-slider";
+import {fpickerTwoInputs} from'../../elements/calendar/calendar';
 
-'../../elements/range-slider/range-slider';
+document.addEventListener("DOMContentLoaded", function () {
+    const areaWithTwoDatesInputs = document.querySelector('.date_dropdowns');
+    const arrived = areaWithTwoDatesInputs.querySelector('.arrival');
+    const departure = areaWithTwoDatesInputs.querySelector('.departure');
+    if (arrived && departure) {
+        fpickerTwoInputs(arrived, departure);
+    }
+});
 
 const numbersInTable = document.querySelectorAll('.check_table .table-cost');
 if (numbersInTable.length !==0) {
@@ -19,7 +27,13 @@ if (cardsRoomBig.length !== 0) {
         const arrival = card.querySelector('.arrival');
         const departure = card.querySelector('.departure');
         const daysElem = card.querySelector('.check_table_row_sum_text_interval');
+        arrival.dispatchEvent(new Event('change'));
+        departure.dispatchEvent(new Event('change'));
+
+
+
         arrival.addEventListener('change', () => {
+            debugger
             const daysInt = getDaysInterval(arrival, departure, daysElem);
             if (arrival.value !== '' && departure.value !== '') {
                 changeCostRoom(card, daysInt);

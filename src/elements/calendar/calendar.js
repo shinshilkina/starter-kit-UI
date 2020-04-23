@@ -3,7 +3,7 @@
 import './calendar.scss';
 const Lightpick = require("lightpick");
 
-function fpickerTwoInputs(arrived, departure) {
+function fpickerTwoInputs(arrived, departure,callback) {
     const pickerTwoInputs = new Lightpick({
         field: arrived,
         secondField: departure,
@@ -24,7 +24,8 @@ function fpickerTwoInputs(arrived, departure) {
                 return '';
             }
         },
-        footer: true
+        footer: true,
+        onSelect: callback
     });
     editButtons();
 }

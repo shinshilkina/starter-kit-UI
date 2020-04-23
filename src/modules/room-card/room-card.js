@@ -7,9 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const areaWithTwoDatesInputs = document.querySelector('.date_dropdowns');
     const arrived = areaWithTwoDatesInputs.querySelector('.arrival');
     const departure = areaWithTwoDatesInputs.querySelector('.departure');
-    if (arrived && departure) {
-        fpickerTwoInputs(arrived, departure);
-    }
+
 });
 
 const numbersInTable = document.querySelectorAll('.check_table .table-cost');
@@ -27,38 +25,26 @@ if (cardsRoomBig.length !== 0) {
         const arrival = card.querySelector('.arrival');
         const departure = card.querySelector('.departure');
         const daysElem = card.querySelector('.check_table_row_sum_text_interval');
-        arrival.dispatchEvent(new Event('change'));
-        departure.dispatchEvent(new Event('change'));
 
-
-
-        arrival.addEventListener('change', () => {
-            debugger
-            const daysInt = getDaysInterval(arrival, departure, daysElem);
-            if (arrival.value !== '' && departure.value !== '') {
-                changeCostRoom(card, daysInt);
-            }
-            else {
-                changeCostRoom(card, 0);
-            }
-        });
-        departure.addEventListener('change', () => {
-            const daysInt = getDaysInterval(arrival, departure, daysElem);
-            if (arrival.value !== '' && departure.value !== '') {
-                changeCostRoom(card, daysInt);
-            }
-            else {
-                changeCostRoom(card, 0);
-            }
-        });
+        if (arrival && departure) {
+            fpickerTwoInputs(arrival, departure, function(start, end){
+                const daysInt = getDaysInterval(start, end, daysElem);
+                if (start && end) {
+                    changeCostRoom(card, daysInt);
+                }
+                else {
+                    changeCostRoom(card, 0);
+                }
+            });
+        }
 
     }
 }
 
 function getDaysInterval(arrival, departure, days) {
-    if (arrival.value !== '' && departure.value !== '') {
-        const date1 = getDate(arrival.value);
-        const date2 = getDate(departure.value);
+    if (arrival && departure) {
+        const date1 = arrival.toDate();
+        const date2 = departure.toDate();
 
         const timeDiff = date2.getTime() - date1.getTime();
         const diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)) + 1;
@@ -66,15 +52,6 @@ function getDaysInterval(arrival, departure, days) {
 
         return diffDays;
     }
-}
-function getDate(text) {
-    const dd = text.substring(0,2);
-    const mm = text.substring(3,5);
-    const yy = text.substring(6,10);
-    const newText = mm + '.' + dd + '.' + yy;
-    const newDate = new Date(newText);
-
-    return newDate;
 }
 
 function changeCostRoom(card, days) {

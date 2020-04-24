@@ -3,19 +3,21 @@ import './bottom-data.pug';
 import './bottom.scss';
 import $ from 'jquery';
 
-/*
-$('div.-navigation').addClass("--height");
-$('div.-about_us').addClass("--height");
-$('div.-support').addClass("--height");
 
-function foo() {
+
+window.addEventListener(`resize`, event => {
     let windowWidth = document.documentElement.clientWidth;
-    if (windowWidth < 980) {
+
+    if (windowWidth < 764) {
         const logoLinks = document.querySelector('.bottom__down__links').style;
-        const bottomBlock = document.querySelector('.bottom__down').style;
-        logoLinks.paddingTop = 90 + "px";
-        bottomBlock.height= 160 + "px";
+        const bottomCopyright = document.querySelector('.bottom__down__copyright').style;
+        logoLinks.marginLeft = "auto";
+        logoLinks.marginRight = "auto";
+        bottomCopyright.padding = "1.9rem 0";
+        bottomCopyright.marginLeft = "auto";
+        bottomCopyright.marginRight = "auto";
+
     }
-}
-foo();
- */
+}, false);
+
+

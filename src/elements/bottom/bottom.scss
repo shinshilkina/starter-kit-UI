@@ -72,8 +72,12 @@
   &__down {
     display: flex;
     flex-wrap: wrap;
+
     background: #FFFFFF;
     box-shadow: 0 1rem 2rem rgba(31, 32, 65, 0.05);
+
+    margin-bottom: 1rem;
+
     &__copyright {
       word-wrap: break-word;
       @include monserrat(normal, 0.865em, 0.865em, $dark_shade_75);

@@ -1,32 +1,29 @@
-@import "../../theme/colors/colors";
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import "../../theme/default_theme/deftheme";
 
-.bottom-pretty{
+.bottom-pretty {
   display: flex;
   flex-direction: column;
 
   align-items: center;
-  padding-top: 7.9rem;
-  //justify-content: center;
-  height: 21rem;
-  background: #FFFFFF;
-  &__logo{
-    padding-left: 1rem;
-    padding-bottom: 1.5rem;
-  }
-  &__subscribe{
-    max-width: 45rem;
-    padding-bottom: 2.2rem;
+  padding-top: 5.5rem;
 
-    font-family: Montserrat, sans-serif;
-    font-size: 1em;
-    line-height: 190%;
-    color: $dark_shade_75;
-    letter-spacing: 0.055em;
+  height: 17.5rem;
+  background: #FFFFFF;
+  &__logo {
+    padding-left: 1.8rem;
+    padding-bottom: 0.15rem;
+  }
+  &__subscribe {
+    max-width: 35rem;
+    padding: 0 0 1.7rem 0.2rem;
+
+    letter-spacing: 0.054em;
     word-wrap: break-word;
     text-align: center;
+
+    @include monserrat(normal, 0.9em, 1.8em, $dark_shade_75)
   }
-  &__links{
+  &__links {
     display: flex;
     padding-right: 1.5rem;
   }

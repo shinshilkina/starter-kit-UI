@@ -11,9 +11,11 @@
   border-radius: 0.286rem;
   &_body {
     padding: 1.4rem 1.9rem 0 1.8rem;
-
+    & .title-h1 {
+      margin: 1rem 0 1.3rem 0;
+    }
     & .password {
-      margin-top: 0.7rem;
+      margin-top: 0.6rem;
     }
     & .button-login {
       margin-top: 1.2rem;

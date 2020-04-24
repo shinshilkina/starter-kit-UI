@@ -20,4 +20,4 @@ mixin search-room({title, arrival, departure, searchText} = {})
                 buttons: true,
                 group: 'guests'
             })
-            +button-go-topay('подобрать номер')
+            +button-go-topay({ text: searchText})

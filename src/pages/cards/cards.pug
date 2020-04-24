@@ -1,0 +1,120 @@
+include ../../modules/search/search
+include ../../modules/register/register
+include ../../modules/logIn/logIn
+include ../../modules/small-room-card/small-room-card
+include ../../modules/room-card/room-card
+
+header
+    div.cards_logo_grey
+main.cards
+    div.cards__container
+        section.cards__column.first
+            +search-room({
+                title:'Найдем номера под ваши пожелания',
+                searchText:'подобрать номер'
+            })
+            +register({title: 'Регистрация аккаунта'})
+        section.cards__column.second
+            +room-card({
+                number: '888', category: 'люкс', cost: '9990', currency: '₽', sale: 2179
+            })
+            +login({
+                title: 'Войти'
+            })
+        section.cards__column.third
+            +small-room-card({
+                number: '888',
+                category: 'люкс',
+                cost: '9990',
+                currency: '₽',
+                feedback: '145',
+                rate: 5,
+                buttons: true,
+                images: [
+                    {
+                        url: require("../../modules/image/room888.png").default,
+                        text: 'image1'
+                    },
+                    {
+                        url: require("../../modules/image/room888.png").default,
+                        text: 'image2'
+                    },
+                    {
+                        url: require("../../modules/image/room888.png").default,
+                        text: 'image3'
+                    },
+                    {
+                        url: require("../../modules/image/room888.png").default,
+                        text: 'image4'
+                    }
+
+                ]
+            })
+            +small-room-card({
+                number: '840',
+                category: 'люкс',
+                cost: '9900',
+                currency: '₽',
+                feedback: '65',
+                rate: 4,
+                images: [
+                    {
+                        url: require("../../modules/image/room840.png").default,
+                        text: 'image1'
+                    },
+                    {
+                        url: require("../../modules/image/room840.png").default,
+                        text: 'image2'
+                    },
+                    {
+                        url: require("../../modules/image/room840.png").default,
+                        text: 'image3'
+                    },
+                    {
+                        url: require("../../modules/image/room840.png").default,
+                        text: 'image4'
+                    }
+
+                ]
+            })
+
+
+
+
+//
+//+register({title: 'Регистрация аккаунта'})
+    +login({
+        title: 'Войти'
+    })
+
+    +small-room-card({
+        number: '888',
+        category:'люкс',
+        cost:'9990',
+        currency: '₽',
+        feedback: '145',
+        rate: 5,
+        buttons: true,
+        images: [
+            {
+                url: require("../../modules/image/room888.png").default,
+                text: 'image1'
+            },
+            {
+                url: require("../../modules/image/room888.png").default,
+                text: 'image2'
+            },
+            {
+                url: require("../../modules/image/room888.png").default,
+                text: 'image3'
+            },
+            {
+                url: require("../../modules/image/room888.png").default,
+                text: 'image4'
+            }
+
+        ]
+    })
+    +room-card({
+        number: '888', category: 'люкс', cost: '9990', currency:  '₽', sale: 2179
+    })

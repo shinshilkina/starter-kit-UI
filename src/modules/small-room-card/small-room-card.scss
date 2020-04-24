@@ -31,8 +31,8 @@
         text-transform: uppercase;
       }
       &_day {
-        @include monserrat(normal, 0.8em, 1.8em, $dark_shade_50);
-        letter-spacing: -0.01em;
+        @include monserrat(normal, 0.8em, 1.7em, $dark_shade_50);
+        letter-spacing: -0.03em;
       }
       &_cost {
         @include monserrat(bold, 0.86em, 1.4em, $dark_shade_50);

@@ -1,13 +1,10 @@
+@import "../../theme/default_theme/deftheme";
+
 header {
   height: 5rem;
 
   & .logo_grey {
-    width: 3rem;
-    height: 3rem;
-    margin: 2.4rem 0 0 1.8rem;
-
-    background: url("../../elements/icon/Group.svg");
-    background-repeat: no-repeat;
+    @include logo_header(3rem, 3rem, 2.4rem 0 0 1.8rem);
   }
 }
 
@@ -49,10 +46,6 @@ header {
     }
     & .date_dropdowns {
       margin-top: 2.3rem;
-      display: flex;
-      & .date-dropdown:last-child {
-        margin-left: 1.2rem;
-      }
     }
     & .filter-date-dropdown {
       margin-top: 2.4rem;

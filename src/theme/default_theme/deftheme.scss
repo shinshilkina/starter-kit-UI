@@ -234,7 +234,7 @@
   &_text {
     margin-right: auto;
 
-    font-family: Montserrat;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -277,6 +277,15 @@
   & .date-dropdown:last-child {
     margin-left: 1.2rem;
   }
+}
+
+@mixin logo_header($width, $height, $margins){
+  width: $width;
+  height: $height;
+  margin: $margins;
+
+  background-image: url("../../elements/icon/Group.svg");
+  background-repeat: no-repeat;
 }
 
 

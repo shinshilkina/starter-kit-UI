@@ -39,7 +39,7 @@ mixin register({title})
                 password: true
             })
             +toggle('Получать спецпредложения', false)
-            +button-go-topay('Перейти к оплате')
+            +button-go-topay({text: 'Перейти к оплате', className:'register-button'})
             div.exist-on-toxin
                 label.exist-on-toxin_text='Уже есть аккаунт на Toxin'
-                +button-bordered({title: 'войти', className: 'login'})
+                +button-bordered({text: 'войти', className: 'login'})

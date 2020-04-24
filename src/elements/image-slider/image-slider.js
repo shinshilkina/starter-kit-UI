@@ -2,9 +2,11 @@ import './image-slider.scss';
 
 let slideIndex = 1;
 
-const cards = document.querySelectorAll('.room-card_body');
+const cards = document.querySelectorAll('.room-card_small .room-card_body');
 if (cards.length !== 0) {
-    showSlides(slideIndex);
+    for (let card of cards) {
+        showSlides(slideIndex, card);
+    }
 }
 
 for (let card of cards) {
@@ -22,11 +24,11 @@ for (let card of cards) {
 
     if (prevButton) {
         nextButton.addEventListener('click', function (event) {
-            plusSlides(1);
+            plusSlides(1, card);
         });
 
         prevButton.addEventListener('click', function (event) {
-            plusSlides(-1);
+            plusSlides(-1, card);
         });
     }
 }
@@ -34,19 +36,19 @@ for (let card of cards) {
 
 
 // Next/previous controls
-function plusSlides(n) {
-    showSlides(slideIndex += n);
+function plusSlides(n, card) {
+    showSlides(slideIndex += n, card);
 }
 
 // Thumbnail image controls
-function currentSlide(n) {
-    showSlides(slideIndex = n);
+function currentSlide(n, card) {
+    showSlides(slideIndex = n, card);
 }
 
-function showSlides(n) {
+function showSlides(n, card) {
     let i;
-    let slides = document.getElementsByClassName('room-card_body_images-block_image');
-    let dots = document.getElementsByClassName('room-card_body_images-block_dots_dot');
+    let slides = card.getElementsByClassName('room-card_body_images-block_image');
+    let dots = card.getElementsByClassName('room-card_body_images-block_dots_dot');
     if (slides.length !== 0) {
         if (n > slides.length) {
             slideIndex = 1

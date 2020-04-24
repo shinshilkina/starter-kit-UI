@@ -14,7 +14,7 @@ for (let card of cards) {
     for (let dot of dots) {
         dot.addEventListener('click', function (event) {
             const index = this.dataset.index;
-            currentSlide(index);
+            currentSlide(index, card);
         });
     }
 

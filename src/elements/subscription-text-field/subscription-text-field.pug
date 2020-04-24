@@ -1,7 +1,10 @@
 mixin subscription-text-field($title, $text)
     div.subscription-text-field
-        if $title
+        if ($title !== '')
             label.subscription-text-field_title=$title
         input.subscription-text-field_input(placeholder = $text)
-        div.subscription-text-field_input_choose
+        if ($title !== '')
+            div.subscription-text-field_input_choose-down
+        else
+            div.subscription-text-field_input_choose-up
 

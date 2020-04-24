@@ -1,119 +1,92 @@
-@import "../../theme/colors/colors";
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import "../../theme/default_theme/deftheme";
+
 @mixin link-image($url) {
-  width: 1.8rem;
-  height: 1.8rem;
-  margin-left: 1.6rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  margin-left: 1.45rem;
   background-image: url($url);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 }
 
-.bottom{
+.bottom {
   display: flex;
   flex-wrap: wrap;
-  font-family: Montserrat, sans-serif;
-  font-style: normal;
-  font-weight: lighter;
+
   letter-spacing: -0.015em;
   background: #FFFFFF;
   box-shadow: 0 1rem 2rem rgba(31, 32, 65, 0.05);
   margin-bottom: 1px;
 
-  padding: 7.7rem 7rem 6.8rem 10.9rem;
+  @include monserrat(normal, 17px, 19px, $dark_shade_50);
+
+  padding: 5.8rem 6rem 5.2rem 8.7rem;
   list-style: none;
-  &__element{
-    &:first-child{
-      width: 20rem;
-      margin-right: 3.7rem;
+  &__element {
+    & .logo {
+      &__circle {
+        margin-top: 0.4rem;
+      }
+      &__toxin {
+        margin-bottom: 0.9rem;
+      }
     }
-    &:last-child{
-      width: 20rem;
+    &:first-child {
+      width: 15.7rem;
+      margin-right: 3.1rem;
+    }
+    &:last-child {
+      width: 16.3rem;
+      padding-left: 0.1rem;
     }
     margin-right: 0.95rem;
-    width: 15rem;
-    &__title{
+    width: 11.5rem;
+    &__title {
       text-transform: uppercase;
-      margin: 0.7rem 0 1.5rem 0;
-      font-size: 0.9em;
+      margin: 0.7rem 0 1.2rem 0;
+      font-size: 0.7em;
       font-weight: bold;
       line-height: 15px;
       color: $dark_shade;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.01em;
     }
     &__sub-element{
-      font-size: 1.05em;
-      line-height: 1.75em;
+      font-size: 0.9em;
+      line-height: 1.7em;
       letter-spacing: 0;
       color: $dark_shade_50;
       list-style: none;
       word-wrap: break-word;
       padding:  0;
-      &__body {
+      margin-bottom: 0.9rem;
 
-        &__email {
-          position: relative;
-          &__text {
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 1em;
-            line-height: 171%;
-            color: $dark_shade_25;
-            letter-spacing: 0.035em;
-
-            margin-top: 1.9rem;
-            padding: 0.7rem 3.7rem 0.85rem 1.1rem;
-
-            background: #FFFFFF;
-            border: 1px solid rgba(31, 32, 65, 0.25);
-            box-sizing: border-box;
-            border-radius: 4px;
-          }
-          &__button {
-            position: absolute;
-            top: 2.85rem;
-            right: 0.5rem;
-            height: 1.5rem;
-            width: 1.5rem;
-            background-image: url("../icon/arrow_forward.png");
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center;
-          }
-        }
-
-        &.--height {
-          line-height: 1.8em;
-          margin-bottom: 1.05rem;
+      & .subscription-text-field {
+        margin-top: 1.5rem;
+        & .subscription-text-field_input_choose-up {
+          right: 0.8rem;
         }
       }
     }
   }
-  &__down{
+  &__down {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 5rem;
     background: #FFFFFF;
     box-shadow: 0 1rem 2rem rgba(31, 32, 65, 0.05);
-    &__copyright{
-      font-family: Montserrat, sans-serif;
-      font-size: 1.1em;
-      font-style: normal;
-      font-weight: lighter;
-      letter-spacing: 0em;
+    &__copyright {
       word-wrap: break-word;
-      color: $dark_shade_75;
+      @include monserrat(normal, 0.865em, 0.865em, $dark_shade_75);
 
-      padding: 2rem 0 2rem 10.9rem;
+      padding: 1.9rem 0 1.8rem 8.7rem;
     }
     &__links{
       display: flex;
       flex-direction: row;
-      position: absolute;
-      right: 11.5rem;
-      padding-top: 1.75rem;
+
+      margin-left: auto;
+      margin-right: 8.7rem;
+      padding: 1.5rem 0;
       &--twitter{
        @include link-image("../icon/twitter.png");
       }

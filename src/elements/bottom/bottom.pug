@@ -1,20 +1,21 @@
 include bottom-data
-    ul.bottom
+include ../subscription-text-field/subscription-text-field
 
+mixin bottom()
+    ul.bottom
         each item in locals.bottomData
             li(class="bottom__element")
                 if item.id === undefined
                     include ../logo/logo
-                div(class="bottom__element__title")=item.title
+                if (item.title)
+                    div(class="bottom__element__title")=item.title
                 if item.elements
                     ul.bottom__element__sub-element
                         each item_child in item.elements
                             li(class="bottom__element__sub-element")
                                 div(class="bottom__element__sub-element__body -"+item.id)=item_child.element
                             if item.id === 'subscribe'
-                                div.bottom__element__sub-element__body__email
-                                    input.bottom__element__sub-element__body__email__text(placeholder="Your email address")
-                                    div.bottom__element__sub-element__body__email__button(type="button")
+                                +subscription-text-field('', 'Your email address')
     div.bottom__down
         span.bottom__down__copyright='Copyright © 2018 Toxin UI Kit. All rights reserved.'
         div.bottom__down__links

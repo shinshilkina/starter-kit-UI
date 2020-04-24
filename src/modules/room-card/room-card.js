@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const areaWithTwoDatesInputs = document.querySelector('.date_dropdowns');
     const arrived = areaWithTwoDatesInputs.querySelector('.arrival');
     const departure = areaWithTwoDatesInputs.querySelector('.departure');
-
 });
 
 const numbersInTable = document.querySelectorAll('.check_table .table-cost');

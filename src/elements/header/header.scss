@@ -1,24 +1,28 @@
-//@import "../fonts/Montserrat/fonts.css";
-@import "../../theme/colors/colors";
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import "../../theme/default_theme/deftheme";
+html {
+  background-color: #E5E5E5;
+}
+body {
+  margin: 0;
+}
 
 .navigation {
   display: flex;
-  font-family: Montserrat, sans-serif;
-  font-style: normal;
-  font-weight: lighter;
-  font-size: 18px;
-  line-height: 0.9em;
-  letter-spacing: -0.015em;
-  margin: 4rem 0 3.5rem 0;
-  background-color: #FFFFFF;
-  box-shadow: 0 1rem 2rem rgba(31, 32, 65, 0.05);
+
   width: 100%;
-  color: $dark_shade_50;
+  margin: 2rem 0 2.5rem 0;
+
+  letter-spacing: -0.015em;
   justify-content: space-between;
   align-items: center;
+
+  background-color: #FFFFFF;
+  box-shadow: 0 1rem 2rem rgba(31, 32, 65, 0.05);
+
+  @include monserrat(normal, 0.85em, 0.7em, $dark_shade_50);
+
   &__logo{
-    padding-left: 10.7rem;
+    padding-left: 8.5rem;
   }
   &__list {
     display: flex;
@@ -26,13 +30,35 @@
   }
   &__element {
     display: inherit;
+
     list-style: none;
     position: relative;
     align-items: center;
-    margin: 1.26rem 1.15rem;
+    margin: 1rem 0.95rem;
+
+    letter-spacing: 0;
+
     &:first-child{
       font-weight: bold;
       color: $dark_shade_75;
+    }
+    &:last-of-type:not(.navigation__element--name) {
+      margin-right: 0.7rem;
+    }
+    &--name {
+      margin-right: 8.8rem;
+      margin-left: 3rem;
+      letter-spacing: 0.01em;
+      position: relative;
+    }
+    &--name:before {
+      content: '';
+      position: absolute;
+      top: -0.55rem;
+      left: -2rem;
+      height: 1.8rem;
+      width: 0.2rem;
+      border-left: 1px solid $dark_shade_10;
     }
   }
   &__link {
@@ -40,10 +66,9 @@
     text-decoration: none;
     color: $dark_shade_50;
     &__show-more{
-      height: 1rem;
-      width: 1rem;
-      margin-left: 0.3rem;
-      margin-top: 0.05rem;
+      height: 0.7rem;
+      width: 0.7rem;
+      margin: 0 -0.2rem 0 0.4rem;
       background-image: url("../icon/expand_more.png");
       background-repeat: no-repeat;
       background-size: contain;
@@ -51,36 +76,28 @@
       align-self: center;
     }
   }
-  &__button {
-    font-family: inherit;
-    margin: 0.3rem 0.85rem;
-    padding: 0;
-    font: inherit;
-    font-size: 0.8em;
-    font-weight: bold;
-    text-transform: uppercase;
-    border-radius: 1.7rem 1.7rem;
-    background-image: $gradient;
-    border:none;
-    height: 2.7rem;
-    &--register{
-      color: #FFFFFF;
-      width: 8rem;
-      padding-bottom: 0.1rem;
-      margin-right: 10.95rem;
+  & .buttons_bordered {
+    height: 2rem;
+    width: 4.9rem;
+
+    margin: auto 1.3rem;
+
+    & .login-header {
+      height: 1.8rem;
+      width: 4.7rem;
+
+      font-weight: bold;
+      font-size: 0.8em;
+
     }
-    &--login{
-      padding: 0.15rem;
-      margin-left: 1.2rem;
-      width: 6.2rem;
-      color: $purple;
-        &__item{
-          padding: 0.6rem 1.45rem;
-          border-radius: inherit;
-          background-color: #FFFFFF;
-          background-image: none;
-        }
-    }
+  }
+  & .register-header {
+    height: 2rem;
+    font-size: 0.85em;
+    margin: auto 8.75rem auto 0;
+  }
+  & .register-header, & .buttons_bordered {
+    vertical-align: middle;
   }
   &__sub{
     display: none;

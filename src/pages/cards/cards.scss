@@ -2,7 +2,6 @@
 
 header {
   height: 5rem;
-
   & .cards_logo_grey {
     @include logo_header(3rem, 3rem, 2rem 0 0 1.6rem);
   }
@@ -10,11 +9,10 @@ header {
 
 .cards {
   display: flex;
-  width: 100%;
+  width: 80%;
   justify-content: center;
   align-items: center;
   padding: 2.4rem 0 0 8rem;
-
   &__container {
     width: 102.857rem;
     display: flex;

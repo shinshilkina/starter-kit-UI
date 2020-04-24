@@ -1,38 +1,26 @@
-.logo{
+.logo {
   display: flex;
   align-items: center;
+  height: 4.2rem;
   &__circle {
     display: inherit;
-    width: 3.2rem;
-    height: 3.2rem;
-    background-image: url("../logo/img/bottom_element.png");
+
+    width: 2.5rem;
+    height: 2.5rem;
+
+    margin: auto 0;
+
+    background-image: url("../logo/img/Group.svg");
     background-repeat: no-repeat;
     background-size: contain;
     align-items: center;
     justify-content: center;
-    &--left{
-      display: inherit;
-      margin-top: 0.25rem;
-      width: 1.1rem;
-      height: 1.1rem;
-      background-image: url("../logo/img/left_element.png");
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
-    &--right{
-      display: inherit;
-      width: 0.8rem;
-      height: 0.8rem;
-      background-image: url("../logo/img/right_element.png");
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
   }
   &__toxin{
     width: 5rem;
-    height: 1.12rem;
-    margin-left: 1rem;
-    background-image: url("../logo/img/TOXIN.png");
+    height: 0.88rem;
+    margin-left: 0.75rem;
+    background-image: url("../logo/img/TOXIN.svg");
     background-repeat: no-repeat;
     background-size: contain;
   }

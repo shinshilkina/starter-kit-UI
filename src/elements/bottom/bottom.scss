@@ -3,7 +3,7 @@
 @mixin link-image($url) {
   width: 1.4rem;
   height: 1.4rem;
-  margin-left: 1.45rem;
+  margin-left: 1.4rem;
   background-image: url($url);
   background-repeat: no-repeat;
   background-size: contain;
@@ -19,12 +19,13 @@
   box-shadow: 0 1rem 2rem rgba(31, 32, 65, 0.05);
   margin-bottom: 1px;
 
-  @include monserrat(normal, 17px, 19px, $dark_shade_50);
+  @include monserrat(normal, 18px, 18px, $dark_shade_50);
 
-  padding: 5.8rem 6rem 5.2rem 8.7rem;
+  padding: 5.8rem 6rem 5.1rem 8.7rem;
   list-style: none;
   &__element {
     & .logo {
+      height: 4rem;
       &__circle {
         margin-top: 0.4rem;
       }
@@ -44,17 +45,20 @@
     width: 11.5rem;
     &__title {
       text-transform: uppercase;
-      margin: 0.7rem 0 1.2rem 0;
+      margin: 0.7rem 0 1.1rem 0;
       font-size: 0.7em;
       font-weight: bold;
       line-height: 15px;
       color: $dark_shade;
-      letter-spacing: 0.01em;
-    }
-    &__sub-element{
-      font-size: 0.9em;
-      line-height: 1.7em;
       letter-spacing: 0;
+    }
+    &__title:last-of-type {
+      letter-spacing: -0.02em;
+    }
+    &__sub-element {
+      font-size: 0.89em;
+      line-height: 1.7em;
+      letter-spacing: 0.055em;
       color: $dark_shade_50;
       list-style: none;
       word-wrap: break-word;
@@ -62,7 +66,7 @@
       margin-bottom: 0.9rem;
 
       & .subscription-text-field {
-        margin-top: 1.5rem;
+        margin-top: 1.4rem;
         & .subscription-text-field_input_choose-up {
           right: 0.8rem;
         }
@@ -82,14 +86,16 @@
       word-wrap: break-word;
       @include monserrat(normal, 0.865em, 0.865em, $dark_shade_75);
 
-      padding: 1.9rem 0 1.8rem 8.7rem;
+      padding: 1.8rem 0 1.8rem 8.7rem;
+      font-size: 0.8em;
+      letter-spacing: 0.017em;
     }
     &__links{
       display: flex;
       flex-direction: row;
 
       margin-left: auto;
-      margin-right: 8.7rem;
+      margin-right: 8.8rem;
       padding: 1.5rem 0;
       &--twitter{
        @include link-image("../icon/twitter.png");

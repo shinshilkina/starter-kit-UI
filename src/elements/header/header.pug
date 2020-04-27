@@ -1,7 +1,7 @@
 include ../../elements/buttons/buttons
 
-mixin header({user = '', menuItems = [] , buttonLogin = 'login', buttonRegister = 'register'} = {})
-    nav.navigation
+mixin header({user = '', menuItems = [] , buttonLogin = 'login', buttonRegister = 'register', lang='en'} = {})
+    nav.navigation(class = 'navigation__'+lang)
         div.navigation__logo
             include ../logo/logo
         ul.navigation__list

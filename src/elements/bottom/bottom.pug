@@ -1,7 +1,7 @@
 
 include ../subscription-text-field/subscription-text-field
 
-mixin bottom()
+mixin bottom({inputText = 'Your email address', copyrightText = 'Copyright © 2018 Toxin UI Kit. All rights reserved.'} = {})
     ul.bottom
         each item in locals.bottomData
             li(class="bottom__element")
@@ -15,9 +15,9 @@ mixin bottom()
                             li(class="bottom__element__sub-element")
                                 div(class="bottom__element__sub-element__body -"+item.id)=item_child.element
                             if item.id === 'subscribe'
-                                +subscription-text-field('', 'Your email address')
+                                +subscription-text-field('', inputText)
     div.bottom__down
-        span.bottom__down__copyright='Copyright © 2018 Toxin UI Kit. All rights reserved.'
+        span.bottom__down__copyright=copyrightText
         div.bottom__down__links
             div.bottom__down__links--twitter
             div.bottom__down__links--facebook

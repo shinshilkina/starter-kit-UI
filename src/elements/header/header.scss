@@ -9,7 +9,6 @@ body {
   flex-wrap: wrap;
 
   width: 100%;
-  margin: 2rem 0 2.5rem 0;
 
   letter-spacing: -0.015em;
   justify-content: space-between;
@@ -18,9 +17,9 @@ body {
   background-color: #FFFFFF;
   box-shadow: 0 1rem 2rem rgba(31, 32, 65, 0.05);
 
-  @include monserrat(normal, 0.83em, 0.7em, $dark_shade_50);
+  @include monserrat(normal, 15.15px, 11.9px, $dark_shade_50);
 
-  &__logo{
+  &__logo {
     padding-left: 8.7rem;
   }
   &__list {
@@ -88,8 +87,7 @@ body {
     & .login-header {
       height: 1.85rem;
       width: auto;
-      padding-left: 1.12rem;
-      padding-right: 1.12rem;
+      padding: 0.1rem 1.12rem 0  1.12rem;
 
       font-weight: bold;
       font-size: 0.75em;
@@ -98,12 +96,40 @@ body {
   & .register-header {
     height: 2rem;
     font-size: 0.75em;
+
     margin: auto 8.75rem auto 0;
+
   }
   & .register-header, & .buttons_bordered {
     vertical-align: middle;
   }
   &__sub{
     display: none;
+  }
+}
+
+.navigation__ru {
+  & .navigation__element {
+    letter-spacing: 0.015em;
+    margin: 0.85rem 0.67rem;
+
+    &:first-child {
+      font-weight: normal;
+      color: $dark_shade_50;
+    }
+    & .navigation__link__show-more {
+      margin: auto  0.4rem;
+      width: 0.8rem;
+      height: 0.8rem;
+    }
+  }
+  & .register-header {
+    letter-spacing: 0.08em;
+  }
+  & .login-header {
+    letter-spacing: 0.1em;
+  }
+  & .buttons_bordered {
+    margin-left: 0.6rem;
   }
 }

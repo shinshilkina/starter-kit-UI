@@ -1,6 +1,6 @@
 @import "../../theme/default_theme/deftheme";
 
-header {
+.header {
   height: 5rem;
   & .cards_logo_grey {
     @include logo_header(3rem, 3rem, 2rem 0 0 1.6rem);

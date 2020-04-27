@@ -14,14 +14,13 @@
   display: flex;
   flex-wrap: wrap;
 
-  letter-spacing: -0.015em;
   background: #FFFFFF;
   box-shadow: 0 1rem 2rem rgba(31, 32, 65, 0.05);
   margin-bottom: 1px;
 
   @include monserrat(normal, 18px, 18px, $dark_shade_50);
 
-  padding: 5.8rem 6rem 5.1rem 8.7rem;
+  padding: 4.8rem 6rem 5.1rem 8.7rem;
   list-style: none;
   &__element {
     & .logo {
@@ -50,10 +49,6 @@
       font-weight: bold;
       line-height: 15px;
       color: $dark_shade;
-      letter-spacing: 0;
-    }
-    &__title:last-of-type {
-      letter-spacing: -0.02em;
     }
     &__sub-element {
       font-size: 0.89em;
@@ -76,6 +71,9 @@
   &__down {
     display: flex;
     flex-wrap: wrap;
+
+    font-size: 18px;
+    line-height: 18px;
 
     background: #FFFFFF;
     box-shadow: 0 1rem 2rem rgba(31, 32, 65, 0.05);

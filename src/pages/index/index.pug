@@ -1,3 +1,7 @@
+include ../../elements/header/header
+include ../../elements/bottom/bottom
+include ../../elements/bottom/bottom-data-ru
+
 doctype html
 html(lang="en")
     head
@@ -6,7 +10,79 @@ html(lang="en")
         meta(http-equiv="X-UA-Comatible" content="ie=edge")
         title My app
 
-        body
-            include ../colors&type/colors_type
+        header
+            +header({
+                menuItems: [
+                    {
+                        name: 'about_us',
+                        link: '#about_us',
+                        title: 'О нас'
+                    },
+                    {
+                        name: 'services',
+                        link: '#services',
+                        title: 'Услуги',
+                        submenu: [
+                            {
+                                subname: 'documentation',
+                                sublink: '#documentation',
+                                subtitle: 'Documentation'
+                            },
+                            {
+                                subname: 'community',
+                                sublink: '#community',
+                                subtitle: 'Community'
+                            },
+                            {
+                                subname: 'get-in-touch',
+                                sublink: '#get-in-touch',
+                                subtitle: 'Get in Touch'
+                            },
+                        ]
+                    },
+                    {
+                        name: 'careers',
+                        link: '#careers',
+                        title: 'Вакансии'
+                    },
+                    {
+                        name: 'news',
+                        link: '#news',
+                        title: 'Новости'
+                    },
+                    {
+                        name: 'documentation',
+                        link: '#documentation',
+                        title: 'Соглашения',
+                        submenu: [
+                            {
+                                subname: 'documentation',
+                                sublink: '#documentation',
+                                subtitle: 'Documentation'
+                            },
+                            {
+                                subname: 'community',
+                                sublink: '#community',
+                                subtitle: 'Community'
+                            },
+                            {
+                                subname: 'get-in-touch',
+                                sublink: '#get-in-touch',
+                                subtitle: 'Get in Touch'
+                            },
+                        ]
+                    }
+                ],
+                buttonLogin: 'войти',
+                buttonRegister: 'зарегистрироваться',
+                lang: 'ru'
+            })
+
+        include ../signIn/signIn
+        bottom
+            +bottom({
+                inputText: 'Email',
+                copyrightText: 'Copyright © 2018 Toxin отель. Все права зачищены.'
+            })
 
 

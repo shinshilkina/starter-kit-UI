@@ -1,73 +1,32 @@
 include ../../elements/buttons/buttons
--
-    var navigation = [
-        {
-            name: 'home',
-            link: '#home',
-            title: 'Home'
-        },
-        {
-            name: 'about_us',
-            link: '#about_us',
-            title: 'About Us'
-        },
-        {
-            name: 'services',
-            link: '#services',
-            title: 'Services',
-            type: [
-                {
-                    name: 'documentation',
-                    link: '#documentation',
-                    title: 'Documentation'
-                },
-                {
-                    name: 'community',
-                    link: '#community',
-                    title: 'Community'
-                },
-                {
-                    name: 'get-in-touch',
-                    link: '#get-in-touch',
-                    title: 'Get in Touch'
-                },
-            ]
-        },
-        {
-            name: 'careers',
-            link: '#careers',
-            title: 'Careers'
-        },
-        {
-            name: 'news',
-            link: '#news',
-            title: 'News'
-        },
-        {
-            name: 'documentation',
-            link: '#documentation',
-            title: 'Documentation'
-        }
-    ]
 
-mixin header({name = ''} = {})
+mixin header({user = '', menuItems = [] , buttonLogin = 'login', buttonRegister = 'register'} = {})
     nav.navigation
         div.navigation__logo
             include ../logo/logo
         ul.navigation__list
-            each item in navigation
-                li.navigation__element
-                    a(href=item.link, class='navigation__link--'+item.name).navigation__link=item.title
-                    if item.type
-                        div.navigation__link__show-more
-                            ul.navigation__sub
-                                each item_sub in item.type
-                                    li.navigation__sub-element
-                                        a(href='#' + item_sub.name).navigation__sub-link=item_sub.title
-            if (name !== '')
+            each item in menuItems
+                - const {name, link, title, submenu} = item
+                +header-items({
+                    name: name,
+                    link: link,
+                    title: title,
+                    submenu: submenu
+                })
+            if (user !== '')
                 li.navigation__element.navigation__element--name
-                    a(class='navigation__link--name').navigation__link=name
+                    a(class='navigation__link--name').navigation__link=user
             else
-                +button-bordered({text: 'login', className: 'login-header'})
-                +button-active({text: 'register', className: 'register-header'})
+                +button-bordered({text: buttonLogin, className: 'login-header'})
+                +button-active({text: buttonRegister, className: 'register-header'})
 
+mixin header-items({name, link, title, submenu = []} = {})
+    li.navigation__element
+        a(href=link, class='navigation__link--' + name).navigation__link=title
+        if (submenu.length !== 0)
+            div.navigation__link__show-more
+                ul.navigation__sub
+                    each item_sub in submenu
+                        - const {subname, sublink, subtitle} = item_sub
+                        li.navigation__sub-element
+                            a(href='#' + sublink).navigation__sub-link=subtitle

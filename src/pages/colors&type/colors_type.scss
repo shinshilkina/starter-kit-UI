@@ -1,0 +1,154 @@
+@import "../../theme/default_theme/deftheme";
+
+html {
+  background-color: #FFFFFF !important;
+}
+
+.colors_logo_grey {
+  @include logo_header(3rem, 3rem, 1.9rem 0 0 1.8rem);
+}
+
+.color {
+  display: flex;
+  margin-bottom: 1.175rem;
+
+  &_rect {
+    min-height: 4.45rem;
+    max-height: 4.45rem;
+    min-width: 4.4rem;
+    border-radius: 0.5rem;
+  }
+  &_text {
+    margin: 0.55rem 0 0 2.45rem;
+
+    &_title {
+      @include quicksand(bold, 1.15em, 1.6em, $dark_shade);
+      letter-spacing: 0.05rem;
+    }
+    &_code {
+      @include quicksand(normal, 1.15em, 1.5em, $dark_shade);
+      letter-spacing: 0.02rem;
+    }
+  }
+}
+.colors_and_type_container {
+  margin: 2.1rem 22rem 0 9.4rem;
+
+  display: flex;
+
+  @media (max-width: 1200px) {
+    margin: 2.1rem 9rem 0 9.4rem;
+  }
+
+  & .colors_and_type {
+
+    &_fonts {
+      width: 37%;
+      margin-left: auto;
+      @media (max-width: 897px) {
+        width: 100%;
+        margin-top: 2rem;
+      }
+
+
+      & .fonts_block {
+        display: flex;
+        max-width: 25.6rem;
+
+        &_title {
+          width: 2.2rem;
+          text-align: right;
+          vertical-align: top;
+
+          &_h1 {
+            @include monserrat(normal, 24px, 29px, $dark_shade_25);
+          }
+
+          &_h2 {
+            @include monserrat(normal, 19px, 23px, $dark_shade_25);
+          }
+
+          &_h3 {
+            @include monserrat(normal, 12px, 15px, $dark_shade_25);
+          }
+
+          &_body {
+            @include monserrat(normal, 14px, 24px, $dark_shade_25);
+          }
+        }
+
+        &_text {
+          padding: 0 0 2.94rem 1.5rem;
+
+          &_h1 {
+            @include quicksand(bold, 1.5em, 1.24em, $dark_shade);
+            letter-spacing: 0.02em;
+          }
+
+          &_h2 {
+            @include quicksand(bold, 19px, 24px, $dark_shade);
+            letter-spacing: 0.025em;
+          }
+
+          &_h3 {
+            @include monserrat(bold, 12px, 15px, $dark_shade);
+            text-transform: uppercase;
+            letter-spacing: 0.023em;
+          }
+
+          &_body {
+            @include monserrat(normal, 14px, 24px, $dark_shade_75);
+            letter-spacing: 0.055em;
+            white-space: pre-wrap;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*
+&_title {
+          width: 50px;
+
+          &_h1 {
+            @include monserrat(normal, 24px, 29px, $dark_shade_25);
+          }
+
+          &_h2 {
+            @include monserrat(normal, 19, 23px, $dark_shade_25);
+          }
+
+          &_h3 {
+            @include monserrat(normal, 12px, 15px, $dark_shade_25);
+          }
+
+          &_body {
+            @include monserrat(normal, 14px, 24px, $dark_shade_25);
+          }
+        }
+
+        &_text {
+          &_h1 {
+            @include quicksand(bold, 1.5em, 1.24em, $dark_shade);
+            letter-spacing: 0.02em;
+          }
+
+          &_h2 {
+            @include quicksand(bold, 19px, 24px, $dark_shade);
+            letter-spacing: 0.025em;
+          }
+
+          &_h3 {
+            @include monserrat(bold, 12px, 15px, $dark_shade);
+            text-transform: uppercase;
+            letter-spacing: 0.023em;
+          }
+
+          &_body {
+            @include monserrat(normal, 14px, 24px, $dark_shade_75);
+            letter-spacing: 0.055em;
+            white-space: pre-wrap;
+          }
+        }
+ */

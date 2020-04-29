@@ -21,8 +21,8 @@
     padding: 1.4rem 1.9rem 0 1.9rem;
     & .title-h1 {
       margin: 1rem 0 1.3rem 0;
-      @include quicksand(bold, 24px, 30px, $dark_shade);
-    }
+      font-size: 24px;
+      letter-spacing: 0.017em;}
     & .password {
       margin-top: 0.6rem;
     }

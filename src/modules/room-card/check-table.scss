@@ -7,7 +7,7 @@
   &_body {
     & .row-text, & .row-icon {
       @include monserrat(normal, 0.85em, 1.3em, $dark_shade_75);//1.3em
-      letter-spacing: 0.01em;
+      letter-spacing: 0.021em;
 
       word-break: break-word;
       white-space: pre-wrap;
@@ -39,14 +39,14 @@
       @include monserrat(normal, 0.87em, 1.3em, $dark_shade_75);
       word-break: break-word;
       white-space: pre-wrap;
+
+
+      text-align: right;
+      vertical-align: top;
+      padding-top: 0.8rem;
     }
     & .row-text {
       width: 69%;
-      padding-top: 0.76rem;
-    }
-    & .row-result {
-      text-align: right;
-      vertical-align: top;
       padding-top: 0.76rem;
     }
   }
@@ -55,13 +55,13 @@
       position: relative;
       &_text {
         @include quicksand(bold, 1.2em, 1.1em, $dark_shade);
-        padding-top: 0.8rem;
-        letter-spacing: 0.04em;
+        padding-top: 0.6rem;
+        letter-spacing: 0.035em;
       }
 
       &_line {
         position: absolute;
-        top: 3rem;
+        top: 2.8rem;
         right: -0.5rem;
 
         border-top: 1px dotted rgba(31,32,65,0.25);
@@ -70,7 +70,7 @@
     }
     &_sum {
       &_cost, &_currency {
-        @include quicksand(bold, 1.2em, 3.5em, $dark_shade);
+        @include quicksand(bold, 1.2em, 3em, $dark_shade);
         padding-top: 0.8rem;
         letter-spacing: 0.04em;
         vertical-align: bottom;

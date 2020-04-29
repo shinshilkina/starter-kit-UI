@@ -27,16 +27,16 @@
         }
       }
       &_category {
-        @include monserrat(bold, 0.75em, 1.8em, $purple);
+        @include monserrat(bold, 0.75em, 1.9em, $purple);
         text-transform: uppercase;
+        letter-spacing: 0.04em;
       }
       &_day {
-        @include monserrat(normal, 0.8em, 1.7em, $dark_shade_50);
-        letter-spacing: -0.03em;
+        @include monserrat(normal, 0.85em, 1.5em, $dark_shade_50);
       }
       &_cost {
-        @include monserrat(bold, 0.86em, 1.4em, $dark_shade_50);
-        letter-spacing: 0.02em;
+        @include monserrat(bold, 0.89em, 1.4em, $dark_shade_50);
+        letter-spacing: 0.07em;
         margin-left: auto;
       }
     }
@@ -47,10 +47,11 @@
       &_feedback {
         &_count {
           margin-left: auto;
-          @include monserrat(bold, 0.85em, 2em, $dark_shade_50);
+          @include monserrat(bold, 0.87em, 2em, $dark_shade_50);
         }
         &_text {
           @include monserrat(normal, 0.87em, 2em, $dark_shade_50);
+          letter-spacing: 0.05em;
         }
       }
     }

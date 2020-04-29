@@ -10,11 +10,14 @@
   box-sizing: border-box;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  font-size: 17px;
+
   & .room-card_body {
     padding: 2.6rem 1.8rem 0 1.8rem;
 
     & .dropdown {
-      margin-top: 1.05rem;
+      margin: 1.05rem 0 0 0.1rem;
     }
   }
   &_body {
@@ -26,11 +29,11 @@
       display: flex;
       &_number {
         &_symbol {
-          @include quicksand( bold, 0.85em, 2.5em, $dark_shade);
+          @include quicksand( bold, 0.85em, 2.4em, $dark_shade);
           letter-spacing: 0.1em;
         }
         &_count {
-          @include quicksand( bold, 1.45em, 1.1em, $dark_shade);
+          @include quicksand( bold, 1.35em, 1.1em, $dark_shade);
           letter-spacing: 0.08rem;
         }
       }
@@ -43,13 +46,13 @@
         letter-spacing: -0.01em;
       }
       &_cost {
-        @include monserrat(bold, 0.86em, 2.5em, $dark_shade_50);
+        @include monserrat(bold, 0.9em, 2.2em, $dark_shade_50);
         letter-spacing: 0.02em;
         margin-left: auto;
       }
     }
     &_dates {
-      margin-top: 0.7rem;
+      margin: 0.4rem 0 0 0.1rem;
     }
   }
 }

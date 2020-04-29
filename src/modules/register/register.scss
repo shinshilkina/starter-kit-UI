@@ -3,19 +3,25 @@
 .register {
   display: flex;
   flex-direction: column;
+
   max-width: 23.9rem;
   min-height: 40.3rem;
+
   background: #FFFFFF;
+
   border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 0.286rem;
+
   box-sizing: border-box;
   box-shadow: 0px 0px 1.786rem rgba(0,0,0,0.2);
-  border-radius: 0.286rem;
+
+  font-size: 16.9px;
+
   &_body {
     padding: 1.35rem 1.9rem 0 1.8rem;
     & .title-h1 {
       color: $dark_shade;
       margin: 1.1rem 0;
-      letter-spacing: 0.09rem;
     }
     & .secondName {
       margin-top: 0.7rem;
@@ -23,11 +29,15 @@
     & .radio_buttons {
       margin-top: 0.6rem;
     }
+    & .masked-text-field_title {
+      margin-left: 0.1rem;
+    }
     & .birthday-title {
       margin-top: 1.4rem;
     }
     & .email-title {
       margin-top: 1rem;
+      letter-spacing: 0.05em;
     }
     & .password {
       margin-top: 0.6rem;
@@ -43,18 +53,11 @@
       margin-top: 1.8rem;
       &_text {
         margin-right: auto;
-
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 18px;
-
+        @include monserrat(normal, 14px, 18px, #000000);
+        letter-spacing: 0.055em;
         display: flex;
         align-items: center;
         text-align: center;
-
-        color: #000000;
       }
     }
   }

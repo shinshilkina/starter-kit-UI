@@ -21,7 +21,7 @@
 @import "../../theme/colors/colors";
 
 @mixin title-monserrat($text-color, $font-size) {
-  font-family: Montserrat;
+  font-family:'Montserrat', Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: $font-size;
@@ -32,7 +32,7 @@
 }
 
 @mixin title-of-forms() {
-  font-family: Quicksand;
+  font-family: 'Quicksand', 'Open Sans', Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 2.2em;
@@ -52,7 +52,7 @@
 
 
 
-  font-family: Montserrat, sans-serif;
+  font-family:'Montserrat', Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 0.87em;
@@ -173,18 +173,12 @@
 }
 
 @mixin font-prop() {
-  font-family: Montserrat, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size:  0.7em;
-  line-height: 15px;
-  letter-spacing: 0.075em;
+  @include monserrat(bold, 12px, 15px, #1F2041);
+  letter-spacing: 0.072em;
 
   text-transform: uppercase;
   display: flex;
   align-items: center;
-
-  color: #1F2041;
 }
 
 @mixin text-field($colorDef, $colorFocus, $borderDef, $borderFocus, $placehDef, $placeholdFocus) {
@@ -221,12 +215,7 @@
   }
 }
 
-.title-h1 {
-  font-size: 1.714rem;
-  letter-spacing: 0.1rem;
-  line-height: 1.9rem;
-  font-weight: bold;
-}
+
 
 .exist-on-toxin {
   display: flex;
@@ -249,7 +238,7 @@
 }
 
 @mixin quicksand($weight, $size, $height, $color) {
-  font-family: 'Quicksand', 'Open Sans', Arial, sans-serif;;
+  font-family: 'Quicksand', 'Open Sans', Arial, sans-serif;
   font-weight: $weight;
   font-size: $size;
   line-height: $height;
@@ -270,6 +259,12 @@
   white-space: pre-wrap;
 }
 
+.title-h1 {
+  @include quicksand(bold, 1.714rem, 1.9rem  ,#1f2041);
+  font-size: 1.65rem;
+  line-height: 1.9rem;
+  font-weight: bold;
+}
 
 
 .date_dropdowns {

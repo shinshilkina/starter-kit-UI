@@ -11,12 +11,8 @@
     margin-top: 0.9rem;
     &_content {
       display: flex;
-
-      font-family: Montserrat, sans-serif;
-      font-size: 0.869em;
-      letter-spacing: 0.009em;
-
-      color: $dark_shade_75;
+      @include monserrat(normal, 0.869em, 1.25em, $dark_shade_75);
+      letter-spacing: 0.05em;
     }
     &_input {
       display: none;
@@ -26,7 +22,7 @@
       height: 1.15rem;
       position: relative;
 
-      margin-right: 0.6rem;
+      margin-right: 0.7rem;
 
       border: 1px solid $dark_shade_25;
       border-radius: 1rem;

@@ -11,11 +11,10 @@
       display: flex;
       margin-right: 1.3rem;
 
-      font-family: Montserrat, sans-serif;
-      font-size: 0.869em;
-      letter-spacing: 0.02em;
+      @include monserrat(normal, 15px, 20px, $dark_shade_75);
 
-      color: $dark_shade_75;
+      //font-size: 0.869em;
+      letter-spacing: 0.035em;
     }
     &_radio {
       display: none;
@@ -26,7 +25,7 @@
       height: 1.1rem;
 
 
-      margin-right: 0.6rem;
+      margin-right: 0.75rem;
 
       border: 1px solid $purple;
       border-radius: 50%;

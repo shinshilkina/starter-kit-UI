@@ -78,7 +78,8 @@ module.exports = new configurator.default().merge({
                 test: /\.(png|jpg|svg|ttf|eot|woff|woff2)$/,
                 loader: 'file-loader',
                 options: {
-                    name: '[path][name].[ext]'
+                    name: '[path][name].[ext]',
+                    useRelativePath: true
                 }
             },
             {

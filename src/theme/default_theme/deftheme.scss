@@ -190,8 +190,8 @@
     height: 2.75rem;
     padding-left: 0.9rem;
 
-    font-family: Montserrat, sans-serif;
-    font-size: 0.8em;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
 
     color: $colorDef;
     background: #FFFFFF;
@@ -249,7 +249,7 @@
 }
 
 @mixin monserrat($weight, $size, $height, $color) {
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;//'Montserrat', Arial, Helvetica, sans-serif;
   font-weight: $weight;
   font-size: $size;
   line-height: $height;

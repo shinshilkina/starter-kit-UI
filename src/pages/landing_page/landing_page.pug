@@ -1,0 +1,10 @@
+include ../../modules/search/search
+
+main.landingPage
+    article.landingPage_container
+        +search-room({
+            title: 'Найдём номера под ваши пожелания',
+            searchText: 'подобрать номер'
+        })
+    div.landingPage_comment
+        span.landingPage_comment_text=`Лучшие номера для вашей работы, отдыха и просто вдохновения`

@@ -1,0 +1,56 @@
+include ../../elements/filter-date-dropdown/filter-date-dropdown
+include ../../elements/dropdown/dropdown
+include ../../elements/range-slider/range-slider
+include ../../elements/checkbox-buttons/checkbox-buttons
+include ../../elements/rich_checkbox_buttons/rich_checkbox_buttons
+include ../../elements/checkbox_list/checkbox_list
+
+div.filter_area
+    +filter-date-dropdown('19.08.2020', '23.08.2020', 'даты пребывания в отеле')
+    +dropdown({
+        title: 'гости',
+        placeholder: 'Сколько гостей',
+        options: [
+            {text: 'дети'},
+            {text: 'взрослые', count: 3},
+            {text: 'младенцы', count: 1},
+        ],
+        buttons: true,
+        group: 'guests'
+    })
+    +range-slider('диапазон цены', '5000', '10000')
+    span.range-slider_comment='Стоимость за сутки пребывания в номере'
+    +checkbox-buttons({title : 'checkbox buttons',
+        params: [
+            { text: 'Можно курить' },
+            { text: 'Можно с питомцами', checked: true} ,
+            { text: 'Можно пригласить гостей \n(до 10 человек)', checked: true}
+        ]})
+    +rich-checkbox-buttons({
+        title: 'доступность',
+        options: [
+            {text: 'Широкий коридор' , subscription: 'Ширина коридоров в номере не менее 91 см.'},
+            {text: 'Помощник для инвалидов' , subscription: 'На 1 этаже вас встретит специалист и проводит до номера.'}
+        ]
+    })
+    +dropdown({
+        title: 'Удобства номера',
+        placeholder: 'Удобства номера',
+        options: [
+            {text: 'спальни', count: 2},
+            {text: 'кровати', count: 2},
+            {text: 'ванные комнаты'},
+        ],
+        buttons: false,
+        group: 'furniture'
+    })
+    +checkbox-list({
+        title: 'дополнительные удобства',
+        options: [
+            { text: 'Завтрак'},
+            { text: 'Письменный стол', checked: true},
+            { text: 'Стул для кормления', checked: true},
+            { text: 'Кроватка', checked: true},
+            { text: 'Телевизор'},
+            { text: 'Шампунь'}
+        ]})

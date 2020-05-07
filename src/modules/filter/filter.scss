@@ -1,0 +1,35 @@
+@import "../../theme/default_theme/deftheme";
+
+.filter_area {
+
+  & .filter-date-dropdown {
+    margin-bottom: 1rem;
+  }
+
+  & .range-slider {
+    margin: 1.1rem 0 0.7rem 0;
+
+    &_title {
+      width: 101%;
+    }
+    &_comment {
+      @include monserrat(normal, 13px, 117%, $dark_shade_50);
+      letter-spacing: 0.02em;
+    }
+  }
+  & .checkboxButtons {
+    margin-top: 1rem;
+  }
+
+  & .rich-checkbox {
+    margin-top: 2rem;
+  }
+
+  & .dropdown[data-group='furniture'] {
+    margin-top: 1.6rem;
+  }
+
+  & .checkbox-list {
+    margin-top: 1.05rem;
+  }
+}

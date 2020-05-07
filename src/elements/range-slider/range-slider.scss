@@ -36,10 +36,11 @@
   &_title {
     @include title-checkboxs();
     margin-bottom: 0.5rem;
+    width: 100%;
   }
   &_value {
     display: flex;
-    width: 64.15%;
+    width: 54%;
     justify-content: flex-end;
 
     &_start, &_perm, &_end {

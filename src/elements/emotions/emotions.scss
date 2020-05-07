@@ -21,13 +21,16 @@
     text-align: center;
 
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
   }
   & .comfort {
     background-image: url("../icon/insert_emoticon.svg");
   }
   & .convenience {
     background-image: url("../icon/location_city.svg");
+  }
+  & .cosiness {
+    background-image: url("../icon/whatshot.svg");
   }
   &_body {
     padding-left: 1rem;

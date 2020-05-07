@@ -7,6 +7,9 @@
   &_image {
     display: none;
     border-radius: 0.286rem 0.286rem 0 0;
+    object-fit: cover;
+    width: 16.9rem;
+    height: 9.5rem;
   }
   &_next, &_prev {
     width: 15.556%;

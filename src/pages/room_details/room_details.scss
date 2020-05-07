@@ -1,0 +1,117 @@
+@import "../../theme/default_theme/deftheme";
+
+.room-details {
+
+  &_container {
+    padding-bottom: 3.8rem;
+    border-bottom: 1px solid $dark_shade_10;
+
+    @media(max-width: 700px) {
+      &_images {
+        display: inline-block;
+        &_first-image {
+        width: 100%;
+        }
+      }
+    }
+    @media(min-width: 700px) {
+      &_images {
+        display: flex;
+        flex-wrap: wrap;
+        &_first-image {
+          width: 68%;
+        }
+        &_left {
+          width: 32%;
+        }
+      }
+    }
+    &_images {
+      &_first-image {
+        max-height: 30.3rem;
+        min-height: 5rem;
+
+      }
+      &_left {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin: 0;
+      }
+    }
+
+    &_info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin: 4.1rem 8rem 0 8.7rem;
+      @media(min-width: 1200px) {
+
+        &_about {
+          margin-right: 4rem;
+          width: 61%;
+          &_header_impressions {
+            margin-left: 5.2rem;
+          }
+        }
+      }
+      @media(max-width: 861px) {
+        & .cancel-room-rools {
+          margin-left: 0;
+          width: 80%;
+        }
+        &_about_header, &_about_rools {
+          justify-content: center;
+        }
+      }
+      &_about {
+        display: flex;
+        flex-wrap: wrap;
+        &_header {
+          display: flex;
+          flex-wrap: wrap;
+          &_impressions {
+            & .pie {
+              margin-top: 1.1rem;
+            }
+          }
+        }
+        &_comments {
+          margin-top: 1rem;
+          position: relative;
+
+          &_count {
+            position: absolute;
+            top: 0.35rem;
+            right: 0.5rem;
+            @include monserrat(normal, 14px, 14px, $dark_shade_50);
+            text-align: right;
+          }
+          & .comment {
+            margin: 0.9rem 0 1.25rem 0;
+            font-size: 14px;
+          }
+        }
+        &_rools {
+          display: flex;
+          flex-wrap: wrap;
+
+          & .title_bullet-list {
+            margin: 0.65rem 0 1.2rem 1.5rem;
+          }
+          &_cancel {
+            width: 49.5%;
+            margin-left: auto;
+            & .cancel-room-rools_title {
+              margin: 0.65rem 0;
+            }
+            & .cancel-room-rools_text {
+              padding:0.5rem 1rem 0 0;
+              @include monserrat(normal, 0.97em, 160%, $dark_shade_75);
+            }
+          }
+        }
+      }
+    }
+  }
+}

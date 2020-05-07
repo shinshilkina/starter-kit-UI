@@ -1,8 +1,8 @@
 include ../like-button/like-button
-mixin comment({ name,date, countLikes,like, text} = {})
+mixin comment({ name,date, countLikes,like, text, image} = {})
     div.comment
         div.comment_header
-            div.comment_header_image
+            img.comment_header_image(src=image)
             div.comment_header_about
                 div.comment_header_about_name=name
                 div.comment_header_about_date=date

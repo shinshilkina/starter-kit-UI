@@ -1,0 +1,80 @@
+include ../../modules/room-card/room-card
+include ../../elements/emotions/emotions
+include ../../elements/pie/pie
+include ../../elements/comment/comment
+include ../../elements/bullet_list/bullet_list
+
+main.room-details
+    article.room-details_container
+        div.room-details_container_images
+            img.room-details_container_images_first-image(src=require('../../modules/image/room888.png').default)
+            div.room-details_container_images_left
+                img.room-details_container_images_left_second-image(src=require('../../modules/image/room888-2.png').default)
+                img.room-details_container_images_left_third-image(src=require('../../modules/image/room888-3.png').default)
+        div.room-details_container_info
+            div.room-details_container_info_about
+                div.room-details_container_info_about_header
+                    div.room-details_container_info_about_header_smiles
+                        h2.room-details_container_info_about_header_smiles_title.title-h2='Сведения о номере'
+                        +emotion('comfort', 'Комфорт', 'Шумопоглащающие стены')
+                        +emotion('convenience', 'Удобство', 'Окно в каждой из спален')
+                        +emotion('cosiness', 'Уют', 'Номер оснащен камином')
+                    div.room-details_container_info_about_header_impressions
+                        h2.room-details_container_info_about_header_impressions.title-h2='Впечатления о номере'
+                        +pie({
+                            voices:[
+                            {
+                                enTitle: 'perfect',
+                                ruTitle: 'Великолепно',
+                                countVoices: 130
+                            },
+                            {
+                                enTitle: 'good',
+                                ruTitle: 'Хорошо',
+                                countVoices: 65
+                            },
+                            {
+                                enTitle: 'satisfactorily',
+                                ruTitle: 'Удовлетворительно',
+                                countVoices: 65
+                            },
+                            {
+                                enTitle: 'bad',
+                                ruTitle: 'Разочарован',
+                                countVoices: 0
+                            }
+                        ]
+                        })
+                div.room-details_container_info_about_comments
+                    h2.room-details_container_info_about_comments_title.title-h2='Отзывы посетителей номера'
+                    span.room-details_container_info_about_comments_count='2 отзыва'
+                    +comment({
+                        name: 'Мурад Сарафанов',
+                        date: '5 дней назад',
+                        countLikes: 12,
+                        like: true,
+                        text: `Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. \nИ стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.`,
+                        image: require('../../elements/icon/murad2.png').default
+                    })
+                    +comment({
+                        name: 'Патрисия Стёклышкова',
+                        date: 'Неделю назад',
+                        countLikes: 2,
+                        like: false,
+                        text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент ',
+                        image: require('../../elements/icon/patric.png').default
+                    })
+                div.room-details_container_info_about_rools
+                    div.room-details_container_info_about_rools_bullet
+                        h2.title-h2.title_bullet-list='Правила'
+                        +bullet-list('', 'Нельзя с питомцами', 'Без вечеринок и мероприятий',
+                            'Время прибытия — после 13:00, а выезд до 12:00')
+                    div.room-details_container_info_about_rools_cancel.cancel-room-rools
+                        h2.cancel-room-rools_title.title-h2='Отмена'
+                        div.cancel-room-rools_text='Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.'
+
+            div.room-details_container_info_card
+                +room-card({
+                    number: '888', category: 'люкс', cost: '9990', currency: '₽', sale: 2179
+                })
+

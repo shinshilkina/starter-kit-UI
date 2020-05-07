@@ -1,0 +1,42 @@
+@import "../../theme/default_theme/deftheme";
+
+.filterPage {
+  border-bottom: 1px solid $dark_shade_25;
+
+  &_container {
+    display: flex;
+
+    margin: 1.7rem 7.6rem 0 8.7rem;
+
+    & .filter_area {
+      width: 16.7rem;
+    }
+
+    &_numbers {
+      width: 100%;
+      margin-left: 3.7rem;
+
+      &_title {
+        margin: 0.2rem 0 0 0;
+      }
+
+      &_cards {
+        display: flex;
+        flex-wrap: wrap;
+
+        & .room-card_small {
+          margin: 1.25rem 0.8rem 0 0;
+        }
+      }
+      &_map-pages {
+        width: 96.5%;
+        display: flex;
+        margin-bottom: 2rem;
+
+        & .pagination {
+          margin: 2.5rem auto;
+        }
+      }
+    }
+  }
+}

@@ -2,7 +2,7 @@ include ../../elements/rate-button/rate-button
 include ../../elements/image-slider/image-slider
 
 
-mixin small-room-card({number = '888', category='люкс', cost='9990', currency= '₽', feedback = '145', rate = 5, buttons = false,images=[]} = {})
+mixin small-room-card({number = '888', category='', cost='9990', currency= '₽', feedback = '145', rate = 5, buttons = false,images=[]} = {})
     form.room-card.room-card_small
         div.room-card_body
             +image-slider({buttons, images})
@@ -13,6 +13,6 @@ mixin small-room-card({number = '888', category='люкс', cost='9990', currenc
                 span.room-card_small_body_info_cost.room_cost=`${cost}${currency} `
                 span.room-card_small_body_info_day.room_day=' в сутки'
             div.room-card.room-card_small_body_reviews
-                +rate-button(rate)
+                +rate-button(rate, number)
                 span.room-card_small_body_reviews_feedback_count=`${feedback}`
                 span.room-card_small_body_reviews_feedback_text=' Отзывов'

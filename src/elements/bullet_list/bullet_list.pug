@@ -1,6 +1,10 @@
 mixin bullet-list($title, ...items)
     div.bullet-list
-        div.bullet-list_title=$title
+        if ($title!='')
+            div.bullet-list_title=$title
+
+
+
         ul.bullet-list_elements
             each item in items
                 li.bullet-list_element

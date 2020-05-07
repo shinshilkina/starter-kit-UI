@@ -1,7 +1,7 @@
 @import "../../theme/default_theme/deftheme";
 
 .dropdown-title {
-  @include title-monserrat($dark_shade, 0.64em);
+  @include title-monserrat($dark_shade, 11px);
 }
 .dropdown {
   position: relative;

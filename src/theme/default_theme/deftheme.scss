@@ -263,9 +263,17 @@
   @include quicksand(bold, 1.714rem, 1.9rem  ,#1f2041);
   font-size: 1.65rem;
   line-height: 1.9rem;
-  font-weight: bold;
 }
 
+.title-h2 {
+  @include quicksand(bold, 1.2rem, 1.2rem  ,#1f2041);
+  line-height: 24px;
+  letter-spacing: 0.018em;
+
+  margin: 0;
+
+  color: #1F2041;
+}
 
 .date_dropdowns {
   display: flex;

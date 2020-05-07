@@ -3,6 +3,7 @@ import './image-slider.scss';
 let slideIndex = 1;
 
 const cards = document.querySelectorAll('.room-card_small .room-card_body');
+
 if (cards.length !== 0) {
     for (let card of cards) {
         showSlides(slideIndex, card);

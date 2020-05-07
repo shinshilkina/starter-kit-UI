@@ -1,0 +1,15 @@
+mixin pie({countVoices='260', voices=[]} = {})
+    div.pie
+        div.pie_circle
+            div.pie_circle_round
+                - let n = 1;
+                each voice in voices
+                    div.piece(class=voice.enTitle + ' pie_circle_round_piece-' + n)
+                    -n++
+                div.pie_circle_round_translate
+                    span.pie_circle_round_translate_count=countVoices
+                    span.pie_circle_round_translate_text='голосов'
+        ul.pie_legend
+            each voice in voices
+                li.pie_legend_item(class=voice.enTitle + ' legend-'+voice.enTitle)=voice.ruTitle
+                    span.pie_legend_item_count(class='legend-count-'+voice.enTitle)=voice.countVoices

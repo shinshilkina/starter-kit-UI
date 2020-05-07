@@ -1,0 +1,46 @@
+include ../../modules/small-room-card/small-room-card
+include ./rooms-database
+include ../../elements/buttons/buttons
+
+main.filterPage
+    article.filterPage_container
+        include ../../modules/filter/filter
+
+        section.filterPage_container_numbers
+            h1.filterPage_container_numbers_title.title-h1='Номера, которые мы для вас подобрали'
+            div.filterPage_container_numbers_cards
+                each room in locals.rooms
+                    +small-room-card({
+                        number: room.number,
+                        category: room.category,
+                        cost: room.cost,
+                        currency: '₽',
+                        feedback: room.feedback,
+                        rate: room.rate,
+                        buttons: room.buttons,
+                        images: [
+                            {
+                                url: require(`../../modules/image/room${room.number}.png`).default,
+                                text: 'image1'
+                            },
+                            {
+                                url: require(`../../modules/image/room${room.number}.png`).default,
+                                text: 'image2'
+                            },
+                            {
+                                url: require(`../../modules/image/room${room.number}.png`).default,
+                                text: 'image3'
+                            },
+                            {
+                                url: require(`../../modules/image/room${room.number}.png`).default,
+                                text: 'image4'
+                            }
+
+                        ]
+                    })
+            div.filterPage_container_numbers_map-pages
+                +pagination({
+                    countPages: '15',
+                    countOnPage: '12',
+                    countVariants: '100+'
+                })

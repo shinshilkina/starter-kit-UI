@@ -1,11 +1,11 @@
-mixin rate-button($countStars)
+mixin rate-button($countStars, $originID)
     div.rate-button
         div.rate-button_area
             each i in [5, 4, 3, 2, 1]
                 if(i === $countStars)
-                    input(type="radio" id=("star"+i) name=$countStars+"rate" value=i checked)
-                    label(for=("star"+i) title=i)
+                    input(type="radio" id=($originID +"star"+i) name=$countStars+"rate" value=i checked)
+                    label(for=($originID + "star"+i) title=i)
                 else
-                    input(type="radio" id=("star" + i) name=$countStars+"rate" value=i)
-                    label(for=("star" + i) title=i)
+                    input(type="radio" id=($originID +"star" + i) name=$countStars+"rate" value=i)
+                    label(for=($originID +"star" + i) title=i)
 

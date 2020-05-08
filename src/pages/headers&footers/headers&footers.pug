@@ -1,63 +1,15 @@
+extends ../layout/default_layout
 include ../../elements/header/header
 include ../../elements/bottom/bottom
 include ../../elements/bottom_pretty/bottom
-include ../../elements/bottom/bottom-data
 
-header
-    div.logo_grey
-main.headers_and_footers
-    +header({
-        menuItems: [
-        {
-            name: 'home',
-            link: '#home',
-            title: 'Home'
-        },
-        {
-            name: 'about_us',
-            link: '#about_us',
-            title: 'About Us'
-        },
-        {
-            name: 'services',
-            link: '#services',
-            title: 'Services',
-            submenu: [
-                {
-                    subname: 'documentation',
-                    sublink: '#documentation',
-                    subtitle: 'Documentation'
-                },
-                {
-                    subname: 'community',
-                    sublink: '#community',
-                    subtitle: 'Community'
-                },
-                {
-                    subname: 'get-in-touch',
-                    sublink: '#get-in-touch',
-                    subtitle: 'Get in Touch'
-                },
-            ]
-        },
-        {
-            name: 'careers',
-            link: '#careers',
-            title: 'Careers'
-        },
-        {
-            name: 'news',
-            link: '#news',
-            title: 'News'
-        },
-        {
-            name: 'documentation',
-            link: '#documentation',
-            title: 'Documentation'
-        }]
-    })
-    +header({
-        menuItems: [
+block content
+    include ../../elements/bottom/bottom-data
+    header
+        div.logo_grey
+    main.headers_and_footers
+        +header({
+            menuItems: [
             {
                 name: 'home',
                 link: '#home',
@@ -84,7 +36,7 @@ main.headers_and_footers
                         subtitle: 'Community'
                     },
                     {
-                        ssububname: 'get-in-touch',
+                        subname: 'get-in-touch',
                         sublink: '#get-in-touch',
                         subtitle: 'Get in Touch'
                     },
@@ -104,9 +56,59 @@ main.headers_and_footers
                 name: 'documentation',
                 link: '#documentation',
                 title: 'Documentation'
-            }
-        ],
-        user: 'Cosmin Negoita'
-    })
-    +bottom()
-    +pretty-bottom()
+            }]
+        })
+        +header({
+            menuItems: [
+                {
+                    name: 'home',
+                    link: '#home',
+                    title: 'Home'
+                },
+                {
+                    name: 'about_us',
+                    link: '#about_us',
+                    title: 'About Us'
+                },
+                {
+                    name: 'services',
+                    link: '#services',
+                    title: 'Services',
+                    submenu: [
+                        {
+                            subname: 'documentation',
+                            sublink: '#documentation',
+                            subtitle: 'Documentation'
+                        },
+                        {
+                            subname: 'community',
+                            sublink: '#community',
+                            subtitle: 'Community'
+                        },
+                        {
+                            ssububname: 'get-in-touch',
+                            sublink: '#get-in-touch',
+                            subtitle: 'Get in Touch'
+                        },
+                    ]
+                },
+                {
+                    name: 'careers',
+                    link: '#careers',
+                    title: 'Careers'
+                },
+                {
+                    name: 'news',
+                    link: '#news',
+                    title: 'News'
+                },
+                {
+                    name: 'documentation',
+                    link: '#documentation',
+                    title: 'Documentation'
+                }
+            ],
+            user: 'Cosmin Negoita'
+        })
+        +bottom()
+        +pretty-bottom()

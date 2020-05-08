@@ -1,3 +1,4 @@
+extends ../layout/default_layout
 include ../../elements/text-field/text-field
 include ../../elements/dropdown/dropdown
 include ../../elements/masked-text-field/masked-text-field
@@ -19,124 +20,125 @@ include ../../elements/emotions/emotions
 include ../../elements/comment/comment
 
 
-header.header
-    div.logo_grey
-main.form-elements
-    div.form-elements__container
-        article.form-elements__fields
-            +text-field({
-                title: 'text field',
-                placeholder: 'Email'
-            })
-            +text-field({
-                title: 'text field',
-                placeholder: 'Email'
-            })
-            +dropdown({
-                title: 'dropdown',
-                placeholder: 'Сколько гостей',
-                options: [
-                    {text: 'дети'},
-                    {text: 'взрослые'},
-                    {text: 'младенцы'},
-                ],
-                buttons: true,
-                group: 'guests'
-            })
-            +masked-text-field({
-                title: 'masked text field',
-                placeholder: 'ДД.ММ.ГГГГ'
-            })
-            div.date_dropdowns
-                +date-dropdown('', 'date dropdown')
-                +date-dropdown('19.08.2019', 'date dropdown')
-            +filter-date-dropdown('19 авг', '23 авг', 'filter date dropdown')
-            +subscription-text-field('subscription text field', 'Email')
-        article.form-elements__check-buttons
-            +checkbox-buttons({title : 'checkbox buttons',
-                params: [
-                    { text: 'Можно курить' },
-                    { text: 'Можно с питомцами', checked: true} ,
-                    { text: 'Можно пригласить гостей \n(до 10 человек)', checked: true}
-            ]})
-            +radio-buttons({
-                title: 'radio buttons',
-                nameRadio: 'gender',
-                options: [
-                    { text: 'Мужчина', checked: true },
-                    { text: 'Женщина'}
-                ]
-            })
-            +toggle('Получать спецпредложения', true, 'toggle')
-            +toggle('Получать спецпредложения', false)
-            div.like-button_title='like button'
-            div.like-buttons
-                +like-button('2', false)
-                +like-button('12', true)
-            label.rate-button_title='rate button'
-            div.stars
-                +rate-button(4)
-                +rate-button(5)
-        article.form-elements__buttons
-            +range-slider('range slider', '5 000₽', '10 000₽')
-            div.buttons_title='buttons'
-            div.buttons-elements_active
-                +button-active({text:'click me'})
-                +button-active({text:'click me'})
-            div.buttons-elements_bordered
-                +button-bordered({text:'click me'})
-                +button-bordered({text:'click me'})
-            div.buttons_icon-link
-                +icon-link-purple({text:'click me'})
-                +icon-link-dark({text:'click me'})
-            +button-go-topay({text:'Перейти к оплате'})
-            div.pagination_title='pagination'
-            +pagination({
-                countPages: '15',
-                countOnPage: '12',
-                countVariants: '100+'
-            })
-        article.form-elements__left-dropdown
-            +dropdown({
-                title: 'dropdown',
-                placeholder: 'Удобства номера',
-                options: [
-                    { text: 'спальни', count : 2 },
-                    { text: 'кровати', count : 2 },
-                    { text: 'ванные комнаты' },
-                ],
-                buttons: false,
-                group: 'furniture'
-            })
-            +checkbox-list({
-                options: [
-                    { text: 'Завтрак'},
-                    { text: 'Письменный стол', checked: true},
-                    { text: 'Стул для кормления', checked: true},
-                    { text: 'Кроватка', checked: true},
-                    { text: 'Телевизор'},
-                    { text: 'Шампунь'},
-                    { text: 'Телевизор'},
-                    { text: 'Шампунь'}
+block content
+    header.header
+        div.logo_grey
+    main.form-elements
+        div.form-elements__container
+            article.form-elements__fields
+                +text-field({
+                    title: 'text field',
+                    placeholder: 'Email'
+                })
+                +text-field({
+                    title: 'text field',
+                    placeholder: 'Email'
+                })
+                +dropdown({
+                    title: 'dropdown',
+                    placeholder: 'Сколько гостей',
+                    options: [
+                        {text: 'дети'},
+                        {text: 'взрослые'},
+                        {text: 'младенцы'},
+                    ],
+                    buttons: true,
+                    group: 'guests'
+                })
+                +masked-text-field({
+                    title: 'masked text field',
+                    placeholder: 'ДД.ММ.ГГГГ'
+                })
+                div.date_dropdowns
+                    +date-dropdown('', 'date dropdown')
+                    +date-dropdown('19.08.2019', 'date dropdown')
+                +filter-date-dropdown('19 авг', '23 авг', 'filter date dropdown')
+                +subscription-text-field('subscription text field', 'Email')
+            article.form-elements__check-buttons
+                +checkbox-buttons({title : 'checkbox buttons',
+                    params: [
+                        { text: 'Можно курить' },
+                        { text: 'Можно с питомцами', checked: true} ,
+                        { text: 'Можно пригласить гостей \n(до 10 человек)', checked: true}
                 ]})
-        article.form-elements__left-comments
-            +emotion('comfort', 'Комфорт', 'Шумопоглащающие стены')
-            +emotion('convenience', 'Удобство', 'Окно в каждой из спален')
-        article.form-elements__middle-dropdown
-            +rich-checkbox-buttons({
-                options: [
-                    {text: 'Широкий коридор' , subscription: 'Ширина коридоров в номере не менее 91 см.'},
-                    {text: 'Помощник для инвалидов' , subscription: 'На 1 этаже вас встретит специалист и проводит до номера.'}
-                ]
-            })
-        article.form-elements__right-dropdown
-            +bullet-list('bullet list', 'Нельзя с питомцами', 'Без вечеринок и мероприятий',
-                'Время прибытия — после 13:00, а выезд до 12:00')
-        article.form-elements__comments
-            +comment({
-                name: 'Мурад Сарафнов',
-                date: '5 дней назад',
-                like: true,
-                countLikes: '12',
-                text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. \nИ стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'
-            })
+                +radio-buttons({
+                    title: 'radio buttons',
+                    nameRadio: 'gender',
+                    options: [
+                        { text: 'Мужчина', checked: true },
+                        { text: 'Женщина'}
+                    ]
+                })
+                +toggle('Получать спецпредложения', true, 'toggle')
+                +toggle('Получать спецпредложения', false)
+                div.like-button_title='like button'
+                div.like-buttons
+                    +like-button('2', false)
+                    +like-button('12', true)
+                label.rate-button_title='rate button'
+                div.stars
+                    +rate-button(4)
+                    +rate-button(5)
+            article.form-elements__buttons
+                +range-slider('range slider', '5 000₽', '10 000₽')
+                div.buttons_title='buttons'
+                div.buttons-elements_active
+                    +button-active({text:'click me'})
+                    +button-active({text:'click me'})
+                div.buttons-elements_bordered
+                    +button-bordered({text:'click me'})
+                    +button-bordered({text:'click me'})
+                div.buttons_icon-link
+                    +icon-link-purple({text:'click me'})
+                    +icon-link-dark({text:'click me'})
+                +button-go-topay({text:'Перейти к оплате'})
+                div.pagination_title='pagination'
+                +pagination({
+                    countPages: '15',
+                    countOnPage: '12',
+                    countVariants: '100+'
+                })
+            article.form-elements__left-dropdown
+                +dropdown({
+                    title: 'dropdown',
+                    placeholder: 'Удобства номера',
+                    options: [
+                        { text: 'спальни', count : 2 },
+                        { text: 'кровати', count : 2 },
+                        { text: 'ванные комнаты' },
+                    ],
+                    buttons: false,
+                    group: 'furniture'
+                })
+                +checkbox-list({
+                    options: [
+                        { text: 'Завтрак'},
+                        { text: 'Письменный стол', checked: true},
+                        { text: 'Стул для кормления', checked: true},
+                        { text: 'Кроватка', checked: true},
+                        { text: 'Телевизор'},
+                        { text: 'Шампунь'},
+                        { text: 'Телевизор'},
+                        { text: 'Шампунь'}
+                    ]})
+            article.form-elements__left-comments
+                +emotion('comfort', 'Комфорт', 'Шумопоглащающие стены')
+                +emotion('convenience', 'Удобство', 'Окно в каждой из спален')
+            article.form-elements__middle-dropdown
+                +rich-checkbox-buttons({
+                    options: [
+                        {text: 'Широкий коридор' , subscription: 'Ширина коридоров в номере не менее 91 см.'},
+                        {text: 'Помощник для инвалидов' , subscription: 'На 1 этаже вас встретит специалист и проводит до номера.'}
+                    ]
+                })
+            article.form-elements__right-dropdown
+                +bullet-list('bullet list', 'Нельзя с питомцами', 'Без вечеринок и мероприятий',
+                    'Время прибытия — после 13:00, а выезд до 12:00')
+            article.form-elements__comments
+                +comment({
+                    name: 'Мурад Сарафнов',
+                    date: '5 дней назад',
+                    like: true,
+                    countLikes: '12',
+                    text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. \nИ стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'
+                })

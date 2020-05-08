@@ -8,8 +8,8 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Comatible" content="ie=edge")
-        title My app
-
+        title Pages
+    body
         header
             +header({
                 menuItems: [
@@ -78,7 +78,7 @@ html(lang="en")
                 lang: 'ru'
             })
 
-        include ../room_details/room_details
+        block content
         bottom
             +bottom({
                 inputText: 'Email',

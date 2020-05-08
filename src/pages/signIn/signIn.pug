@@ -1,7 +1,9 @@
+extends ../layout/layout
 include ../../modules/logIn/logIn
 
-main.signInPage
-    article.signInPage_container
-        +login({
-            title: 'Войти'
-        })
+block content
+    main.signInPage
+        article.signInPage_container
+            +login({
+                title: 'Войти'
+            })

@@ -4,12 +4,14 @@ const configurator = require('webpack-config');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
 module.exports = new configurator.default().merge({
     entry: './src/entry.js',
     output: {
         filename: '[name].js',
         path: path.resolve(__dirname, '..', 'dist'),
-        publicPath: '/'
+        publicPath: '.'
     },
     resolve: {
         modules: [
@@ -26,21 +28,49 @@ module.exports = new configurator.default().merge({
         new webpack.ProvidePlugin({
             $: 'jquery',
             jquery: 'jquery',
-        }),
+        }),/*
         new HtmlWebpackPlugin({
-            getData: () => {
-                try {
-                    return JSON.parse(`./src/pages/index/index.json`, 'utf8');
-                } catch (e) {
-                    console.warn(`data.json was not provided for page index`);
-                    return {};
-                }
-            },
             filename: 'index.html',
-            template: './src/pages/index/index.pug',
+            template: './src/pages/layout/layout.pug',
             alwaysWriteToDisk: true,
             inject: 'body',
             hash: true,
+        }),*/
+        new HtmlWebpackPlugin({
+            template: './src/pages/landing_page/landing_page.pug',
+            filename: './landing_page.html',
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/pages/cards/cards.pug',
+            filename: './cards.html',
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/pages/colors&type/colors_type.pug',
+            filename: './colors_type.html',
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/pages/filter/filter.pug',
+            filename: './filter.html',
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/pages/headers&footers/headers&footers.pug',
+            filename: './headers&footers.html',
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/pages/page_elements/page_elements.pug',
+            filename: './page_elements.html',
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/pages/registration/registration.pug',
+            filename: './registration.html',
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/pages/room_details/room_details.pug',
+            filename: './room_details.html',
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/pages/signIn/signIn.pug',
+            filename: './signIn.html',
         })
     ].concat(),
     module: {
@@ -65,7 +95,7 @@ module.exports = new configurator.default().merge({
                     'style-loader',
                     'css-loader',
                     'sass-loader',
-                ],
+                ]
             },
             {
                 test: /\.css$/i,
@@ -79,8 +109,9 @@ module.exports = new configurator.default().merge({
                 loader: 'file-loader',
                 options: {
                     name: '[path][name].[ext]',
-                    useRelativePath: true
-                }
+                    useRelativePath: true,
+                    publicPath: '.'
+                },
             },
             {
                 test: /[\/]jquery\.js$/,

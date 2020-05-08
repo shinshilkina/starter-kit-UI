@@ -1,5 +1,5 @@
 import './landing_page.scss';
-import {fpickerTwoInputs} from'../../elements/calendar/calendar';
+import {fpickerTwoInputs} from '../../elements/calendar/calendar';
 
 const dateInputsArea = document.querySelector('.landingPage_container .date_dropdowns');
 

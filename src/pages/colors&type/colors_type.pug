@@ -1,3 +1,5 @@
+extends ../layout/default_layout
+
 mixin color-area({title, code, color} = {})
     div.color
         div.color_rect(style=`background-color: ${color}`)
@@ -6,69 +8,70 @@ mixin color-area({title, code, color} = {})
             div.color_text_code=code
 
 
-header
-    div.colors_logo_grey
-main.colors_and_type
-    div.colors_and_type_container
-        section.colors_and_type_colors
-            +color-area({
-                title: 'Dark Shade 100%',
-                code: '#1F2041',
-                color: 'rgb(31, 32, 65)'
-            })
-            +color-area({
-                title: 'Dark Shade 75%',
-                code: '#1F2041',
-                color: 'rgba(31, 32, 65, 0.75)'
-            })
-            +color-area({
-                title: 'Dark Shade 50%',
-                code: '#1F2041',
-                color: 'rgba(31, 32, 65, 0.5)'
-            })
-            +color-area({
-                title: 'Dark Shade 25%',
-                code: '#1F2041',
-                color: 'rgba(31, 32, 65, 0.25)'
-            })
-            +color-area({
-                title: 'Dark Shade 5%',
-                code: '#1F2041',
-                color: 'rgba(31, 32, 65, 0.05)'
-            })
-            +color-area({
-                title: 'Purple',
-                code: '#BC9CFF',
-                color: '#BC9CFF'
-            })
-            +color-area({
-                title: 'Green',
-                code: '#6FCF97',
-                color: '#6FCF97'
-            })
-        section.colors_and_type_fonts
-            table.fonts_block
-                tbody.fonts_block_body
-                    tr.fonts_block_body_row
-                        td.fonts_block_title
-                            span.fonts_block_title_h1='H1'
-                        td.fonts_block_text
-                            span.fonts_block_text_h1='This one is the sub-section or widget title'
-                    tr.fonts_block_body_row
-                        td.fonts_block_title
-                            span.fonts_block_title_h2='H2'
-                        td.fonts_block_text
-                            span.fonts_block_text_h2='Next one is the item title inside widgets'
-                    tr.fonts_block_body_row
-                        td.fonts_block_title
-                            span.fonts_block_title_h3='H3'
-                        td.fonts_block_text
-                            span.fonts_block_text_h3='This is a label or CTA text'
-                    tr.fonts_block_body_row
-                        td.fonts_block_title
-                            span.fonts_block_title_body='Body'
-                        td.fonts_block_text
-                            span.fonts_block_text_body=`This is the body text which is used for most \nof the design, like paragraphs, lists, etc.`
+block content
+    header
+        div.colors_logo_grey
+    main.colors_and_type
+        div.colors_and_type_container
+            section.colors_and_type_colors
+                +color-area({
+                    title: 'Dark Shade 100%',
+                    code: '#1F2041',
+                    color: 'rgb(31, 32, 65)'
+                })
+                +color-area({
+                    title: 'Dark Shade 75%',
+                    code: '#1F2041',
+                    color: 'rgba(31, 32, 65, 0.75)'
+                })
+                +color-area({
+                    title: 'Dark Shade 50%',
+                    code: '#1F2041',
+                    color: 'rgba(31, 32, 65, 0.5)'
+                })
+                +color-area({
+                    title: 'Dark Shade 25%',
+                    code: '#1F2041',
+                    color: 'rgba(31, 32, 65, 0.25)'
+                })
+                +color-area({
+                    title: 'Dark Shade 5%',
+                    code: '#1F2041',
+                    color: 'rgba(31, 32, 65, 0.05)'
+                })
+                +color-area({
+                    title: 'Purple',
+                    code: '#BC9CFF',
+                    color: '#BC9CFF'
+                })
+                +color-area({
+                    title: 'Green',
+                    code: '#6FCF97',
+                    color: '#6FCF97'
+                })
+            section.colors_and_type_fonts
+                table.fonts_block
+                    tbody.fonts_block_body
+                        tr.fonts_block_body_row
+                            td.fonts_block_title
+                                span.fonts_block_title_h1='H1'
+                            td.fonts_block_text
+                                span.fonts_block_text_h1='This one is the sub-section or widget title'
+                        tr.fonts_block_body_row
+                            td.fonts_block_title
+                                span.fonts_block_title_h2='H2'
+                            td.fonts_block_text
+                                span.fonts_block_text_h2='Next one is the item title inside widgets'
+                        tr.fonts_block_body_row
+                            td.fonts_block_title
+                                span.fonts_block_title_h3='H3'
+                            td.fonts_block_text
+                                span.fonts_block_text_h3='This is a label or CTA text'
+                        tr.fonts_block_body_row
+                            td.fonts_block_title
+                                span.fonts_block_title_body='Body'
+                            td.fonts_block_text
+                                span.fonts_block_text_body=`This is the body text which is used for most \nof the design, like paragraphs, lists, etc.`
 
 
 

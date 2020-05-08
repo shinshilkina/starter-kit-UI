@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:new-second-step" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e7266e4f-5d6c-4b84-aada-5f7044d47916" name="Default Changelist" comment="init commit" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="second-step" />
+        <entry key="$PROJECT_DIR$" value="new-second-step" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1WF1J6ddKBIF97e0QfUqcjlh6GG" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pages/layout" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pages/layout" />
+      <recent name="$PROJECT_DIR$/src/elements/bottom" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/modules/fonts/Montserrat" />
+      <recent name="$PROJECT_DIR$/src/pages/index" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.start:dev">
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="build:dev (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/../package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build:dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start:dev (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/../package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start:dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start:dev (2)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$USER_HOME$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start:dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start:dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start:dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start:dev (2)" />
+        <item itemvalue="npm.start:dev (1)" />
+        <item itemvalue="npm.start:dev" />
+        <item itemvalue="npm.build:dev (1)" />
+        <item itemvalue="npm.build" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e7266e4f-5d6c-4b84-aada-5f7044d47916" name="Default Changelist" comment="" />
+      <created>1578730453605</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578730453605</updated>
+      <workItem from="1578730455342" duration="48199000" />
+      <workItem from="1578926298217" duration="27394000" />
+      <workItem from="1579611374106" duration="11089000" />
+      <workItem from="1579708199788" duration="2559000" />
+      <workItem from="1579882221705" duration="1744000" />
+      <workItem from="1580125548159" duration="59133000" />
+      <workItem from="1581236078752" duration="4299000" />
+      <workItem from="1581263280535" duration="5429000" />
+      <workItem from="1581278375081" duration="332000" />
+      <workItem from="1581336027382" duration="6945000" />
+      <workItem from="1581411809953" duration="21483000" />
+      <workItem from="1581511388252" duration="2005000" />
+      <workItem from="1581518793206" duration="3766000" />
+      <workItem from="1581990957566" duration="599000" />
+      <workItem from="1585039291348" duration="13805000" />
+      <workItem from="1585055168913" duration="24000" />
+      <workItem from="1585126908326" duration="13700000" />
+      <workItem from="1585295899486" duration="24323000" />
+      <workItem from="1585479196226" duration="21691000" />
+      <workItem from="1585582390214" duration="35000" />
+      <workItem from="1586158826446" duration="8312000" />
+      <workItem from="1586270750437" duration="3750000" />
+      <workItem from="1586598468778" duration="197000" />
+      <workItem from="1586598679890" duration="1725000" />
+      <workItem from="1586601913102" duration="20865000" />
+      <workItem from="1586957145255" duration="41853000" />
+      <workItem from="1587096143059" duration="13404000" />
+      <workItem from="1587121709244" duration="5864000" />
+      <workItem from="1587194370722" duration="34631000" />
+      <workItem from="1587384015074" duration="26394000" />
+      <workItem from="1587650067746" duration="16743000" />
+      <workItem from="1587708494931" duration="23858000" />
+      <workItem from="1587747963251" duration="20339000" />
+      <workItem from="1587981827904" duration="889000" />
+      <workItem from="1587984674961" duration="26293000" />
+      <workItem from="1588248233414" duration="12409000" />
+      <workItem from="1588605138565" duration="234000" />
+      <workItem from="1588605389050" duration="5968000" />
+      <workItem from="1588752370906" duration="27589000" />
+    </task>
+    <task id="LOCAL-00001" summary="change properties on mixin title-checkboxs. add params mixin text-field">
+      <created>1586959665594</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1586959665594</updated>
+    </task>
+    <task id="LOCAL-00002" summary="change properties on mixins and styles">
+      <created>1587055173649</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1587055173649</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add page with elements">
+      <created>1587055208468</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1587055208468</updated>
+    </task>
+    <task id="LOCAL-00004" summary="change properties on mixins, styles and add modules to webpack config">
+      <created>1587121784448</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1587121784448</updated>
+    </task>
+    <task id="LOCAL-00005" summary="change properties on mixins and styles">
+      <created>1587127741819</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1587127741819</updated>
+    </task>
+    <task id="LOCAL-00006" summary="make small card of room">
+      <created>1587228361129</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1587228361129</updated>
+    </task>
+    <task id="LOCAL-00007" summary="make big(check) card of room">
+      <created>1587390701703</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1587390701703</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add result sum script">
+      <created>1587391066989</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1587391066989</updated>
+    </task>
+    <task id="LOCAL-00009" summary="try make event listener for change dates inputs">
+      <created>1587667564476</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1587667564476</updated>
+    </task>
+    <task id="LOCAL-00010" summary="made a calculation of the cost of the room depending on the number of days of stay">
+      <created>1587669654106</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1587669654106</updated>
+    </task>
+    <task id="LOCAL-00011" summary="make cards page and fix some styles, fix bug with prev image rooms(render of card, not all images)">
+      <created>1587721942134</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1587721942134</updated>
+    </task>
+    <task id="LOCAL-00012" summary="fix small bug">
+      <created>1587722131595</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1587722131595</updated>
+    </task>
+    <task id="LOCAL-00013" summary="make footer and change some style of cards.scss">
+      <created>1587742016361</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1587742016361</updated>
+    </task>
+    <task id="LOCAL-00014" summary="reduct bottom and render logic of subscription-text-field">
+      <created>1587745645611</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1587745645611</updated>
+    </task>
+    <task id="LOCAL-00015" summary="fix style and correct pretty bottom">
+      <created>1587747742957</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1587747742957</updated>
+    </task>
+    <task id="LOCAL-00016" summary="make footer&amp;bottom and change some style of elements">
+      <created>1587816223687</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1587816223687</updated>
+    </task>
+    <task id="LOCAL-00017" summary="make colors and types page, fix bugs, change some exist elements style">
+      <created>1587990950807</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1587990950807</updated>
+    </task>
+    <task id="LOCAL-00018" summary="change header for render on Russian language">
+      <created>1587997852601</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1587997852601</updated>
+    </task>
+    <task id="LOCAL-00019" summary="change style bottom for site">
+      <created>1587998370299</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1587998370299</updated>
+    </task>
+    <task id="LOCAL-00020" summary="make login page and change styles of elements for this page">
+      <created>1588005571825</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1588005571825</updated>
+    </task>
+    <task id="LOCAL-00021" summary="change style of elements(все шрифты полетели)">
+      <created>1588141268015</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1588141268015</updated>
+    </task>
+    <task id="LOCAL-00022" summary="make landing page">
+      <created>1588251427200</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1588251427201</updated>
+    </task>
+    <task id="LOCAL-00023" summary="make landing page">
+      <created>1588252322670</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1588252322670</updated>
+    </task>
+    <task id="LOCAL-00024" summary="finish last page and correct elements styles">
+      <created>1588867559959</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1588867559959</updated>
+    </task>
+    <task id="LOCAL-00025" summary="change structure files for building pages and change webpack's config, add layout pages for building pages">
+      <created>1588955263143</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1588955263143</updated>
+    </task>
+    <task id="LOCAL-00026" summary="add used images">
+      <created>1588956418521</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1588956418521</updated>
+    </task>
+    <task id="LOCAL-00027" summary="init commit">
+      <created>1588956531889</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1588956531889</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="new-second-step" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="1" value="TOOL_WINDOW" />
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="change some styles and mixin prop" />
+    <MESSAGE value="change properties on mixins, styles and add modules to webpack config" />
+    <MESSAGE value="change properties on mixins and styles" />
+    <MESSAGE value="make small card of room" />
+    <MESSAGE value="make big(check) card of room" />
+    <MESSAGE value="add result sum script" />
+    <MESSAGE value="try make event listener for change dates inputs" />
+    <MESSAGE value="made a calculation of the cost of the room depending on the number of days of stay" />
+    <MESSAGE value="make cards page and fix some styles, fix bug with prev image rooms(render of card, not all images)" />
+    <MESSAGE value="fix small bug" />
+    <MESSAGE value="make footer and change some style of cards.scss" />
+    <MESSAGE value="reduct bottom and render logic of subscription-text-field" />
+    <MESSAGE value="fix style and correct pretty bottom" />
+    <MESSAGE value="make footer&amp;bottom and change some style of elements" />
+    <MESSAGE value="make colors and types page, fix bugs, change some exist elements style" />
+    <MESSAGE value="change header for render on Russian language" />
+    <MESSAGE value="change style bottom for site" />
+    <MESSAGE value="make login page and change styles of elements for this page" />
+    <MESSAGE value="change style of elements(все шрифты полетели)" />
+    <MESSAGE value="make landing page" />
+    <MESSAGE value="make filter page and correct child elements" />
+    <MESSAGE value="finish last page and correct elements styles" />
+    <MESSAGE value="change structure files for building pages and change webpack's config, add layout pages for building pages" />
+    <MESSAGE value="add used images" />
+    <MESSAGE value="init commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="init commit" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1104" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588952980890">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="1104" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1588952980890" />
+    <state x="606" y="98" width="912" height="911" key="CommitChangelistDialog2" timestamp="1588958051302">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="606" y="98" width="912" height="911" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1588958051302" />
+    <state x="368" y="244" width="876" height="800" key="DiffContextDialog" timestamp="1588956491658">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="368" y="244" width="876" height="800" key="DiffContextDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1588956491658" />
+    <state x="962" y="288" width="424" height="491" key="FileChooserDialogImpl" timestamp="1585582422823">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="962" y="288" width="424" height="491" key="FileChooserDialogImpl/70.27.1850.1053@70.27.1850.1053" timestamp="1585582422823" />
+    <state width="963" height="345" key="GridCell.Tab.0.bottom" timestamp="1588957933347">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1156" height="110" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1581273983042" />
+    <state width="963" height="345" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1588957933347" />
+    <state width="963" height="345" key="GridCell.Tab.0.center" timestamp="1588957933346">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1156" height="110" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1581273983041" />
+    <state width="963" height="345" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1588957933346" />
+    <state width="963" height="345" key="GridCell.Tab.0.left" timestamp="1588957933345">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1156" height="110" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1581273983040" />
+    <state width="963" height="345" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1588957933345" />
+    <state width="963" height="345" key="GridCell.Tab.0.right" timestamp="1588957933347">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1156" height="110" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1581273983042" />
+    <state width="963" height="345" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1588957933346" />
+    <state x="1183" y="253" width="397" height="640" key="RollbackChangesDialog" timestamp="1588955638518">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="1183" y="253" width="397" height="640" key="RollbackChangesDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1588955638518" />
+    <state x="70" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1586598724582">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="70" y="188" width="1022" height="737" key="SettingsEditor/70.27.1850.1053@70.27.1850.1053" timestamp="1586598724582" />
+    <state x="877" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1588958306704">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="877" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/70.27.1850.1053@70.27.1850.1053" timestamp="1588958306704" />
+    <state x="1106" y="205" width="337" height="697" key="VcsDiffUtil.ChangesDialog" timestamp="1585489443081">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="1106" y="205" width="337" height="697" key="VcsDiffUtil.ChangesDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1585489443081" />
+    <state x="433" y="285" width="724" height="570" key="find.popup" timestamp="1588141687675">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="433" y="285" width="724" height="570" key="find.popup/70.27.1850.1053@70.27.1850.1053" timestamp="1588141687675" />
+    <state x="197" y="254" key="run.anything.popup" timestamp="1588947084749">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="197" y="254" key="run.anything.popup/70.27.1850.1053@70.27.1850.1053" timestamp="1588947084749" />
+    <state x="195" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1587050769470">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="192" y="259" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1580306851185" />
+    <state x="195" y="259" width="672" height="678" key="search.everywhere.popup/70.27.1850.1053@70.27.1850.1053" timestamp="1587050769470" />
+    <state x="1112" y="407" width="540" height="333" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1588955428363">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="1112" y="407" width="540" height="333" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1588955428363" />
+  </component>
+</project>
